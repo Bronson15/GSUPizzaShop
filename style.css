@@ -1,0 +1,44 @@
+#header {
+  background-color: #041e42;
+  display: block;
+}
+
+#header span {
+  display: flex;
+  align-items: center;
+}
+
+#header img {
+  padding: 5px;
+}
+
+#nav-bar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+#nav-bar li {
+  float: left;
+  color: #666;
+}
+
+#nav-bar li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#nav-bar li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+#nav-bar li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
