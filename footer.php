@@ -1,3 +1,5 @@
+<?php 
+echo'
 <footer>
 	<div class="contact">
 		<a href="contact.html">Contact Us</a> | <a href="contact.html">About Us</a><br>
@@ -9,4 +11,5 @@
 	<div class="copy">
 		Copyright &copy; 2017 GSU Pizza Shop
 	</div>
-</footer>
+</footer>';
+?>
