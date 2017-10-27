@@ -6,8 +6,7 @@
     <title>GSU Pizza Shop::Specials</title>
 </head>
 <body>
-    <?php include("header.php");?>
-	
+	<?php include("header.php");?>
 	<main>
 		<p>Save Big<p>
 		
