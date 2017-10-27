@@ -52,6 +52,22 @@ main h1{
 	text-align:center;
 }
 
+#specials img {
+	width: 500px;
+	height: 300px;
+}
+
+#pizza-table th, td {
+    border: 1px solid black;
+    padding: 5px;
+	}
+#pizza-table table {
+    border-spacing: 10px;
+	width: 50%;
+}
+#pizza-table button {
+	width: 157px;
+}
 #contact{
 	text-align:center;
 }
