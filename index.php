@@ -17,14 +17,14 @@ else
 </head>
 <body>
 	
-	<?php include("includes/header.html");?>
+	<?php include("header.php");?>
 	
 	<main>
 		<p>Welcome to GSU pizza shop<p>
 		<p>Check out our best deals under specials</p>
 	</main>
 	
-	<?php include("includes/footer.html");?>
+	<?php include("footer.php");?>
 	
 </body>
 </html>
