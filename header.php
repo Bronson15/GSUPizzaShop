@@ -1,3 +1,4 @@
+<?php echo '
 <div id="wrapper">
         <header>
 			<h1><img src="logo.jpg" alt="GSU Logo"></h1>
@@ -12,4 +13,5 @@
         </b>
     </nav> 
 	
-</div>
+</div> ';
+?>
