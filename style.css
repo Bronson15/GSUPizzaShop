@@ -1,0 +1,80 @@
+#wrapper{
+	background-color:#041e42;
+	border-color:#041e42;
+}
+
+header h1{
+	text-align:center;
+	font-size:50px;
+	padding:0px;
+	color:white;
+	margin: 0;
+	padding: 1% 1%;
+}
+header img{
+	right:0;
+	left:0;
+	z-index:1030;
+	width: 60%;
+}
+body{
+	background-color: #e4e4e4;
+	font-family: Arial, sans-serif;
+}
+nav{
+	overflow:hidden;
+	font-size:1.2em;
+	background-color:#DDD;
+	text-align:center;
+	min-height:50px;
+	margin-bottom:20px;
+	border: 1px solid transparent;
+}
+nav a{
+	display: inline-block;
+	font-size:20px;
+	padding: 14px 16px;
+	color:#041e42;
+	text-align: center;
+	border: hidden;
+	border-radius:1px;
+	text-decoration: none;
+	margin-left:50px;
+	margin-right:50px;
+}
+nav a:hover{
+	background-color:#a99260;
+}
+main{
+	
+}
+main h1{
+	text-align:center;
+}
+
+#contact{
+	text-align:center;
+}
+
+footer{
+	font-family:Times New Roman, serif;
+	font-size:.85em;
+	background-color:#041e42;
+	
+}
+.copy{
+	font-family:Times New Roman, serif;
+	font-size: .85em;
+	text-align:center;
+	position: fixed;
+	left: 50px;
+	right: 50px;
+	bottom:5px;
+}
+.contact{
+	float:left;
+	padding-left:75px;
+}
+.clear{
+	clear:left;
+}
