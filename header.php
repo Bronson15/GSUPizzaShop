@@ -5,10 +5,9 @@
         </header>
 	<nav>
 		<b>
-			<a href="index.html">Home</a>
+			<a href="index.php">Home</a>
 			<a href="pizza.html">Pizza</a>
 			<a href="specials.html">Specials</a>
-			<a href="contact.html">Contact Us</a>
 			<a href="cart.html">Cart</a>
         </b>
     </nav> 
