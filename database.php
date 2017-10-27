@@ -1,5 +1,5 @@
 <?php
-$servername = "aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com:1433";
+$servername = "aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com,1433";
 $username = "admin";
 $password = "password";
 $database = "GSUPizzaShop";
