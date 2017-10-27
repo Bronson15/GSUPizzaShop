@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
-    <title>GSU Pizza Shop::Cart</title>
+    <title>Cart | GSU Pizza Shop</title>
 </head>
 <body>
 	<?php include("header.php");?>
