@@ -1,3 +1,3 @@
 # GSUPizzaShop
 
-https://d4cs32fnurprh.cloudfront.net/
+http://gsupizzashop.us-east-2.elasticbeanstalk.com/
