@@ -22,8 +22,6 @@ else
 	<main>
 		<p>Welcome to GSU pizza shop<p>
 		<p>Check out our best deals under specials</p>
-		
-		<?php include("database.php");?>
 	</main>
 	
 	<?php include("footer.php");?>
