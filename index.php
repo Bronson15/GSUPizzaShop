@@ -22,36 +22,16 @@ else
 	<main>
 		
 		<?php
-			$data_source='Driver={SQL Server Native Client 10.0};Server=aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com:1433;Database=GSUPizzaShop;';
-			$user='admin';
-			$password='password';
-			$conn=odbc_connect("$data_source,$user,$password);
-			if (!$conn){
-			    if (phpversion() < '4.0'){
-			      exit("Connection Failed: . $php_errormsg" );
-			    }
-			    else{
-			      exit("Connection Failed:" . odbc_errormsg() );
-			    }
-			}
+			$dbhost = $_SERVER['RDS_HOSTNAME'];
+			$dbport = $_SERVER['RDS_PORT'];
+			$dbname = $_SERVER['RDS_DB_NAME'];
+			$charset = 'utf8' ;
 
-			// This query generates a result set with one record in it.
-			$sql="SELECT 1 AS test_col";
+			$dsn = "sqlsrv:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+			$username = $_SERVER['RDS_USERNAME'];
+			$password = $_SERVER['RDS_PASSWORD'];
 
-			# Execute the statement.
-			$rs=odbc_exec($conn,$sql);
-
-			// Fetch and display the result set value.
-			if (!$rs){
-			    exit("Error in SQL");
-			}
-			while (odbc_fetch_row($rs)){
-			    $col1=odbc_result($rs, "test_col");
-			    echo "$col1\n";
-			}
-
-			// Disconnect the database from the database handle.
-			odbc_close($conn);
+			$pdo = new PDO($dsn, $username, $password);
 
 		?>
 		<p>Welcome to GSU pizza shop<p>
