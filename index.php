@@ -31,7 +31,6 @@ else
 			# Now let's use the connection for something silly just to prove it works:
 			$result = pg_query($pg_conn, "SELECT * FROM public.'Customer'");
 			print $result;
- 			while ($row = pg_fetch_row($result)) { print("- $row[0]\n");
 			
  
 		?>
