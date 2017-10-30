@@ -35,17 +35,10 @@ else
 			$result = pg_query($pg_conn, "SELECT * FROM public.'Customer'");
  			if (!result) {
 				die("Error in SQL: " . pg_last_error());
+			} else {
+				print $result;
 			}
-			while($row = pg_fetch_array($result)) {
-				echo "CustomerID: " . $row[0] . "<br />";
-				echo "Name: " . $row[1] . "<br />";
-				echo "Age: " . $row[2] . "<br />";
-				echo "ContactNumber: " . $row[3] . "<br />";
-				echo "EmailAddress: " . $row[4] . "<br />";
-				echo "StreetAddress: " . $row[5] . "<br />";
-				echo "username: " . $row[6] . "<br />";
-				echo "passw: " . $row[7] . "<br />";
-			}
+			
  
 		?>
 		<p>Welcome to GSU pizza shop<p>
