@@ -23,7 +23,7 @@ else
 		
 		<?php
 			function pg_connection_string_from_database_url() {
-			  extract(parse_url($_ENV["ec2-54-221-229-64.compute-1.amazonaws.com"]));
+			  extract(parse_url($_ENV["postgres://pkfrgzlctptcwu:4d0970357f0b40e9ecbc28745e8622fb04ed8154598977f5f0f4399f8f1784ad@ec2-54-221-229-64.compute-1.amazonaws.com:5432/daks3ct0559eok"]));
 			  return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 			}
 			# Here we establish the connection. Yes, that's all.
