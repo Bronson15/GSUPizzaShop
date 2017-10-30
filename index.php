@@ -20,6 +20,21 @@ else
 	<?php include("header.php");?>
 	
 	<main>
+		
+		<?php
+
+			$dbhost = $_SERVER['aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com'];
+			$dbport = $_SERVER['1433'];
+			$dbname = $_SERVER['GSUPizzShop'];
+			$charset = 'utf8' ;
+
+			$dsn = "sqlsrv:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+			$username = $_SERVER['admin'];
+			$password = $_SERVER['password'];
+
+			$pdo = new PDO($dsn, $username, $password);
+
+		?>
 		<p>Welcome to GSU pizza shop<p>
 		<p>Check out our best deals under specials</p>
 	</main>
