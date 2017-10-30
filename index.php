@@ -25,7 +25,7 @@ else
 
 			$dbhost = $_SERVER['aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com'];
 			$dbport = $_SERVER['1433'];
-			$dbname = $_SERVER['GSUPizzShop'];
+			$dbname = $_SERVER['GSUPizzaShop'];
 			$charset = 'utf8' ;
 
 			$dsn = "sqlsrv:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
