@@ -29,7 +29,7 @@ else
 			# Here we establish the connection. Yes, that's all.
 			$pg_conn = pg_connect(pg_connection_string_from_database_url());
 			# Now let's use the connection for something silly just to prove it works:
-			$result = pg_query($pg_conn, "SELECT * FROM 'public'.Customer");
+			$result = pg_query($pg_conn, "SELECT * FROM public.'Customer'");
 			print $result;
 			
  
