@@ -30,7 +30,7 @@ else
 			$pg_conn = pg_connect(pg_connection_string_from_database_url()) or die("Error in connection: " . pg_last_error());
 			# Now let's use the connection for something silly just to prove it works:
 			$result = pg_query($pg_conn, "SELECT * FROM customer") or die("Error in SQL: " . pg_last_error());
-			print $result;
+			while ($row = pg_fetch_row($result)) { print("- $row[0]\n");
 			
  
 		?>
