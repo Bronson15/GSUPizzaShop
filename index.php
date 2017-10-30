@@ -36,7 +36,7 @@ else
  			if (!result) {
 				die("Error in SQL: " . pg_last_error());
 			} else {
-				print $result;
+				echo "It should be working";
 			}
 			
  
