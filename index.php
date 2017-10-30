@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 }
 else
 {
+	dl('php_pdo_sqlsrv_7_ts.dll');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,14 +23,14 @@ else
 	<main>
 		
 		<?php
-			$dbhost = $_SERVER['RDS_HOSTNAME'];
-			$dbport = $_SERVER['RDS_PORT'];
-			$dbname = $_SERVER['RDS_DB_NAME'];
+			$dbhost = $_SERVER[''];
+			$dbport = $_SERVER['1433'];
+			$dbname = $_SERVER['GSUPizzaShop'];
 			$charset = 'utf8' ;
 
 			$dsn = "sqlsrv:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-			$username = $_SERVER['RDS_USERNAME'];
-			$password = $_SERVER['RDS_PASSWORD'];
+			$username = $_SERVER['admin'];
+			$password = $_SERVER['password'];
 
 			$pdo = new PDO($dsn, $username, $password);
 
