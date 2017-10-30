@@ -22,7 +22,7 @@ else
 	<main>
 		
 		<?php
-			$dbhost = $_SERVER[''];
+			$dbhost = $_SERVER['aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com:1433'];
 			$dbport = $_SERVER['1433'];
 			$dbname = $_SERVER['GSUPizzaShop'];
 			$charset = 'utf8' ;
