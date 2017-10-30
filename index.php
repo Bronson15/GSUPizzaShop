@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 }
 else
 {
-	dl('php_pdo_sqlsrv_7_ts.dll');
 ?>
 <!DOCTYPE html>
 <html lang="en">
