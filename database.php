@@ -1,14 +1,9 @@
 <?php
-$servername = "aa17n6gzzuklrjm.ceko05wsajde.us-east-2.rds.amazonaws.com,1433";
-$username = "admin";
-$password = "password";
-$database = "GSUPizzaShop";
-
-$conn = new mysqli($servername, $username, $password);
-if($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
-
-echo "Connected";
+	function pg_connection_string_from_database_url() {
+	  extract(parse_url($_ENV["DATABASE_URL"]));
+	  return "user=$user password=$pass host=$host dbname=" . substr($path, 1);
+	}
+	
+	$pg_conn = pg_connect(pg_connection_string_from_database_url()) or die("Error in connection: " . pg_last_error());
 
 ?>
