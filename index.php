@@ -17,7 +17,3 @@ include("database.php");
 		?>
 	</div>
 	<?php include("footer.php");?>
-
-<?php
-}
-?>
