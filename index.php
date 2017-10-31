@@ -15,7 +15,7 @@ include("database.php");
 		<?php
 			$result = pg_query($pg_conn, "SELECT * FROM customer") or die("Error in SQL: " . pg_last_error());
 		 	$i = 0;
-			echo 'table><tr>';
+			echo '<table><tr>';
 			while ($i < pg_num_fields($result))
 			{
 				$fieldName = pg_field_name($result, $i);
