@@ -1,7 +1,14 @@
-<?php echo '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/css/style.css">
+    <title>Home | GSU Pizza Shop</title>
+</head>
+<body>
 <div id="wrapper">
         <header>
-			<h1><img src="logo.jpg" alt="GSU Logo"></h1>
+			<h1><img src="/img/logo.jpg" alt="GSU Logo"></h1>
         </header>
 	<nav>
 		<b>
@@ -12,5 +19,4 @@
         </b>
     </nav> 
 	
-</div> ';
-?>
+</div> 
