@@ -8,7 +8,7 @@
 <body>
 <div id="wrapper">
         <header>
-			<h1><img src="/img/logo.jpg" alt="GSU Logo"></h1>
+		<h1><a href="index.html"><img src="/img/logo.jpg" alt="GSU Logo"></a></h1>
         </header>
 	<nav>
 		<b>
