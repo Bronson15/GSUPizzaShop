@@ -18,7 +18,10 @@
 * Commit changes. When creating commit message be sure to use present tense (i.e. "adding new image to pizza.php")
 
 ### Step 6:
-* Create pull-request for your branch
+* Create pull request for your branch
 
 ### Step 7:
-* Text Bronson to approve pull-request
+* Text Bronson to approve pull-request 
+
+
+* Text Bronson if you have any questions or get confused *
