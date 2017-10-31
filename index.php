@@ -11,7 +11,7 @@ include("database.php");
 		</main>
 	</div>
 	
-	<div id="database-testing>
+	<div id="database-testing">
 		<?php
 			$result = pg_query($pg_conn, "SELECT * FROM customer") or die("Error in SQL: " . pg_last_error());
 		 	$i = 0;
