@@ -42,7 +42,7 @@ include("database.php");
 			}
 			pg_free_result($result);
 
-			echo '</table>
+			echo '</table>';
 		?>
 	</div>
 	<?php include("footer.php");?>
