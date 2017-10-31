@@ -24,4 +24,4 @@
 * Text Bronson to approve pull-request 
 
 
-* Text Bronson if you have any questions or get confused *
+*Text Bronson if you have any questions or get confused*
