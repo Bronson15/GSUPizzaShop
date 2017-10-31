@@ -14,6 +14,8 @@ include("database.php");
 	<div id="database-testing>
 		<?php
 			$result = pg_query($pg_conn, "SELECT * FROM customer") or die("Error in SQL: " . pg_last_error());
+		 	$arr = pg_fetch_all($result);
+			print_r($arr);
 		?>
 	</div>
 	<?php include("footer.php");?>
