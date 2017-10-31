@@ -8,14 +8,14 @@
 <body>
 <div id="wrapper">
         <header>
-		<h1><a href="index.php"><img src="/img/logo.jpg" alt="GSU Logo"></a></h1>
+		<h1><a href="/"><img src="/img/logo.jpg" alt="GSU Logo"></a></h1>
         </header>
 	<nav>
 		<b>
-			<a href="index.php">Home</a>
-			<a href="pizza.php">Pizza</a>
-			<a href="specials.php">Specials</a>
-			<a href="cart.php">Cart</a>
+			<a href="/">Home</a>
+			<a href="/pizza.php">Pizza</a>
+			<a href="/specials.php">Specials</a>
+			<a href="/cart.php">Cart</a>
         </b>
     </nav> 
 	
