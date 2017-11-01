@@ -1,7 +1,7 @@
 <?php 
 
 include("header.php");
-include("database.php");
+
 ?>
 	
 	<div id="index-body-text">		
