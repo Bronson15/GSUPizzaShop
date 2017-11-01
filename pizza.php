@@ -9,7 +9,7 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE 'ProductID' = 7;") or die("Error in SQL: " . pg_last_error());
+				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 								echo $result; ?>
 				</p>
 				<select name="Size" style="width:200px">
