@@ -9,7 +9,7 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; 
 								echo $price ?>
@@ -46,7 +46,7 @@
 				<td><b>Pepperoni</b>
 				<form action="cart.php">
 				<p>
-				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
+				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; 
 								echo $price ?>
@@ -87,7 +87,7 @@
 				<td><b>Meat Lovers</b>
 				<form action="cart.php">
 				<p>
-				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
+				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; 
 								echo $price ?>
@@ -159,7 +159,7 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 22;") or die("Error in SQL: " . pg_last_error());
+				<p>Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 22;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; 
 								echo $price ?></p>
