@@ -46,7 +46,10 @@
 				<td><b>Pepperoni</b>
 				<form action="cart.php">
 				<p>
-				PRICE
+				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; 
+								echo $price ?>
 				</p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
@@ -84,7 +87,10 @@
 				<td><b>Meat Lovers</b>
 				<form action="cart.php">
 				<p>
-				PRICE
+				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; 
+								echo $price ?>
 				</p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
@@ -118,7 +124,7 @@
 				<td><b>Combo</b>
 				<form action="cart.php">
 				<p>
-				PRICE
+				Price: this pizza doesn't exist in the DB
 				</p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
@@ -153,7 +159,10 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>$9.95</p>
+				<p>Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 22;") or die("Error in SQL: " . pg_last_error());
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; 
+								echo $price ?></p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
