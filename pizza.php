@@ -10,8 +10,9 @@
 				<form action="cart.php">
 				<p>
 				Price: <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-								$array = pg_fetch_all($result);
-								print_r($array);?>
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; 
+								echo $price ?>
 				</p>
 				<select name="Size" style="width:200px">
 					<option value="small">Small</option>
