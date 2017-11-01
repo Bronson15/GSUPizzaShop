@@ -9,14 +9,16 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
+				Price: $<?php 
 								echo $price ?>
 				</p>
 				<select name="Size" style="width:200px">
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
+					<option value="small">Small <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; ?></option>
+					<option value="medium">Medium <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+								$row = pg_fetch_assoc($result);
+								$price = $row['price']; ?></option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
