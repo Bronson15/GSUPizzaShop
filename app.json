@@ -1,9 +1,7 @@
 {
   "name": "GSUPizzaShop",
   "scripts": {
-    "pg":"backups capture --app PRODUCTION"
-    "pg":"backups restore"
-    "pg":"backups public-url --app PRODUCTION DATABASE_URL --app REVIEW"
+    "postdeploy": "bundle exec rake db:migrate; bundle exec rake db:seed"
   },
   "env": {
     "DATABASE_URL": {
