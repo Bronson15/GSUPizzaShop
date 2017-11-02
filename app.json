@@ -1,7 +1,8 @@
 {
   "name": "GSUPizzaShop",
   "scripts": {
-    "postdeploy": "pg_dump $DATABASE_URL | psql $REVIEW_APP_DATABASE_URL && bundle exec rake db:migrate"
+    "pg":"backups capture --app PRODUCTION"
+    "pg":"backups restore heroku pg:backups public-url --app PRODUCTION DATABASE_URL --app REVIEW"
   },
   "env": {
     "DATABASE_URL": {
