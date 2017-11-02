@@ -1,8 +1,15 @@
 {
   "name": "GSUPizzaShop",
   "scripts": {
+    "postdeploy": "pg_dump $DATABASE_URL | psql $REVIEW_APP_DATABASE_URL && bundle exec rake db:migrate"
   },
   "env": {
+    "STAGING_DATABASE_URL": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
   },
   "formation": {
   },
