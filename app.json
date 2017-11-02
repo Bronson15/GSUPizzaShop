@@ -2,7 +2,8 @@
   "name": "GSUPizzaShop",
   "scripts": {
     "pg":"backups capture --app PRODUCTION"
-    "pg":"backups restore heroku pg:backups public-url --app PRODUCTION DATABASE_URL --app REVIEW"
+    "pg":"backups restore"
+    "pg":"backups public-url --app PRODUCTION DATABASE_URL --app REVIEW"
   },
   "env": {
     "DATABASE_URL": {
