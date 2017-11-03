@@ -27,6 +27,7 @@
 						$.ajax({
 						  type: "POST",
 						  data: { price: price },
+						  dataType: "json",
 						  url: "process_ajax.php",
 						  success: function(json) {
 							insertResults(json);
