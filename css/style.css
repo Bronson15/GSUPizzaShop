@@ -76,16 +76,8 @@ footer{
 	font-family:Times New Roman, serif;
 	font-size:.85em;
 	background-color:#041e42;
+	text-align: center;
 	
-}
-.copy{
-	font-family:Times New Roman, serif;
-	font-size: .85em;
-	text-align:center;
-	position: fixed;
-	left: 50px;
-	right: 50px;
-	bottom:5px;
 }
 .contact{
 	float:left;
