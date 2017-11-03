@@ -5,7 +5,7 @@
 			Phone:(912)-555-5555<br>
 			Address: 123 Chandler Rd<br>
 			Statesboro, GA 30458<br><br>
-	</div>
+	</div><br>
 	<div class="copy">
 		Copyright &copy; 2017 GSU Pizza Shop
 	</div>

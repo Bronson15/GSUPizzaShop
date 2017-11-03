@@ -75,9 +75,9 @@ main h1{
 footer{
 	font-family:Times New Roman, serif;
 	font-size:.85em;
-	background-color:#041e42;
+	/*background-color:#041e42;*/
 	text-align: center;
-	
+	margin: 0 auto;
 }
 .contact{
 	float:left;
