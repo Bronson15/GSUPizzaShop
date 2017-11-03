@@ -47,6 +47,34 @@
 							document.getElementById("price").innerHTML = price;
 						}
 						
+						if(object.id == "pepSize") {
+							quantity = document.getElementById("pepQuantity").value;
+							if(object.value == "small") price = <?php echo $smallPep; ?>;
+							if(object.value == "medium") price = <?php echo $medPep; ?>;
+							if(object.value == "large") price = <?php echo $largePep; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						if(object.id == "meatSize") {
+							quantity = document.getElementById("meatQuantity").value;
+							if(object.value == "small") price = <?php echo $smallMeat; ?>;
+							if(object.value == "medium") price = <?php echo $medMeat; ?>;
+							if(object.value == "large") price = <?php echo $largeMeat; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						if(object.id == "supSize") {
+							quantity = document.getElementById("supQuantity").value;
+							if(object.value == "small") price = <?php echo $smallSup; ?>;
+							if(object.value == "medium") price = <?php echo $medSup; ?>;
+							if(object.value == "large") price = <?php echo $largeSup; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						
 						
 					}
 				</script>
@@ -78,10 +106,7 @@
 				<td><b>Pepperoni</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?>
+				<div id="pepPrice">Price: </div>
 				</p>
 				<select id="pepSize" style="width: 200px">
 					<option value="small">Small</option>
@@ -119,10 +144,7 @@
 				<td><b>Meat Lovers</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?>
+				<div id="meatPrice">Price: </div>
 				</p>
 				<select id="meatSize" style="width: 200px">
 					<option value="small">Small</option>
@@ -136,7 +158,7 @@
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select id="meatQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -153,24 +175,24 @@
 				</p>
 
 				</td>
-				<td><b>Combo</b>
+				<td><b>Supreme</b>
 				<form action="cart.php">
 				<p>
-				Price: this pizza doesn't exist in the DB
+				<div id="supPrice">Price: </div>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="supSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="Style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity">
+				<select id="supQuantity">
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -191,10 +213,8 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 22;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?></p>
+				<p>Price: $
+				</p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
