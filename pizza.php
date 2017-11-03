@@ -33,7 +33,7 @@
 					} else if (selected == "#medium") {
 						$("#price").html(" " + $medCheese);
 					} else {
-						$("#price").html(" " + $largeCheese);\
+						$("#price").html(" " + $largeCheese);
 					}
 				  });
 				</script>
