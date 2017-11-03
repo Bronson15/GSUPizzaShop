@@ -23,25 +23,14 @@
 					<option value="Large">Large</option>
 				</select>
 				
-				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-				<script>
-				  $("#size").on("change", function(){
-					var selected = $(this).val();
-					
-					if (selected == "#small") {
-						$("#price").html(" " + $smallCheese);
-					} else if (selected == "#medium") {
-						$("#price").html(" " + $medCheese);
-					} else {
-						$("#price").html(" " + $largeCheese);
-					}
-				  });
-				</script>
-				
 				<script>
 					function changePrice(){
-						var smallPrice = "<?php echo $price; ?>";
-						document.getElementById("price").innerHTML = smallPrice;
+						var selector = document.getElementById("price");
+						var smallPrice = "<?php echo $smallCheese; ?>";
+						var medPrice = "<?php echo $medCheese; ?>";
+						var largePrice = "<?php echo $largeCheese; ?>";
+						alert(selector.value);
+						selector.innerHTML = smallPrice;
 					}
 				</script>
 					
