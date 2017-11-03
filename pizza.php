@@ -36,10 +36,11 @@
 				<script>
 					function changePrice(){
 						var selector = document.getElementById("size");
+						var quantity = document.getElementById("cheeseQuantity").value;
 						if(selector.value == "small") price = "<?php echo $smallCheese; ?>";
 						if(selector.value == "medium") price = "<?php echo $medCheese; ?>";
 						if(selector.value == "large") price = "<?php echo $largeCheese; ?>";
-						price = "Price: $" + price;
+						price = "Price: $" + (price*quantity);
 						document.getElementById("price").innerHTML = price;
 					}
 				</script>
@@ -51,7 +52,7 @@
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select onchange="changePrice();" id="cheeseQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
