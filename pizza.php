@@ -9,10 +9,11 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php 
-								echo $price ?>
-				</p>
-				<select name="Size" style="width:200px">
+				<div id="price"></div>
+				
+				
+					
+				<select name="size" style="width:200px">
 					<option value="small">Small <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; ?></option>
@@ -21,6 +22,15 @@
 								$price = $row['price']; ?></option>
 					<option value="Large">Large</option>
 				</select>
+				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				<script>
+					$("#size".on("change", function() {
+						var selected = $(this).val();
+						$("#price").html("Price: " + selected);
+					}
+				</script>
+					
 				<p>
 				<select name="Style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
