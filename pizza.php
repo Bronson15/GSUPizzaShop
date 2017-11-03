@@ -1,8 +1,7 @@
-<?php include("header.php");?>
-
-<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; ?>
+<?php 
+	include("header.php");
+	include("pizza-data.php");
+?>
 
 <main>
 	<p>Welcome to GSU pizza shop<p>
@@ -10,17 +9,11 @@
 </main>
 <div id="pizza-table">
 	<table>
-		<script>
-			function changePrice(){
-				var smallPrice = "<?php echo $price; ?>";
-				document.getElementById("price").innerHTML = smallPrice;
-			}
-		</script>
 			<tr>
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				<div id="price"></div>
+				<div id="price">Price: </div>
 				
 				
 					
@@ -30,7 +23,27 @@
 					<option value="Large">Large</option>
 				</select>
 				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				<script>
+				  $("#size").on("change", function(){
+					var selected = $(this).val();
+					
+					if (selected == "#small") {
+						$("#price").html(" " + $smallCheese);
+					} else if (selected == "#medium") {
+						$("#price").html(" " + $medCheese);
+					} else {
+						$("#price").html(" " + $largeCheese);\
+					}
+				  });
+				</script>
 				
+				<script>
+					function changePrice(){
+						var smallPrice = "<?php echo $price; ?>";
+						document.getElementById("price").innerHTML = smallPrice;
+					}
+				</script>
 					
 				<p>
 				<select name="Style" style="width: 200px">
