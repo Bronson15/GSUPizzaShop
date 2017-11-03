@@ -13,7 +13,7 @@
 				
 				
 					
-				<select name="size" style="width:200px">
+				<select id="size" style="width:200px">
 					<option value="small">Small <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; ?></option>
