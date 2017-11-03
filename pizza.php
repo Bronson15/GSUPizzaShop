@@ -42,8 +42,11 @@
 							if(selector.value == "small") price = <?php echo $smallCheese; ?>;
 							if(selector.value == "medium") price = <?php echo $medCheese; ?>;
 							if(selector.value == "large") price = <?php echo $largeCheese; ?>;
-							price.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
 						}
+						
+						
 					}
 				</script>
 					
@@ -55,6 +58,7 @@
 				</p>
 				<p>
 				<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
+					<option value="" disabled selected>Select Size</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
