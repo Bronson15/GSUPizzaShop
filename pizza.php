@@ -35,12 +35,12 @@ $largeCheese = $row['price'];
 				
 				<script>
 					function changePrice(){
-						var selector = document.getElementById("price");
-						var smallPrice = "<?php echo $smallCheese; ?>";
-						var medPrice = "<?php echo $medCheese; ?>";
-						var largePrice = "<?php echo $largeCheese; ?>";
+						var selector = document.getElementById("size");
+						var smallPrice = "Price: <?php echo $smallCheese; ?>";
+						var medPrice = "Price: <?php echo $medCheese; ?>";
+						var largePrice = "Price: <?php echo $largeCheese; ?>";
 						alert(selector.value);
-						selector.innerHTML = smallPrice;
+						document.getElementById("price").innerHTML = smallPrice;
 					}
 				</script>
 					
