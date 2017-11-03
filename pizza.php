@@ -27,21 +27,23 @@
 				
 				
 					
-				<select onchange="changePrice();" id="size" style="width:200px">
+				<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium </option>
 					<option value="large">Large</option>
 				</select>
 				
 				<script>
-					function changePrice(){
-						var selector = document.getElementById("size");
-						var quantity = document.getElementById("cheeseQuantity").value;
-						if(selector.value == "small") price = <?php echo $smallCheese; ?>;
-						if(selector.value == "medium") price = <?php echo $medCheese; ?>;
-						if(selector.value == "large") price = <?php echo $largeCheese; ?>;
-						price = "Price: $" + (price*quantity).toFixed(2);
-						document.getElementById("price").innerHTML = price;
+					function changePrice(object){
+						var price = document.getElementById("price");
+						var quantity;
+						if(object.id == "cheeseSize") {
+							quantity = document.getElementById("cheeseQuantity").value;
+							if(selector.value == "small") price = <?php echo $smallCheese; ?>;
+							if(selector.value == "medium") price = <?php echo $medCheese; ?>;
+							if(selector.value == "large") price = <?php echo $largeCheese; ?>;
+							price.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+						}
 					}
 				</script>
 					
@@ -52,7 +54,7 @@
 				</select>
 				</p>
 				<p>
-				<select onchange="changePrice();" id="cheeseQuantity" >
+				<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -77,19 +79,19 @@
 								$price = $row['price']; 
 								echo $price ?>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="pepSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select id="pepQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -118,13 +120,13 @@
 								$price = $row['price']; 
 								echo $price ?>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="meatSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
