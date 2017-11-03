@@ -3,8 +3,8 @@
 <main>
 	<p>The Best Deals in Town: ALL DAY, EVERYDAY</p>
 	<p>***CARRY OUT ONLY***</p>
-	<form action="cart.php>
-	<img src= "/img/pizzapizza.jpg" alt="Pizza">
+	<form action="cart.php">
+	<img src="/img/pizzapizza.jpg" alt="Pizza">
     <button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
 	</form>
 	<form action="cart.php">		
