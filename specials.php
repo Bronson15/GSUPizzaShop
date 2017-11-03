@@ -23,13 +23,13 @@
 	</form>
 	<form action="cart.php" >
 	<fieldset>
-	<img src= "/img/3Tpizza.jifi" alt="MPizza">
+	<img src= "/img/3Tpizza.jifi" alt="3TPizza">
 	<button type="add" onclick="cart.php" >Large 3 topping Pizza for $7.00</button>
 	</fieldset>
 	</form>
 	<form action="cart.php" >
 	<fieldset>
-	<img src= "/img/Mpizza.jifi" alt="MPizza">
+	<img src= "/img/Mpizza.jifi" alt="MedPizza">
 	<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
 	</fieldset>
 	</form>
