@@ -1,7 +1,7 @@
 # GSUPizzaShop
 
 ## Test Site
-https://gsupizzashop-pr-[REPLACE WITH PR NUMBER].herokuapp.com/
+https://gsupizzashop-pr-[REPLACE-WITH-PR-NUMBER].herokuapp.com/
 
 ## How to use GitHub on this project
 
