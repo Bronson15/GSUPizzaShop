@@ -1,8 +1,8 @@
 <?php include("header.php");?>
 <div id="specials">
 <main>
-	<p><font color ="Gold">The Best Deals in Town: ALL DAY, EVERYDAY</font></p>
-	<p><font color ="Gold">***CARRY OUT ONLY***</font></p>
+	<p><strong><font size = "4">The Best Deals in Town: ALL DAY, EVERYDAY</font></strong></p>
+	<p>***CARRY OUT ONLY***</p>
 	<form action="cart.php" style="background-color:#041e42">
 	<fieldset>
 	<img src="/img/pizzapizza.jpg" alt="Pizza">
