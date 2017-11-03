@@ -37,16 +37,16 @@
 					function changePrice(){
 						var selector = document.getElementById("size");
 						var quantity = document.getElementById("cheeseQuantity").value;
-						if(selector.value == "small") price = "<?php echo $smallCheese; ?>";
-						if(selector.value == "medium") price = "<?php echo $medCheese; ?>";
-						if(selector.value == "large") price = "<?php echo $largeCheese; ?>";
-						price = "Price: $" + (price*quantity);
+						if(selector.value == "small") price = <?php echo $smallCheese; ?>;
+						if(selector.value == "medium") price = <?php echo $medCheese; ?>;
+						if(selector.value == "large") price = <?php echo $largeCheese; ?>;
+						price = "Price: $" + (price*quantity).toFixed(2);
 						document.getElementById("price").innerHTML = price;
 					}
 				</script>
 					
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
