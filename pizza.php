@@ -28,7 +28,7 @@
 					$("#size".on("change", function() {
 						var selected = $(this).val();
 						$("#price").html("Price: " + selected);
-					}
+					})
 				</script>
 					
 				<p>
