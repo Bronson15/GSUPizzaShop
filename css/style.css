@@ -78,6 +78,7 @@ footer{
 	/*background-color:#041e42;*/
 	text-align: center;
 	margin: 0 auto;
+	padding-top: 20px;
 }
 .clear{
 	clear:left;
