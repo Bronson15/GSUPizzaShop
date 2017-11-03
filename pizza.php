@@ -1,4 +1,18 @@
-<?php include("header.php");?>
+<?php 
+	include("header.php");
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$smallCheese = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$medCheese = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$largeCheese = $row['price']; 
+?>
+
 <main>
 	<p>Welcome to GSU pizza shop<p>
 	<p>Check out our best deals under specials</p>
@@ -9,26 +23,70 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php 
-								echo $price ?>
-				</p>
-				<select name="Size" style="width:200px">
-					<option value="small">Small <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; ?></option>
-					<option value="medium">Medium <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; ?></option>
-					<option value="Large">Large</option>
+				<div id="price">Price: </div>
+				
+				
+					
+				<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
+					<option value="" disabled selected>Select Size</option>
+					<option value="small">Small</option>
+					<option value="medium">Medium </option>
+					<option value="large">Large</option>
 				</select>
+				
+				<script>
+					function changePrice(object){
+						var price = document.getElementById("price");
+						var quantity;
+						if(object.id == "cheeseSize") {
+							quantity = document.getElementById("cheeseQuantity").value;
+							if(object.value == "small") price = <?php echo $smallCheese; ?>;
+							if(object.value == "medium") price = <?php echo $medCheese; ?>;
+							if(object.value == "large") price = <?php echo $largeCheese; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						if(object.id == "pepSize") {
+							quantity = document.getElementById("pepQuantity").value;
+							if(object.value == "small") price = <?php echo $smallPep; ?>;
+							if(object.value == "medium") price = <?php echo $medPep; ?>;
+							if(object.value == "large") price = <?php echo $largePep; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						if(object.id == "meatSize") {
+							quantity = document.getElementById("meatQuantity").value;
+							if(object.value == "small") price = <?php echo $smallMeat; ?>;
+							if(object.value == "medium") price = <?php echo $medMeat; ?>;
+							if(object.value == "large") price = <?php echo $largeMeat; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						if(object.id == "supSize") {
+							quantity = document.getElementById("supQuantity").value;
+							if(object.value == "small") price = <?php echo $smallSup; ?>;
+							if(object.value == "medium") price = <?php echo $medSup; ?>;
+							if(object.value == "large") price = <?php echo $largeSup; ?>;
+							price = "Price: $" + (price*quantity).toFixed(2);
+							document.getElementById("price").innerHTML = price;
+						}
+						
+						
+						
+					}
+				</script>
+					
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -48,24 +106,21 @@
 				<td><b>Pepperoni</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?>
+				<div id="pepPrice">Price: </div>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="pepSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select id="pepQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -89,24 +144,21 @@
 				<td><b>Meat Lovers</b>
 				<form action="cart.php">
 				<p>
-				Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?>
+				<div id="meatPrice">Price: </div>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="meatSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity" >
+				<select id="meatQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -123,24 +175,24 @@
 				</p>
 
 				</td>
-				<td><b>Combo</b>
+				<td><b>Supreme</b>
 				<form action="cart.php">
 				<p>
-				Price: this pizza doesn't exist in the DB
+				<div id="supPrice">Price: </div>
 				</p>
-				<select name="Size" style="width: 200px">
+				<select id="supSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="Large">Large</option>
 				</select>
 				<p>
-				<select name="Style" style="width: 200px">
+				<select id="Style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
 				</p>
 				<p>
-				<select name="Quantity">
+				<select id="supQuantity">
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -161,10 +213,8 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>Price: $<?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 22;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; 
-								echo $price ?></p>
+				<p>Price: $
+				</p>
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
