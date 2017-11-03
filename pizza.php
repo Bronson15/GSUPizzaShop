@@ -14,9 +14,7 @@
 				
 					
 				<select id="size" style="width:200px">
-					<option value="small">Small <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-								$row = pg_fetch_assoc($result);
-								$price = $row['price']; ?></option>
+					<option value="small">Small</option>
 					<option value="medium">Medium <?php $result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
 								$row = pg_fetch_assoc($result);
 								$price = $row['price']; ?></option>
@@ -25,9 +23,22 @@
 				
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 				<script>
+					function makeAjaxRequest(opts){
+						$.ajax({
+						  type: "POST",
+						  data: { price: price },
+						  url: "process_ajax.php",
+						  success: function(json) {
+							insertResults(json);
+						  }
+						});
+					}
+					function insertResults(json){
+						$("#price").val(json["price"]);
+					}
 					$("#size").on("change", function() {
 						var selected = $(this).val();
-						$("#price").html("Price: " + selected);
+						makeAjaxRequest(selected);
 					})
 				</script>
 					
