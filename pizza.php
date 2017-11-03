@@ -24,7 +24,7 @@
 				
 				
 					
-				<select id="size" style="width:200px">
+				<select onchange="changePrice();" id="size" style="width:200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium </option>
 					<option value="Large">Large</option>
