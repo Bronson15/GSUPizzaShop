@@ -36,10 +36,17 @@
 					function insertResults(json){
 						$("#price").val(json["price"]);
 					}
+					function clearForm(){
+						$("#price").val("");
+					}
 					$("#size").on("change", function() {
 						var selected = $(this).val();
-						makeAjaxRequest(selected);
-					})
+						if (selected == "0"){
+							clearForm();
+						} else {
+							makeAjaxRequest(selected);
+						}
+					});
 				</script>
 					
 				<p>
