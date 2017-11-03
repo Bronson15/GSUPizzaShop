@@ -56,6 +56,12 @@ main h1{
 	width: 500px;
 	height: 300px;
 }
+#specials button{
+	background-color:#a99260;
+}
+#specials form{
+	background-color:#041e42;
+}
 
 #pizza-table th, td {
     border: 1px solid black;
