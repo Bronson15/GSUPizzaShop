@@ -1,16 +1,16 @@
 <?php 
 	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-$row = pg_fetch_assoc($result);
-$smallCheese = $row['price']; 
+	$row = pg_fetch_assoc($result);
+	$smallCheese = $row['price']; 
 
-$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
-$row = pg_fetch_assoc($result);
-$medCheese = $row['price']; 
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$medCheese = $row['price']; 
 
-$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
-$row = pg_fetch_assoc($result);
-$largeCheese = $row['price']; 
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$largeCheese = $row['price']; 
 ?>
 
 <main>
@@ -30,17 +30,17 @@ $largeCheese = $row['price'];
 				<select onchange="changePrice();" id="size" style="width:200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium </option>
-					<option value="Large">Large</option>
+					<option value="large">Large</option>
 				</select>
 				
 				<script>
 					function changePrice(){
 						var selector = document.getElementById("size");
-						var smallPrice = "Price: <?php echo $smallCheese; ?>";
-						var medPrice = "Price: <?php echo $medCheese; ?>";
-						var largePrice = "Price: <?php echo $largeCheese; ?>";
-						alert(selector.value);
-						document.getElementById("price").innerHTML = smallPrice;
+						if(selector.value == "small") price = "<?php echo $smallCheese; ?>";
+						if(selector.value == "medium") price = "<?php echo $medCheese; ?>";
+						if(selector.value == "large") price = "<?php echo $largeCheese; ?>";
+						price = "Price: $" + price;
+						document.getElementById("price").innerHTML = price;
 					}
 				</script>
 					
