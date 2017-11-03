@@ -21,6 +21,18 @@
 	<button type="add" onclick="cart.php" >Large Meat Lovers Pizza for $12.99</button>
 	</fieldset>
 	</form>
+	<form action="cart.php" >
+	<fieldset>
+	<img src= "/img/3Tpizza.jifi" alt="MPizza">
+	<button type="add" onclick="cart.php" >Large 3 topping Pizza for $7.00</button>
+	</fieldset>
+	</form>
+	<form action="cart.php" >
+	<fieldset>
+	<img src= "/img/Mpizza.jifi" alt="MPizza">
+	<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
+	</fieldset>
+	</form>
 </main>
 </div>
 <?php include("footer.php");?>
