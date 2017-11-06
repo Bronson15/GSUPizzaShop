@@ -97,3 +97,7 @@ footer{
 #specials-form {
 	text-align: center;
 }
+
+#specials-form fieldset {
+	width: 50%;
+}
