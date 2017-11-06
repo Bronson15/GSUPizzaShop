@@ -143,6 +143,7 @@
 				<div id="pepPrice">Price: </div>
 				</p>
 				<select onchange="changePrice(this);" id="pepSize" style="width: 200px">
+					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
@@ -181,6 +182,7 @@
 				<div id="meatPrice">Price: </div>
 				</p>
 				<select onchange="changePrice(this);" id="meatSize" style="width: 200px">
+					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
@@ -215,6 +217,7 @@
 				<div id="supPrice">Price: </div>
 				</p>
 				<select onchange="changePrice(this);" id="supSize" style="width: 200px">
+					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
@@ -250,6 +253,7 @@
 				<p>Price: $
 				</p>
 				<select name="Size" style="width: 200px">
+					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
