@@ -1,5 +1,14 @@
 # GSUPizzaShop
 
+## Test Site
+### Step 1:
+* Create a pull request to replace the test branch with your current branch
+
+### Step 2:
+* Go to the link below to see changes
+
+https://gsupizzashop-pr-[REPLACE-WITH-PR-NUMBER].herokuapp.com/
+
 ## How to use GitHub on this project
 
 ### Step 1:
