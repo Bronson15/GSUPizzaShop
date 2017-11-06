@@ -89,3 +89,7 @@ footer{
 .clear{
 	clear:left;
 }
+
+#specials-1 {
+	float: left;
+}

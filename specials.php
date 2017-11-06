@@ -3,18 +3,21 @@
 <main>
 	<p><strong><font size = "4">The Best Deals in Town: ALL DAY, EVERYDAY</font></strong></p>
 	<p>***CARRY OUT ONLY***</p>
-	<form action="cart.php" >
-	<fieldset>
-	<img src="/img/pizzapizza.jpg" alt="Pizza">
-    <button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
-	</fieldset>
-	</form>
-	<form action="cart.php" >	
-    <fieldset>	
-	<img src= "/img/cheese.jpg" alt="CPizza">
-	<button type="add" onclick="cart.php" >Two Large Cheese Pizzas for $9.99</button>	
-	</fieldset>
-	</form>
+	
+	<div id="specials-1">
+		<form action="cart.php" >
+			<fieldset>
+				<img src="/img/pizzapizza.jpg" alt="Pizza">
+				<button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
+			</fieldset>
+		</form>
+		<form action="cart.php" >	
+			<fieldset>	
+			<img src= "/img/cheese.jpg" alt="CPizza">
+			<button type="add" onclick="cart.php" >Two Large Cheese Pizzas for $9.99</button>	
+			</fieldset>
+		</form>
+	</div>	
 	<form action="cart.php" >
 	<fieldset>
 	<img src= "/img/meat.jpg" alt="MPizza">
