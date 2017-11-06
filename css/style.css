@@ -75,21 +75,10 @@ main h1{
 footer{
 	font-family:Times New Roman, serif;
 	font-size:.85em;
-	background-color:#041e42;
-	
-}
-.copy{
-	font-family:Times New Roman, serif;
-	font-size: .85em;
-	text-align:center;
-	position: fixed;
-	left: 50px;
-	right: 50px;
-	bottom:5px;
-}
-.contact{
-	float:left;
-	padding-left:75px;
+	/*background-color:#041e42;*/
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
 }
 .clear{
 	clear:left;
