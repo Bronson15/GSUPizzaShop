@@ -11,6 +11,45 @@
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeCheese = $row['price']; 
+	
+	include("header.php");
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$smallPep = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$medPep = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$largePep = $row['price'];
+	
+	include("header.php");
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$smallMeat = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$medMeat = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$largeMeat = $row['price'];
+	
+	include("header.php");
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$smallSup = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$medSup = $row['price']; 
+
+	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
+	$row = pg_fetch_assoc($result);
+	$largeSup = $row['price'];
 ?>
 
 <main>
