@@ -12,7 +12,6 @@
 	$row = pg_fetch_assoc($result);
 	$largeCheese = $row['price']; 
 	
-	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$smallPep = $row['price']; 
@@ -25,7 +24,6 @@
 	$row = pg_fetch_assoc($result);
 	$largePep = $row['price'];
 	
-	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$smallMeat = $row['price']; 
@@ -38,7 +36,6 @@
 	$row = pg_fetch_assoc($result);
 	$largeMeat = $row['price'];
 	
-	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$smallSup = $row['price']; 
