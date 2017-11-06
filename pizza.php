@@ -59,7 +59,7 @@
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
 				<p>
-				<div id="price">Price: </div>
+				<div id="cheesePrice">Price: </div>
 				
 				
 					
@@ -80,7 +80,7 @@
 							if(object.value == "medium") price = <?php echo $medCheese; ?>;
 							if(object.value == "large") price = <?php echo $largeCheese; ?>;
 							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("price").innerHTML = price;
+							document.getElementById("cheesePrice").innerHTML = price;
 						}
 						
 						if(object.id == "pepSize") {
@@ -89,7 +89,7 @@
 							if(object.value == "medium") price = <?php echo $medPep; ?>;
 							if(object.value == "large") price = <?php echo $largePep; ?>;
 							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("price").innerHTML = price;
+							document.getElementById("pepPrice").innerHTML = price;
 						}
 						
 						if(object.id == "meatSize") {
@@ -98,7 +98,7 @@
 							if(object.value == "medium") price = <?php echo $medMeat; ?>;
 							if(object.value == "large") price = <?php echo $largeMeat; ?>;
 							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("price").innerHTML = price;
+							document.getElementById("meatPrice").innerHTML = price;
 						}
 						
 						if(object.id == "supSize") {
@@ -107,7 +107,7 @@
 							if(object.value == "medium") price = <?php echo $medSup; ?>;
 							if(object.value == "large") price = <?php echo $largeSup; ?>;
 							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("price").innerHTML = price;
+							document.getElementById("supPrice").innerHTML = price;
 						}
 						
 						
@@ -147,7 +147,7 @@
 				<select id="pepSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
-					<option value="Large">Large</option>
+					<option value="large">Large</option>
 				</select>
 				<p>
 				<select id="style" style="width: 200px">
@@ -156,7 +156,7 @@
 				</select>
 				</p>
 				<p>
-				<select id="pepQuantity" >
+				<select onchange="changePrice(document.getElementById('pepSize'));" id="pepQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -185,7 +185,7 @@
 				<select id="meatSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
-					<option value="Large">Large</option>
+					<option value="large">Large</option>
 				</select>
 				<p>
 				<select id="style" style="width: 200px">
@@ -194,7 +194,7 @@
 				</select>
 				</p>
 				<p>
-				<select id="meatQuantity" >
+				<select onchange="changePrice(document.getElementById('meatSize'));" id="meatQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -219,7 +219,7 @@
 				<select id="supSize" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
-					<option value="Large">Large</option>
+					<option value="large">Large</option>
 				</select>
 				<p>
 				<select id="Style" style="width: 200px">
@@ -228,7 +228,7 @@
 				</select>
 				</p>
 				<p>
-				<select id="supQuantity">
+				<select onchange="changePrice(document.getElementById('supSize'));" id="supQuantity">
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -254,7 +254,7 @@
 				<select name="Size" style="width: 200px">
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
-					<option value="Large">Large</option>
+					<option value="large">Large</option>
 				</select>
 			<p><select name = "crust" style="width:200px">
 				<option selected>Pan</option>
