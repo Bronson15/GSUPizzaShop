@@ -40,7 +40,6 @@
 	<form action="cart.php" >
 		<fieldset>
 			<img src= "/img/Mpizza.jpg" alt="MedPizza">
-			<br>
 			<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
 		</fieldset>
 	</form>
