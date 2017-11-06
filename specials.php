@@ -4,8 +4,8 @@
 		<p><strong><font size = "4">The Best Deals in Town: ALL DAY, EVERYDAY</font></strong></p>
 		<p>***CARRY OUT ONLY***</p>
 		
+		<form action="cart.php" id="specials-form">
 		<div id="specials-1">
-			<form action="cart.php" id="specials-form">
 				<fieldset>
 					<img src="/img/pizzapizza.jpg" alt="Pizza">
 					<br>
