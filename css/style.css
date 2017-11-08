@@ -64,7 +64,7 @@ main h1{
 #pizza-table th, td {
     border: 1px solid black;
     padding: 5px;
-	}
+}
 #pizza-table table {
     border-spacing: 10px;
 	width: 50%;
@@ -87,6 +87,7 @@ footer{
 .clear{
 	clear:left;
 }
+
 #log-col{
 	max-width: 500px;
 	padding: 30px;
@@ -109,3 +110,17 @@ footer{
 button{
 	background-color:#a99260;
 }
+
+
+#specials-1 {
+	float: left;
+}
+
+#specials-form {
+	text-align: center;
+}
+
+#specials-form fieldset {
+	width: 50%;
+}
+
