@@ -8,7 +8,7 @@
 			<label>PASSWORD:</label>
 			<input type="password" id="pass" name="pass" placeholder="password">
 			
-			<input type="submit" value="LOGIN" id="sub">
+			<button type="submit" id="sub" name="log">LOGIN</button>
 			<script>
 				var submit = document.getElementById("sub");
 				submit.addEventListener("onclick", function{();}, false);
