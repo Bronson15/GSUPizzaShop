@@ -134,8 +134,8 @@
 				</select>
 				<button type="add" onClick="cart.php">Add to Cart</button>
 				</form>
-				</p>
 				<div id="cheeseIMG"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
+				</p>
 				</td>
 
 				<td><b>Pepperoni</b>
