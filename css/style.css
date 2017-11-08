@@ -102,38 +102,38 @@ footer{
 	width: 50%;
 }
 
-#cheeseIMG img {
+#pizza-table img {
 	height: 100px;
 }
 
-#cheeseForm {
+#cheese-form {
 	float: left;
 }
 
-#cheeseIMG {
+#cheese-img {
 	float: left;
 }
 
-#pepForm {
+#pep-form {
 	float:left;
 }
 
-#pepIMG {
+#pep-img {
 	float: left;
 }
 
-#meatForm {
+#meat-form {
 	float: left;
 }
 
-#meatIMG {
+#meat-img {
 	float: left;
 }
 
-#supForm {
+#sup-form {
 	float: left;
 }
 
-#supIMG {
+#sup-img {
 	float: left;
 }

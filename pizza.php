@@ -104,8 +104,8 @@
 			<tr>
 
 				<td><b>Cheese Pizza</b>
-					<div class="cheeseClass">
-						<div id="cheeseForm">
+					<div class="cheese-class">
+						<div id="cheese-form">
 							<form action="cart.php">
 								<br>
 								<div id="cheesePrice">Price: </div>
@@ -138,13 +138,13 @@
 							</form>
 						</div>
 						<br>
-						<div id="cheeseIMG"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
+						<div id="cheese-img"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
 					</div>
 				</td>
 
 				<td><b>Pepperoni</b>
-					<div class="pepClass">
-						<div id="pepForm">
+					<div class="pep-class">
+						<div id="pep-form">
 							<form action="cart.php">
 								<br>
 								<div id="pepPrice">Price: </div>
@@ -175,14 +175,14 @@
 							</form>
 						</div>
 						<br>
-						<div id="pepIMG"><img src="/img/pizza-pep.png" alt="pizza-pep"></div>
+						<div id="pep-img"><img src="/img/pizza-pep.png" alt="pizza-pep"></div>
 					</div>
 				</td>
 			</tr>
 			<tr>
 				<td><b>Meat Lovers</b>
-					<div class="meatClass">
-						<div id="meatForm">
+					<div class="meat-class">
+						<div id="meat-form">
 							<form action="cart.php">
 								<br>
 								<div id="meatPrice">Price: </div>
@@ -213,13 +213,13 @@
 							</form>
 						</div>
 						<br>
-						<div id="meatIMG"><img src="/img/pizza-meat.png" alt="pizza-meat"></div>
+						<div id="meat-img"><img src="/img/pizza-meat.png" alt="pizza-meat"></div>
 					</div>
 				</td>
 
 				<td><b>Supreme</b>
-					<div class="supClass">
-						<div id="supForm">
+					<div class="sup-class">
+						<div id="sup-form">
 							<form action="cart.php">
 								<br>
 								<div id="supPrice">Price: </div>
@@ -250,7 +250,7 @@
 							</form>
 						</div>
 						<br>
-						<div id="supIMG"><img src="/img/pizza-sup.png" alt="pizza-sup"></div>
+						<div id="sup-img"><img src="/img/pizza-sup.png" alt="pizza-sup"></div>
 					</div>
 				</td>
 
