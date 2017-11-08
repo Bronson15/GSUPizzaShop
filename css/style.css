@@ -106,6 +106,10 @@ footer{
 	height: 100px;
 }
 
-.cheeseClass {
+#cheeseIMG {
+	float: left;
+}
+
+#cheeseForm {
 	float: left;
 }
