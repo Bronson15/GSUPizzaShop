@@ -159,6 +159,7 @@
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
 								</select>
+								<br>
 								<select onchange="changePrice(document.getElementById('pepSize'));" id="pepQuantity" >
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -197,6 +198,7 @@
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
 								</select>
+								<br>
 								<select onchange="changePrice(document.getElementById('meatSize'));" id="meatQuantity" >
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -234,6 +236,7 @@
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
 								</select>
+								<br>
 								<select onchange="changePrice(document.getElementById('supSize'));" id="supQuantity">
 									<option value="1">1</option>
 									<option value="2">2</option>
