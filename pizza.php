@@ -102,8 +102,8 @@
 <div id="pizza-table">
 	<table>
 			<tr>
+			<div class="cheeseClass">
 				<td><b>Cheese Pizza</b>
-				<div class="cheeseClass">
 					<div id="cheeseForm">
 						<form action="cart.php">
 						<br>
