@@ -91,6 +91,7 @@ footer{
 }
 #login{
 	display: block;
+	border: hidden;
 }
 #sub{
 	background-color:#a99260;
