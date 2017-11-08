@@ -58,7 +58,7 @@
 			<tr>
 				<td><b>Cheese Pizza</b>
 				<form action="cart.php">
-				<p>
+				<br>
 				<div id="cheesePrice">Price: </div>
 
 				<script>
@@ -112,14 +112,12 @@
 					<option value="medium">Medium </option>
 					<option value="large">Large</option>
 				</select>
-
-				<p>
+				<br>
 				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
 					<option value="hand">Hand Tossed</option>
 				</select>
-				</p>
-				<p>
+				<br>
 				<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -135,7 +133,7 @@
 				<button type="add" onClick="cart.php">Add to Cart</button>
 				</form>
 				<div id="cheeseIMG"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
-				</p>
+
 				</td>
 
 				<td><b>Pepperoni</b>
