@@ -106,10 +106,34 @@ footer{
 	height: 100px;
 }
 
+#cheeseForm {
+	float: left;
+}
+
 #cheeseIMG {
 	float: left;
 }
 
-#cheeseForm {
+#pepForm {
+	float:left;
+}
+
+#pepIMG {
+	float: left;
+}
+
+#meatForm {
+	float: left;
+}
+
+#meatIMG {
+	float: left;
+}
+
+#supForm {
+	float: left;
+}
+
+#supIMG {
 	float: left;
 }
