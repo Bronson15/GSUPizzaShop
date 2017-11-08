@@ -16,7 +16,6 @@
 			<a href="/pizza.php">Pizza</a>
 			<a href="/specials.php">Specials</a>
 			<a href="/cart.php">Cart</a>
-			<a href="/login.php">Login</a>
         </b>
     </nav> 
 	
