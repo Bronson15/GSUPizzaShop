@@ -1,3 +1,4 @@
+<?php include("header.php") ?>
 <div id="log-col">
 	<form id="login" action="">
 		<fieldset id="username">
@@ -35,4 +36,5 @@
 	</form>
 	<!--https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php-->
 </div>
+<?php include("footer.php") ?>
 
