@@ -105,3 +105,7 @@ footer{
 #cheeseIMG img {
 	height: 200px;
 }
+
+.cheeseClass {
+	display: inline-block;
+}
