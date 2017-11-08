@@ -102,44 +102,46 @@
 <div id="pizza-table">
 	<table>
 			<tr>
-			<div class="cheeseClass">
-				<td><b>Cheese Pizza</b>
-					<div id="cheeseForm">
-						<form action="cart.php">
-						<br>
-						<div id="cheesePrice">Price: </div>
+
+				<td>
+					<div class="cheeseClass">
+						<b>Cheese Pizza</b>
+						<div id="cheeseForm">
+							<form action="cart.php">
+							<br>
+							<div id="cheesePrice">Price: </div>
 
 
 
-						<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
-							<option value="" disabled selected>Select Size</option>
-							<option value="small">Small</option>
-							<option value="medium">Medium </option>
-							<option value="large">Large</option>
-						</select>
-						<br>
-						<select id="style" style="width: 200px">
-							<option value="pan">Pan Pizza</option>
-							<option value="hand">Hand Tossed</option>
-						</select>
-						<br>
-						<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-						</select>
-						<button type="add" onClick="cart.php">Add to Cart</button>
-						</form>
-					</div>
+							<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
+								<option value="" disabled selected>Select Size</option>
+								<option value="small">Small</option>
+								<option value="medium">Medium </option>
+								<option value="large">Large</option>
+							</select>
+							<br>
+							<select id="style" style="width: 200px">
+								<option value="pan">Pan Pizza</option>
+								<option value="hand">Hand Tossed</option>
+							</select>
+							<br>
+							<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							<button type="add" onClick="cart.php">Add to Cart</button>
+							</form>
+						</div>
 
-					<div id="cheeseIMG"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
+						<div id="cheeseIMG"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
 				</div>
 				</td>
 
