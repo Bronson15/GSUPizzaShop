@@ -102,10 +102,6 @@ footer{
 	font-size: 16px;
 }
 
-#user{
-	margin-bottom: -1px;
-}
-
-#pass{
-	margin-bottom: 10px;
+#sub{
+	background-color:#a99260;
 }
