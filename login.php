@@ -6,6 +6,8 @@
 			<input type="text" id="user" name="user" placeholder="username">
 			<label>PASSWORD:</label>
 			<input type="password" id="pass" name="pass" placeholder="password">
+			
+			<input type="submit" value="LOGIN">
 			<?php 
 				$username = $_POST['user'];
 				$password = $_POST['pass'];
