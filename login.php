@@ -6,6 +6,7 @@
 			<label>USERNAME:</label>
 			<input type="text" id="user" name="user" placeholder="username">
 			<label>PASSWORD:</label>
+			<br>
 			<input type="password" id="pass" name="pass" placeholder="password">
 			
 			<button type="submit" id="sub" name="log">LOGIN</button>
