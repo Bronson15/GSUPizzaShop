@@ -89,3 +89,15 @@ footer{
 .clear{
 	clear:left;
 }
+
+#specials-1 {
+	float: left;
+}
+
+#specials-form {
+	text-align: center;
+}
+
+#specials-form fieldset {
+	width: 50%;
+}
