@@ -179,70 +179,6 @@
 						<div id="pep-img"><img src="/img/pizza-pep.png" alt="pizza-pep"></div>
 					</div>
 				</td>
-
-				<td><b>Create your own</b>
-				<form action = "cart.php">
-				<p>Price: $
-				</p>
-				<select name="Size" style="width: 200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-				</select>
-			<p><select name = "crust" style="width:200px">
-				<option selected>Pan</option>
-				<option>Handtossed</option>
-			</select></p>
-			<p><select name = "sauce" style="width:200px"</select>
-				<option selected>Marinara</option>
-			</select></p>
-			<p>Toppings:</p>
-			<p><label>Cheese
-				<input type = "checkbox" name = "top" value = "che"
-			</label>
-			<label>Pepperoni(.25)
-				<input type = "checkbox" name = "top" value = "pep"
-			</label></p>
-			<p><label>Chicken(.3)
-				<input type = "checkbox" name = "top" value = "chi"
-			</label>
-			<label>Pineapple(.25)
-				<input type = "checkbox" name = "top" value = "pin"
-			</label></p>
-			<p><label>Jalapeno(.15)
-				<input type = "checkbox" name = "top" value = "jal"
-			</label>
-			<label>Black Olives(.15)
-				<input type = "checkbox" name = "top" value = "bla"
-			</label></p>
-			<label>Bacon(.25)
-				<input type = "checkbox" name = "top" value = "bac"
-			</label>
-			<label>Banana Pepper(.15)
-				<input type = "checkbox" name = "top" value = "ban"
-			</label>
-
-			<p><label>Mushrooms(.15)
-				<input type = "checkbox" name = "top" value = "mus"
-			</label></p>
-			<p><select name = "quantity"</select>
-				<option selected>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
-				<option>9</option>
-				<option>10</option>
-			</select>
-			<button type = "add" onClick="cart.php">Add to Cart</button>
-			</p>
-			</td>
-
-			
 			</tr>
 			<tr>
 				<td><b>Meat Lovers</b>
@@ -323,7 +259,67 @@
 
 
 			</tr>
+				<td><b>Create your own</b>
+				<form action = "cart.php">
+				<p>Price: $
+				</p>
+				<select name="Size" style="width: 200px">
+					<option value="" disabled selected>Select Size</option>
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large">Large</option>
+				</select>
+			<p><select name = "crust" style="width:200px">
+				<option selected>Pan</option>
+				<option>Handtossed</option>
+			</select></p>
+			<p><select name = "sauce" style="width:200px"</select>
+				<option selected>Marinara</option>
+			</select></p>
+			<p>Toppings:</p>
+			<p><label>Cheese
+				<input type = "checkbox" name = "top" value = "che"
+			</label>
+			<label>Pepperoni(.25)
+				<input type = "checkbox" name = "top" value = "pep"
+			</label></p>
+			<p><label>Chicken(.3)
+				<input type = "checkbox" name = "top" value = "chi"
+			</label>
+			<label>Pineapple(.25)
+				<input type = "checkbox" name = "top" value = "pin"
+			</label></p>
+			<p><label>Jalapeno(.15)
+				<input type = "checkbox" name = "top" value = "jal"
+			</label>
+			<label>Black Olives(.15)
+				<input type = "checkbox" name = "top" value = "bla"
+			</label></p>
+			<label>Bacon(.25)
+				<input type = "checkbox" name = "top" value = "bac"
+			</label>
+			<label>Banana Pepper(.15)
+				<input type = "checkbox" name = "top" value = "ban"
+			</label>
 
+			<p><label>Mushrooms(.15)
+				<input type = "checkbox" name = "top" value = "mus"
+			</label></p>
+			<p><select name = "quantity"</select>
+				<option selected>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+			<button type = "add" onClick="cart.php">Add to Cart</button>
+			</p>
+			</td>
 	</table>
 </div>
 <?php include("footer.php");?>
