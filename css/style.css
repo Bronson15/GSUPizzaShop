@@ -89,15 +89,28 @@ footer{
 .clear{
 	clear:left;
 }
+
 #log-col{
 	border:hidden;
+	text-align: center;
 }
+
 #login{
-	max-width:330px;
+	max-width:430px;
 	padding: 15px;
 	margin: 0 auto;
 }
+
+#user{
+	margin-bottom: -1px;
+	border-color:#a99260;
+}
+
+#pass{
+	margin-bottom: -1px;
+	border-color:#a99260;
+}
+
 #sub{
 	background-color:#a99260;
-	text-align:center;
 }
