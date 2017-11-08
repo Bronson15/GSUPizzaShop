@@ -114,12 +114,24 @@ footer{
 	float: left;
 }
 
+.cheese-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #pep-form {
 	float:left;
 }
 
 #pep-img {
 	float: left;
+}
+
+.pep-class:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #meat-form {
@@ -130,10 +142,22 @@ footer{
 	float: left;
 }
 
+.meat-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #sup-form {
 	float: left;
 }
 
 #sup-img {
 	float: left;
+}
+
+.sup-class:after {
+  content: "";
+  display: table;
+  clear: both;
 }
