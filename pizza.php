@@ -1,48 +1,48 @@
-<?php 
+<?php
 	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallCheese = $row['price']; 
+	$smallCheese = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medCheese = $row['price']; 
+	$medCheese = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$largeCheese = $row['price']; 
-	
+	$largeCheese = $row['price'];
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallPep = $row['price']; 
+	$smallPep = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 2;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medPep = $row['price']; 
+	$medPep = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 3;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largePep = $row['price'];
-	
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallMeat = $row['price']; 
+	$smallMeat = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 14;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medMeat = $row['price']; 
+	$medMeat = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 15;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeMeat = $row['price'];
-	
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 25;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallSup = $row['price']; 
+	$smallSup = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 26;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medSup = $row['price']; 
+	$medSup = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
@@ -60,7 +60,7 @@
 				<form action="cart.php">
 				<p>
 				<div id="cheesePrice">Price: </div>
-				
+
 				<script>
 					function changePrice(object){
 						var price = document.getElementById("price");
@@ -73,7 +73,7 @@
 							price = "Price: $" + (price*quantity).toFixed(2);
 							document.getElementById("cheesePrice").innerHTML = price;
 						}
-						
+
 						if(object.id == "pepSize") {
 							quantity = document.getElementById("pepQuantity").value;
 							if(object.value == "small") price = <?php echo $smallPep; ?>;
@@ -82,7 +82,7 @@
 							price = "Price: $" + (price*quantity).toFixed(2);
 							document.getElementById("pepPrice").innerHTML = price;
 						}
-						
+
 						if(object.id == "meatSize") {
 							quantity = document.getElementById("meatQuantity").value;
 							if(object.value == "small") price = <?php echo $smallMeat; ?>;
@@ -91,7 +91,7 @@
 							price = "Price: $" + (price*quantity).toFixed(2);
 							document.getElementById("meatPrice").innerHTML = price;
 						}
-						
+
 						if(object.id == "supSize") {
 							quantity = document.getElementById("supQuantity").value;
 							if(object.value == "small") price = <?php echo $smallSup; ?>;
@@ -100,19 +100,19 @@
 							price = "Price: $" + (price*quantity).toFixed(2);
 							document.getElementById("supPrice").innerHTML = price;
 						}
-						
-						
-						
+
+
+
 					}
 				</script>
-					
+
 				<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium </option>
 					<option value="large">Large</option>
 				</select>
-					
+
 				<p>
 				<select id="style" style="width: 200px">
 					<option value="pan">Pan Pizza</option>
@@ -128,15 +128,16 @@
 					<option value="5">5</option>
 					<option value="6">6</option>
 					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
+					<option value="8">8</option>
+					<option value="9">9</option>
 					<option value="10">10</option>
 				</select>
 				<button type="add" onClick="cart.php">Add to Cart</button>
 				</form>
 				</p>
+				<td><img src="/img/pizza-cheese.png" alt="pizza-cheese"></td>
 				</td>
-		
+
 				<td><b>Pepperoni</b>
 				<form action="cart.php">
 				<p>
@@ -163,16 +164,16 @@
 					<option value="5">5</option>
 					<option value="6">6</option>
 					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
+					<option value="8">8</option>
+					<option value="9">9</option>
 					<option value="10">10</option>
 				</select>
 				<button type="add" onClick="cart.php">Add to Cart</button>
 				</form>
 				</p>
-				
-				
-				
+
+
+
 				</td>
 			</tr>
 			<tr>
@@ -202,8 +203,8 @@
 					<option value="5">5</option>
 					<option value="6">6</option>
 					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
+					<option value="8">8</option>
+					<option value="9">9</option>
 					<option value="10">10</option>
 				</select>
 				<button type="add" onClick="cart.php">Add to Cart</button>
@@ -237,16 +238,16 @@
 					<option value="5">5</option>
 					<option value="6">6</option>
 					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
+					<option value="8">8</option>
+					<option value="9">9</option>
 					<option value="10">10</option>
 				</select>
 				<button type="add" onClick="cart.php">Add to Cart</button>
 				</form>
 				</p>
-				</td> 
-				
-				
+				</td>
+
+
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
@@ -290,7 +291,7 @@
 			<label>Banana Pepper(.15)
 				<input type = "checkbox" name = "top" value = "ban"
 			</label>
-			
+
 			<p><label>Mushrooms(.15)
 				<input type = "checkbox" name = "top" value = "mus"
 			</label></p>
@@ -310,5 +311,5 @@
 			</p>
 			</td>
 	</table>
-</div>		
+</div>
 <?php include("footer.php");?>
