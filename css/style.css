@@ -89,3 +89,9 @@ footer{
 .clear{
 	clear:left;
 }
+#login{
+	display: block;
+}
+#sub{
+	background-color:#a99260;
+}
