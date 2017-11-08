@@ -103,9 +103,9 @@ footer{
 }
 
 #cheeseIMG img {
-	height: 200px;
+	height: 100px;
 }
 
 .cheeseClass {
-	display: inline-block;
+	float: left;
 }

@@ -103,16 +103,13 @@
 	<table>
 			<tr>
 
-				<td>
+				<td><b>Cheese Pizza</b>
 					<div class="cheeseClass">
-						<b>Cheese Pizza</b>
 						<div id="cheeseForm">
 							<form action="cart.php">
 							<br>
+							<br>
 							<div id="cheesePrice">Price: </div>
-
-
-
 							<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
 								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
