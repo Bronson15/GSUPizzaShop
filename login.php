@@ -1,5 +1,4 @@
 <?php include("header.php")
-	session_start();
  ?>
 
 <div id="log-col">
