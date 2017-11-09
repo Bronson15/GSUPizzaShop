@@ -9,7 +9,6 @@
 			<input type="text" id="user" name="user" placeholder="username">
 			<br>
 			<br>
-			<br>
 			<label>PASSWORD:</label>
 			<input type="password" id="pass" name="pass" placeholder="password">
 			<br>
