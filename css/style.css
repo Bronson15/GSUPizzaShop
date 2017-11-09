@@ -100,6 +100,15 @@ footer{
 	padding: 20px;
 	font-size: 16px;
 }
+
+#user{
+	padding-bottom:5px;
+}
+
+#pass{
+	padding-bottom:5px;
+}
+
 button{
 	background-color:#a99260;
 }
