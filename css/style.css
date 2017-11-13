@@ -56,9 +56,7 @@ main h1{
 	width: 500px;
 	height: 300px;
 }
-#specials button{
-	background-color:#a99260;
-}
+
 #specials form{
 	background-color:#041e42;
 }
@@ -89,15 +87,30 @@ footer{
 .clear{
 	clear:left;
 }
-
-#specials-1 {
-	float: left;
+#log-col{
+	max-width: 500px;
+	padding: 30px;
+	margin: 0 auto;
+	text-align:center;
 }
 
-#specials-form {
-	text-align: center;
+#login{
+	position: relative;
+	height: auto;
+	padding: 20px;
+	font-size: 16px;
 }
 
-#specials-form fieldset {
-	width: 50%;
+#user{
+	padding-bottom:5px;
+	margin-bottom:2px;
+}
+
+#pass{
+	padding-bottom:5px;
+	margin-bottom:2px;
+}
+
+button{
+	background-color:#a99260;
 }
