@@ -70,6 +70,7 @@ main h1{
 #pizza-table table {
     border-spacing: 10px;
 	width: 50%;
+	margin: auto;
 }
 #pizza-table button {
 	width: 148px;
@@ -102,10 +103,6 @@ footer{
 	width: 50%;
 }
 
-#pizza-table table {
-	margin: auto; 
-}
-
 #pizza-table img {
 	height: 100px;
 }
@@ -122,6 +119,10 @@ footer{
   content: "";
   display: table;
   clear: both;
+}
+
+#pizza-text {
+	text-align: center;
 }
 
 #pep-form {
