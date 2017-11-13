@@ -1,6 +1,28 @@
-<?php include("header.php")?>
+<?php include("header.php")
+	session_start();
+	if(isset($_POST['user']) && isset($_POST['pass'])){
+		$username = $_POST['user'];
+		$password = $_POST['pass'];
+		
+		$result = pg_query($pg_conn, "SELECT * FROM Customer WHERE username = '$username' AND passw = '$password'");
+		
+		if(pg_num_rows($result) > 0){
+			$_SESSION['usernae'] = $username;
+		}
+	}
+	
+	pg_close($pg_conn);
+
+	if(isset($username)){
+		echo 'Could not log in';
+	}
+	else{
+		echo 'You' . $_SESSION['username'] . ' are now logged in.';
+	}
+	
+?>
 <div id="log-col">
-	<form id="login" action="login.php" method="POST">
+	<form id="login" action="/login.php" method="POST">
 		<fieldset id="username">
 			
 			<label>USERNAME:</label>
