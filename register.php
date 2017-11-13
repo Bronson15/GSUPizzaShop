@@ -1,5 +1,5 @@
 <?php include("header.php")
-	$query = "INSERT INTO Customer VALUES ('$_POST[name]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')";
+	$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[name]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')";
 	
 	$result = pg_query($query);
 	
