@@ -5,8 +5,15 @@
 	<p>***CARRY OUT ONLY***</p>
 	<form action="cart.php" >
 	<fieldset>
-	<img src="/img/pizzapizza.jpg" alt="Pizza">
-    <button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
+		<table>
+			<tr>
+				<td><b>Large Combo Pizza</b>
+				<th><img src="/img/pizzapizza.jpg" alt="Pizza"></th>
+	
+				<button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
+				</td>
+			</tr>
+		</table>
 	</fieldset>
 	</form>
 	<form action="cart.php" >	
