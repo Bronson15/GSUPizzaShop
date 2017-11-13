@@ -2,15 +2,6 @@
 	$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());
 	
 	$result = pg_query($query);
-	
-	if(pg_num_rows($query) > 0){
-		while($row = pg_fetch_assoc()){
-		echo "<br> Name: " . $row["name"] "<br>";
-		}
-	}
-	else{
-		echo "0 results";
-	}
 ?>
 <div id="log-col">
 	<form id="login" action="/register.php" method="POST">
