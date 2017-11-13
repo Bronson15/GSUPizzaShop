@@ -68,9 +68,9 @@ main h1{
     padding: 5px;
 	}
 #pizza-table table {
+	margin: auto;
     border-spacing: 10px;
 	width: 50%;
-	margin: auto;
 }
 #pizza-table button {
 	width: 148px;
