@@ -15,38 +15,48 @@
 			
 		</fieldset>
 		<?php 
+				session_start();
 				$error = "";
 				include("database.php");
 				
-				$userParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE username = $username;");
-				$passParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE passw = $password;");
+				//$userParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE username = $username;");
+				//$passParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE passw = $password;");
+				
+				$username = "";
+				$password = "";
 				
 				$username_err = "";
 				$password_err = "";
 				
-				if($_SERVER["REQUEST_METHOD"] == "GET"){
-					$username = "";
-					$password = "";
+				//check if username is empty
+				if(empty(trim($_POST["user"]))){
+					$username_err = "Please enter username";
 				}
-				else if($_SERVER["REQUEST_METHOD"] == "POST"){
+				else{
 					$username = trim($_POST["user"]);
+				}
+				//check if password is empty
+				if(empty(trim($_POST["pass"]))){
+					$password_err = "Please enter password";
+				}
+				else{
 					$password = trim($_POST["pass"]);
+				}
+				
+				//validate credentials 
+				if(isset($_POST['user']) && isset($_POST['pass'])){
+					$username = $_POST['user'];
+					$password = $_POST['pass'];
 					
-					if($userParam == $username && $passParam == $password ){
-						
-						setcookie("userIDforDV", $username, time()+43200);
-					}
-					else{
-						$error = "Your username and/or password is incorrect";
+					$query = "SELECT * FROM Customer WHERE username = $username AND passw = $password ";
+					
+					$result = pg_query($query);
+					
+					if(pg_num_rows($result) > 0){
+						$_SESSION['username'] = $username;
 					}
 				}
 				
-				$username = $_COOKIE['userIDforDV'];
-				if(isset($username) && $username !=""){
-					echo "Welcome" . $username;
-				}
-				
-				echo $error;
 				
 			?>
 	</form>
