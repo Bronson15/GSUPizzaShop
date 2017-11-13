@@ -102,6 +102,10 @@ footer{
 	width: 50%;
 }
 
+#pizza-table table {
+	margin: auto; 
+}
+
 #pizza-table img {
 	height: 100px;
 }
