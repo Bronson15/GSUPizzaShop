@@ -155,6 +155,7 @@
 									<option value="medium">Medium</option>
 									<option value="large">Large</option>
 								</select>
+								<br>
 								<select id="style" style="width: 200px">
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
@@ -194,6 +195,7 @@
 									<option value="medium">Medium</option>
 									<option value="large">Large</option>
 								</select>
+								<br>
 								<select id="style" style="width: 200px">
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
@@ -232,6 +234,7 @@
 									<option value="medium">Medium</option>
 									<option value="large">Large</option>
 								</select>
+								<br>
 								<select id="Style" style="width: 200px">
 									<option value="pan">Pan Pizza</option>
 									<option value="hand">Hand Tossed</option>
