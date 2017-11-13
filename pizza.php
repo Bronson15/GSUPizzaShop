@@ -50,8 +50,10 @@
 ?>
 
 <main>
-	<p>Welcome to GSU pizza shop<p>
-	<p>Check out our best deals under specials</p>
+	<div id="pizza-text">
+		<h2>Welcome to GSU pizza shop<h2>
+		<b>Check out our best deals under specials</b>
+	</div>	
 </main>
 
 <script>
