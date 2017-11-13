@@ -24,11 +24,11 @@
 			<br>
 			<br>
 			<label>Username(max 15 characters):</label>
-			<input type="text" id="username" name="username" placeholder="EX. j.doe">
+			<input type="text" id="username" name="username" placeholder="EX. j.doe" max="15">
 			<br>
 			<br>
 			<label>Password(max 15 characters):</label>
-			<input type="password" id="password" name="password">
+			<input type="password" id="password" name="password" max="15">
 			<br>
 			<br>
 			<button type="submit" id="sub" name="createUser">Create User</button>
