@@ -1,4 +1,4 @@
-<?php include("database.php")
+<?php include("header.php")
 	session_start();
 	if(isset($_POST['user']) && isset($_POST['pass'])){
 		$username = $_POST['user'];
@@ -12,18 +12,14 @@
 	}
 	
 	pg_close($pg_conn);
-	
-	if(isset($_SESSION['valid_user'])){
-		include("header.php");
+
+	if(isset($username)){
+		echo 'Could not log in';
 	}
 	else{
-		if(isset($username)){
-			echo 'Could not log in';
-		}
-		else{
-			echo 'You' . $_SESSION['valid_user'] . ' are now logged in.';
-		}
+		echo 'You' . $_SESSION['valid_user'] . ' are now logged in.';
 	}
+	
 ?>
 <div id="log-col">
 	<form id="login" action="login.php" method="POST">
