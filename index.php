@@ -1,11 +1,12 @@
 <?php include("header.php"); ?>
-	h1{ 
+
+	<div id="index-body-text">		
+		<main>	
+		h1{ 
 				font-family:verdana;
 				font-size: 40px; 
 				text-align: center; 
 			}
-	<div id="index-body-text">		
-		<main>
 		<h1>Welcome to GSU Pizza Shop!</h1>
 			
 		</main>
