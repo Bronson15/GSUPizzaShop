@@ -1,4 +1,17 @@
-<?php include("header.php")?>
+<?php include("header.php")
+	$query = "INSERT INTO Customer VALUES ('$_POST[name]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')";
+	
+	$result = pg_query($query);
+	
+	if(pg_num_rows($query) > 0){
+		while($row = pg_fetch_assoc()){
+		echo "<br> Name: " . $row["name"] "<br>";
+		}
+	}
+	else{
+		echo "0 results";
+	}
+?>
 <div id="log-col">
 	<form id="login" action="/register.php" method="POST">
 		<fieldset id="username">
@@ -20,7 +33,7 @@
 			<br>
 			<br>
 			<label>Contact Number</label>
-			<input type="tel" id="telephone" name="telephone" placeholder="xxx-xxx-xxxx">
+			<input type="text" id="telephone" name="telephone" placeholder="xxx-xxx-xxxx">
 			<br>
 			<br>
 			<label>Username(max 15 characters):</label>
