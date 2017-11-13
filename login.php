@@ -1,6 +1,32 @@
-<?php include("header.php")?>
+<?php include("database.php")
+	session_start();
+	if(isset($_POST['user']) && isset($_POST['pass'])){
+		$username = $_POST['user'];
+		$password = $_POST['pass'];
+		
+		$result = pg_query($pg_conn, "SELECT * FROM Customer WHERE username = '$username' AND passw = '$password'");
+		
+		if(pg_num_rows($result) > 0){
+			$_SESSION['valid_user'] = $username;
+		}
+	}
+	
+	pg_close($pg_conn);
+	
+	if(isset($_SESSION['valid_user'])){
+		include("header.php");
+	}
+	else{
+		if(isset($username)){
+			echo 'Could not log in';
+		}
+		else{
+			echo 'You' . $_SESSION['valid_user'] . ' are now logged in.';
+		}
+	}
+?>
 <div id="log-col">
-	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+	<form id="login" action="login.php" method="POST">
 		<fieldset id="username">
 			
 			<label>USERNAME:</label>
@@ -14,51 +40,6 @@
 			<button type="submit" id="sub" name="log">LOGIN</button>
 			
 		</fieldset>
-		<?php 
-				session_start();
-				$error = "";
-				include("database.php");
-				
-				//$userParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE username = $username;");
-				//$passParam = pg_query($pg_conn, "SELECT * FROM Customer WHERE passw = $password;");
-				
-				$username = "";
-				$password = "";
-				
-				$username_err = "";
-				$password_err = "";
-				
-				//check if username is empty
-				if(empty(trim($_POST["user"]))){
-					$username_err = "Please enter username";
-				}
-				else{
-					$username = trim($_POST["user"]);
-				}
-				//check if password is empty
-				if(empty(trim($_POST["pass"]))){
-					$password_err = "Please enter password";
-				}
-				else{
-					$password = trim($_POST["pass"]);
-				}
-				
-				//validate credentials 
-				if(isset($_POST['user']) && isset($_POST['pass'])){
-					$username = $_POST['user'];
-					$password = $_POST['pass'];
-					
-					$query = "SELECT * FROM Customer WHERE username = $username AND passw = $password ";
-					
-					$result = pg_query($query);
-					
-					if(pg_num_rows($result) > 0){
-						$_SESSION['username'] = $username;
-					}
-				}
-				
-				
-			?>
 	</form>
 </div>
 <?php include("footer.php") ?>
