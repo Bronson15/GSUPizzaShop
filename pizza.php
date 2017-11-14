@@ -47,6 +47,8 @@
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeSup = $row['price'];
+
+
 ?>
 
 <main>
@@ -286,7 +288,8 @@
 
 
 			</tr>
-				<td><b>Create your own</b>
+			<tr<
+				<td colspan=2><b>Create your own</b>
 				<form action = "cart.php">
 				<br>
 				<div id="custPrice">Price: </div>
@@ -348,6 +351,7 @@
 			<button type = "add" onClick="cart.php">Add to Cart</button>
 			</p>
 			</td>
+		</tr>
 	</table>
 </div>
 <?php include("footer.php");?>
