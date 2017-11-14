@@ -11,7 +11,10 @@
 	//Get custom pizza info
 	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE id=1;");
 	$row = pg_fetch_assoc($result);
-	$customPizza = $row;
+	$customPizza['base_price'] = $row['base_price'];
+	$customPizza['m_upcharge'] = $row['m_upcharge'];
+	$customPizza['l_upcharge'] = $row['l_upcharge'];
+	$customPizza['p_upcharge'] = $row['p_upcharge'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
@@ -60,8 +63,6 @@
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeSup = $row['price'];
-
-	echo $customPizza['product_name'];
 
 ?>
 
@@ -115,9 +116,9 @@
 		if(object.id == "custSize") {
 			if(object.value!=""){
 				quantity = document.getElementById("custQuantity").value;
-				if(object.value == "small") price = <?php echo $smallCheese; ?>;
-				if(object.value == "medium") price = <?php echo $medCheese; ?>;
-				if(object.value == "large") price = <?php echo $largeCheese; ?>;
+				if(object.value == "small") price = <?php echo $customPizza['base_price']; ?>;
+				if(object.value == "medium") price = <?php echo $customPizza['base_price'] + $customPizza['m_upcharge']; ?>;
+				if(object.value == "large") price = <?php echo $customPizza['base_price'] + $customPizza['l_upcharge']; ?>;
 				price = price+getToppingTotal();
 				price = "Price: $" + (price*quantity).toFixed(2);
 				document.getElementById("custPrice").innerHTML = price;
