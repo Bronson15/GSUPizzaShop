@@ -19,55 +19,6 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$smallCheese = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$medCheese = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$largeCheese = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$smallPep = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 2;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$medPep = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 3;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$largePep = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$smallMeat = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 14;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$medMeat = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 15;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$largeMeat = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 25;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$smallSup = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 26;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$medSup = $row['price'];
-
-	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
-	$row = pg_fetch_assoc($result);
-	$largeSup = $row['price'];
-
 ?>
 
 <main>
@@ -92,30 +43,18 @@
 					echo "pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
 				}
 			?>
-			if(pizzaID > 1){
-				var priceDisplay = document.getElementById("price" + pizzaID);
-				var quantity = document.getElementById("quantity" + pizzaID).value;
-				var size = document.getElementById("size" + pizzaID).value;
-				var crust = document.getElementById("crust" + pizzaID).value;
-				var price = basePrice[pizzaID];
-				if(size == "medium") price += mUpcharge[pizzaID];
-				if(size == "large") price += lUpcharge[pizzaID];
-				if(crust == "pan") price += pUpcharge[pizzaID];
-				priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+			var priceDisplay = document.getElementById("price" + pizzaID);
+			var quantity = document.getElementById("quantity" + pizzaID).value;
+			var size = document.getElementById("size" + pizzaID).value;
+			var crust = document.getElementById("crust" + pizzaID).value;
+			var price = basePrice[pizzaID];
+			if(size == "medium") price += mUpcharge[pizzaID];
+			if(size == "large") price += lUpcharge[pizzaID];
+			if(crust == "pan") price += pUpcharge[pizzaID];
+			if(pizzaID == 1) {
+				price = price+getToppingTotal();
 			}
-
-
-			if(object.id == "custSize") {
-				if(object.value!=""){
-					quantity = document.getElementById("custQuantity").value;
-					if(object.value == "small") price = <?php echo $pizzaInfo[1]['base_price']; ?>;
-					if(object.value == "medium") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['m_upcharge']; ?>;
-					if(object.value == "large") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['l_upcharge']; ?>;
-					price = price+getToppingTotal();
-					price = "Price: $" + (price*quantity).toFixed(2);
-					document.getElementById("custPrice").innerHTML = price;
-				}
-			}
+			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
 		}
 
 		function getToppingTotal(){
@@ -299,54 +238,54 @@
 
 		</tr>
 			<tr>
-				<td colspan=2><b>Create your own</b>
+				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 				<form action = "cart.php">
 				<br>
 				<div id="custPrice">Price: </div>
 				<br>
-				<select onchange="changePrice(this);" id="custSize" style="width: 200px">
+				<select onchange="changePrice(1);" id="size1" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
 				</select>
-				<p><select name = "crust" style="width:200px">
-					<option selected>Pan</option>
-					<option>Handtossed</option>
+				<p><select onchange="changePrice(1);" id="crust1" style="width: 200px">
+					<option value="hand">Hand Tossed</option>
+					<option value="pan">Pan</option>
 				</select></p>
 				<p><select name = "sauce" style="width:200px"</select>
-					<option selected>Marinara</option>
+					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
 				<p><label>Cheese
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "che"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "che"
 				</label>
 				<label>Pepperoni(.25)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pep"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "pep"
 				</label></p>
 				<p><label>Chicken(.3)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "chi"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "chi"
 				</label>
 				<label>Pineapple(.25)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pin"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "pin"
 				</label></p>
 				<p><label>Jalapeno(.15)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "jal"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "jal"
 				</label>
 				<label>Black Olives(.15)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bla"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "bla"
 				</label></p>
 				<label>Bacon(.25)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bac"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "bac"
 				</label>
 				<label>Banana Pepper(.15)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "ban"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "ban"
 				</label>
 
 				<p><label>Mushrooms(.15)
-					<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "mus"
+					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "mus"
 				</label></p>
-				<p><select onchange="changePrice(document.getElementById('custSize'));" id = "custQuantity"</select>
+				<p><select onchange="changePrice(1);" id = "custQuantity"</select>
 					<option selected>1</option>
 					<option>2</option>
 					<option>3</option>
