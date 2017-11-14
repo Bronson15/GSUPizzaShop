@@ -97,6 +97,7 @@
 		}
 
 		if(object.id == "custSize") {
+			alert("test");
 			quantity = document.getElementById("custQuantity").value;
 			if(object.value == "small") price = <?php echo $smallCheese; ?>;
 			if(object.value == "medium") price = <?php echo $medCheese; ?>;
