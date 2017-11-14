@@ -147,7 +147,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="crust2" style="width: 200px">
+							<select onchange="changePrice(2);" id="crust2" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -186,7 +186,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="crust3" style="width: 200px">
+							<select onchange="changePrice(3);" id="crust3" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -226,7 +226,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="crust4" style="width: 200px">
+							<select onchange="changePrice(4);" id="crust4" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -265,7 +265,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="Style" style="width: 200px">
+							<select onchange="changePrice(5);" id="Style" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
