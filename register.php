@@ -15,7 +15,7 @@
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
-			die('There is an empty field. Please review form.');
+			die('<script type="text/javascript">alert("There is an empty field. Please review your form")</script>');
 		}
 		//checks for duplicate users
 		if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
