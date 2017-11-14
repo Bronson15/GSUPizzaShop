@@ -19,7 +19,8 @@
 		}
 		//checks for duplicate users
 		if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
-			die('There is already an account with those credentials');
+			die('<script type="text/javascript">alert("There is already an account with those credentials")</script>');
+			
 		}
 		//if no duplicates or empty fields, insert data into table
 		$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
