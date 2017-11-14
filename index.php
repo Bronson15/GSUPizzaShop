@@ -5,32 +5,55 @@
 		<style>
 		h1{ 
 				font-family:verdana;
-				font-size: 40px; 
+				font-size: 25px; 
 				text-align: center; 
 			}
-			
-		p{
-			text-align: center; 
-			font-family:verdana; 
-			font-size: 20px;
-		}
-		
-		.Gus{
-			text-align:center;
-			display: block; 
-			
-		}
-		
+
 		</style>
-		<h1>Welcome to GSU Pizza Shop!</h1>
+		<h1>Deals<h1>
 			
 		</main>
-		<!-- <img style="border-radius:20px" src="img/pizza.jpg"> -->
-		<p><i>
-			Check out the best deals in town! 
-		</i></p>
-		<div id="pizza-gus">
-		<img src="img/PizzaGus1.png" class="Gus" alt="Gus" style="float:center;width:216px;height:252px;">
+		<div id="pizza-dea;s">
+			<table>
+			<tbody>
+				<tr>
+				<td>
+				<!--image placed here-->
+					<b>Broke College Kid Special<b>
+					<p>Enjoy two large cheese pizzas for $9.99</p>
+				</td>
+				
+				<td>
+					<!--image placed here-->
+					<b>Mighty Meat Special<b>
+					<p>Grab a large meat lovers pizza for $12.99</p>
+				</td>
+				
+				<td>
+					<!--image placed here-->
+					<b>Toppings Galore<b>
+					<p>Customize your pizza! Large three topping pizza for $7.00</p>
+				<td>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				</tr>
+		
 		</div>
 		
 	</div>
