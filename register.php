@@ -25,19 +25,11 @@
 			session_unset();
 			header("Refresh:0");
 		}
-		/*
-		else if(($name = $nameParam && $email = $emailParam) || $email = 
-		$emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
-			session_unset();
-			header("Refresh:0");
-		}*/
-		else if(pg_num_rows($nameParam) >= 1 && pg_num_rows($emailParam) >= 1{
+		else if(pg_num_rows($nameParam) >= 1 && pg_num_rows($emailParam) >= 1){
 			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
 			session_unset();
 			header("Refresh:0");
 		}
-		
 		//if no duplicates or empty fields, insert data into table
 		else{
 			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
