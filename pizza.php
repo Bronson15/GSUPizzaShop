@@ -1,13 +1,17 @@
 <?php
 	include("header.php");
 
-	//Get topping prices
+	//Get topping names and prices
 	$result = pg_query($pg_conn, "SELECT * FROM toppings;");
 	while($row = pg_fetch_assoc($result)){
 		$t_names[$row['topping_id']] = $row['topping_name'];
+		$t_prices[$row['topping_id']] = $row['price'];
 	}
 
-	echo $t_names['Xm'];
+	//Get custom pizza info
+	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE id=1;");
+	$row = pg_fetch_assoc($result);
+	$customPizza = $row;
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
@@ -57,6 +61,7 @@
 	$row = pg_fetch_assoc($result);
 	$largeSup = $row['price'];
 
+	echo $customPizza['product_name'];
 
 ?>
 
