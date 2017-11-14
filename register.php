@@ -1,6 +1,52 @@
-<?php include("header.php")?>
+<?php include("header.php");
+	session_start();
+	$pg_conn2 = pg_connection_reset($pg_conn);
+	//runs if the create user button is pressed
+	if(isset($_POST['createUser'])){
+		//variables set to values the user inputs
+		$username = $_POST['username'];
+		$name = $_POST['flname'];
+		$email = $_POST['email'];	
+		
+		//variables to validate form elements
+		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = $username");
+		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $flname");
+		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $email");
+		
+		//If form elements are left empty
+		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
+			echo '<script type="text/javascript">alert("There is an empty field. Please review your form")</script>';
+			session_unset();
+			header("Refresh:0");
+		}
+			//if username is a duplicate
+		else if($username = $userParam){
+			echo "<script type='text/javascript'>alert('Username taken.')</script>";
+			session_unset();
+			header("Refresh:0");
+		}
+		else if(($name = $nameParam && $email = $emailParam) || $email = 
+		$emailParam){
+			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
+			session_unset();
+			header("Refresh:0");
+		}
+		//if no duplicates or empty fields, insert data into table
+		else{
+			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
+			$result = pg_query($query);
+?>		
+	<h1>Registered</h1>
+	<p>You are now registered. You can log on <a href="login.php">here</a></p>
+<?php
+			session_unset();
+			session_destroy();
+		}
+	}
+	else{
+?>
 <div id="log-col">
-	<form id="login" action="/register.php" method="POST">
+	<form id="login" action=<?php echo $_SERVER['PHP_SELF']; ?> method="POST">
 		<fieldset id="username">
 			
 			<label>Name(First and Last):</label>
@@ -20,7 +66,7 @@
 			<br>
 			<br>
 			<label>Contact Number</label>
-			<input type="tel" id="telephone" name="telephone" placeholder="xxx-xxx-xxxx">
+			<input type="text" id="telephone" name="telephone" placeholder="xxx-xxx-xxxx">
 			<br>
 			<br>
 			<label>Username(max 15 characters):</label>
@@ -36,4 +82,6 @@
 		</fieldset>
 	</form>
 </div>
-<?php include("footer.php") ?>
+<?php 
+	}
+	include("footer.php"); ?>
