@@ -48,7 +48,7 @@
 					<p>Customize your pizza! Large three topping pizza for $7.00</p>
 				</td>
 				</tr>
-		
+			</table>
 		</div>
 		
 	</div>
