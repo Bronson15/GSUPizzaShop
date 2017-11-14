@@ -134,7 +134,7 @@
 							<br>
 							<div id="price2">Price: </div>
 							<br>
-							<select onchange="changePrice(this);" id="size2" style="width:200px">
+							<select onchange="changePrice(2);" id="size2" style="width:200px">
 								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium </option>
@@ -146,7 +146,7 @@
 								<option value="pan">Pan</option>
 							</select>
 							<br>
-							<select onchange="changePrice(document.getElementById('cheeseSize'));" id="quantity2" >
+							<select onchange="changePrice(2);" id="quantity2" >
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -173,7 +173,7 @@
 							<br>
 							<div id="price3">Price: </div>
 							<br>
-							<select onchange="changePrice(this);" id="size3" style="width: 200px">
+							<select onchange="changePrice(3);" id="size3" style="width: 200px">
 								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
@@ -185,7 +185,7 @@
 								<option value="pan">Pan</option>
 							</select>
 							<br>
-							<select onchange="changePrice(document.getElementById('pepSize'));" id="quantity3" >
+							<select onchange="changePrice(3);" id="quantity3" >
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -213,7 +213,7 @@
 							<br>
 							<div id="price4">Price: </div>
 							<br>
-							<select onchange="changePrice(this);" id="size4" style="width: 200px">
+							<select onchange="changePrice(4);" id="size4" style="width: 200px">
 								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
@@ -225,7 +225,7 @@
 								<option value="pan">Pan</option>
 							</select>
 							<br>
-							<select onchange="changePrice(document.getElementById('meatSize'));" id="quantity4" >
+							<select onchange="changePrice(4);" id="quantity4" >
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -252,7 +252,7 @@
 							<br>
 							<div id="price5">Price: </div>
 							<br>
-							<select onchange="changePrice(this);" id="size5" style="width: 200px">
+							<select onchange="changePrice(5);" id="size5" style="width: 200px">
 								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
@@ -264,7 +264,7 @@
 								<option value="pan">Pan</option>
 							</select>
 							<br>
-							<select onchange="changePrice(document.getElementById('supSize'));" id="quantity5">
+							<select onchange="changePrice(5);" id="quantity5">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
