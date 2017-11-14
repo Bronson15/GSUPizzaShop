@@ -96,8 +96,30 @@
 			document.getElementById("supPrice").innerHTML = price;
 		}
 
+		if(object.id == "custSize") {
+			if(object.value!=""){
+				quantity = document.getElementById("custQuantity").value;
+				if(object.value == "small") price = <?php echo $smallCheese; ?>;
+				if(object.value == "medium") price = <?php echo $medCheese; ?>;
+				if(object.value == "large") price = <?php echo $largeCheese; ?>;
+				price = price+getToppingTotal();
+				price = "Price: $" + (price*quantity).toFixed(2);
+				document.getElementById("custPrice").innerHTML = price;
+			}
+		}
+	}
 
-
+	function getToppingTotal(){
+		total = 0.0;
+		if(document.getElementById("pep").checked) total += .25;
+		if(document.getElementById("chi").checked) total += .30;
+		if(document.getElementById("pin").checked) total += .25;
+		if(document.getElementById("jal").checked) total += .15;
+		if(document.getElementById("bla").checked) total += .15;
+		if(document.getElementById("bac").checked) total += .25;
+		if(document.getElementById("ban").checked) total += .15;
+		if(document.getElementById("mus").checked) total += .15;
+		return total;
 	}
 </script>
 
@@ -266,9 +288,10 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>Price: $
-				</p>
-				<select name="Size" style="width: 200px">
+				<br>
+				<div id="custPrice">Price: </div>
+				<br>
+				<select onchange="changePrice(this);" id="custSize" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
@@ -283,34 +306,34 @@
 			</select></p>
 			<p>Toppings:</p>
 			<p><label>Cheese
-				<input type = "checkbox" name = "top" value = "che"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "che"
 			</label>
 			<label>Pepperoni(.25)
-				<input type = "checkbox" name = "top" value = "pep"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pep"
 			</label></p>
 			<p><label>Chicken(.3)
-				<input type = "checkbox" name = "top" value = "chi"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "chi"
 			</label>
 			<label>Pineapple(.25)
-				<input type = "checkbox" name = "top" value = "pin"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pin"
 			</label></p>
 			<p><label>Jalapeno(.15)
-				<input type = "checkbox" name = "top" value = "jal"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "jal"
 			</label>
 			<label>Black Olives(.15)
-				<input type = "checkbox" name = "top" value = "bla"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bla"
 			</label></p>
 			<label>Bacon(.25)
-				<input type = "checkbox" name = "top" value = "bac"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bac"
 			</label>
 			<label>Banana Pepper(.15)
-				<input type = "checkbox" name = "top" value = "ban"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "ban"
 			</label>
 
 			<p><label>Mushrooms(.15)
-				<input type = "checkbox" name = "top" value = "mus"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "mus"
 			</label></p>
-			<p><select name = "quantity"</select>
+			<p><select onchange="changePrice(document.getElementById('custSize'));" id = "custQuantity"</select>
 				<option selected>1</option>
 				<option>2</option>
 				<option>3</option>
