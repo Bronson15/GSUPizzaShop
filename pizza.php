@@ -265,7 +265,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select onchange="changePrice(5);" id="Style" style="width: 200px">
+							<select onchange="changePrice(5);" id="crust5" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
