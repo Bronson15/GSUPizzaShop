@@ -257,11 +257,16 @@
 					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
-				<table align="left" style="table-layout: fixed; float: none;">
+				<table>
 					<tr>
-						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Green Peppers</label></td>
-						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Onion</label></td>
-						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Jalapeno</label></td>
+						<td>
+							<p><input type="checkbox"><label>Green Peppers</label></p>
+							<p><input type="checkbox"><label>Onion</label></p>
+							<p><input type="checkbox"><label>Jalapeno</label></p>
+						</td>
+						</td>
+							<p><input type="checkbox"><label>Beef</label></p>
+						</td>
 					</tr>
 				</table><br>
 				<p><select onchange="changePrice(1);" id = "quantity1"</select>
