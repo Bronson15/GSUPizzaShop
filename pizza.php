@@ -8,26 +8,16 @@
 		$t_prices[$row['topping_id']] = $row['price'];
 	}
 
-	//Get custom pizza info
-	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE product_id=1;");
-	$row = pg_fetch_assoc($result);
-	$customPizza['base_price'] = $row['base_price'];
-	$customPizza['m_upcharge'] = $row['m_upcharge'];
-	$customPizza['l_upcharge'] = $row['l_upcharge'];
-	$customPizza['p_upcharge'] = $row['p_upcharge'];
-
-	//Get specialty pizza info
+	//Get pizza info
 	$result = pg_query($pg_conn, "SELECT * FROM prices;");
 	while($row = pg_fetch_assoc($result)){
-		$specialty[$row['product_id']]['product_name'] = $row['product_name'];
-		$specialty[$row['product_id']]['base_price'] = $row['base_price'];
-		$specialty[$row['product_id']]['m_upcharge'] = $row['m_upcharge'];
-		$specialty[$row['product_id']]['l_upcharge'] = $row['l_upcharge'];
-		$specialty[$row['product_id']]['p_upcharge'] = $row['p_upcharge'];
-		$specialty[$row['product_id']]['toppings'] = $row['toppings'];
+		$pizzaInfo[$row['product_id']]['product_name'] = $row['product_name'];
+		$pizzaInfo[$row['product_id']]['base_price'] = $row['base_price'];
+		$pizzaInfo[$row['product_id']]['m_upcharge'] = $row['m_upcharge'];
+		$pizzaInfo[$row['product_id']]['l_upcharge'] = $row['l_upcharge'];
+		$pizzaInfo[$row['product_id']]['p_upcharge'] = $row['p_upcharge'];
+		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
-
-	echo $specialty[4]['product_name'];
 
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
@@ -130,9 +120,9 @@
 		if(object.id == "custSize") {
 			if(object.value!=""){
 				quantity = document.getElementById("custQuantity").value;
-				if(object.value == "small") price = <?php echo $customPizza['base_price']; ?>;
-				if(object.value == "medium") price = <?php echo $customPizza['base_price'] + $customPizza['m_upcharge']; ?>;
-				if(object.value == "large") price = <?php echo $customPizza['base_price'] + $customPizza['l_upcharge']; ?>;
+				if(object.value == "small") price = <?php echo $pizzaInfo[1]['base_price']; ?>;
+				if(object.value == "medium") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['m_upcharge']; ?>;
+				if(object.value == "large") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['l_upcharge']; ?>;
 				price = price+getToppingTotal();
 				price = "Price: $" + (price*quantity).toFixed(2);
 				document.getElementById("custPrice").innerHTML = price;
