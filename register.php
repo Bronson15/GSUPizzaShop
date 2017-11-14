@@ -16,7 +16,7 @@
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
 			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
 			window.history.back();</script>';
-		
+		}
 			//if username is a duplicate
 		else if($username = $userParam){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
