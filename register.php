@@ -39,7 +39,7 @@
 			session_unset();
 			header("Refresh:0");
 		}*/
-		else if(pg_num_rows($nameParam) >=1 && pg_num_rows($emailParam) >= 1){
+		else if(pg_num_rows($nameParam) >= 1){
 			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
 			session_unset();
 			header("Refresh:0");
