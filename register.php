@@ -15,22 +15,19 @@
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
-			echo "<script type='text/javascript'>alert('A field is blank, please review form.')</script>";
+			die('There is an empty field. Please review form.');
 		}
 		//checks for duplicate users
-		if($username == $userParam || $name == $nameParam || $email == $emailParam){
-			echo "<script type='text/javascript'>alert('There is already an account made with these credentials. Try forgot <a href='forgot.php'>Username/Password</a>')</script>";
+		if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
+			die('There is already an account with those credentials');
 		}
 		//if no duplicates or empty fields, insert data into table
-		else{
-			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());
-			
-			$result = pg_query($query);
+		$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
+		$result = pg_query($query);
 ?>		
 	<h1>Registered</h1>
 	<p>You are now registered. You can log on <a href="login.php">here</a></p>
 <?php
-		}
 	}
 	else{
 ?>
