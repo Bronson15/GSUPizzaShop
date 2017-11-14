@@ -87,7 +87,8 @@
 				echo "var pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
 			}
 		?>
-		if(pizzaID != 1){
+		alert(pizzaID);
+		if(pizzaID > 1){
 			alert("success1");
 			var priceDisplay = document.getElementById("price" + pizzaID);
 			alert("success2");
