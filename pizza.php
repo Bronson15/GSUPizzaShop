@@ -1,48 +1,48 @@
-<?php 
+<?php
 	include("header.php");
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallCheese = $row['price']; 
+	$smallCheese = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 8;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medCheese = $row['price']; 
+	$medCheese = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 9;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$largeCheese = $row['price']; 
-	
+	$largeCheese = $row['price'];
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 1;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallPep = $row['price']; 
+	$smallPep = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 2;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medPep = $row['price']; 
+	$medPep = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 3;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largePep = $row['price'];
-	
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 13;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallMeat = $row['price']; 
+	$smallMeat = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 14;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medMeat = $row['price']; 
+	$medMeat = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 15;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeMeat = $row['price'];
-	
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 25;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$smallSup = $row['price']; 
+	$smallSup = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 26;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
-	$medSup = $row['price']; 
+	$medSup = $row['price'];
 
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
@@ -50,203 +50,219 @@
 ?>
 
 <main>
-	<p>Welcome to GSU pizza shop<p>
-	<p>Check out our best deals under specials</p>
+	<div id="pizza-text">
+		<h2>Welcome to GSU pizza shop</h2>
+		<b>Check out our best deals under specials</b>
+	</div>	
 </main>
+
+<script>
+	function changePrice(object){
+		var price = document.getElementById("price");
+		var quantity;
+		if(object.id == "cheeseSize") {
+			quantity = document.getElementById("cheeseQuantity").value;
+			if(object.value == "small") price = <?php echo $smallCheese; ?>;
+			if(object.value == "medium") price = <?php echo $medCheese; ?>;
+			if(object.value == "large") price = <?php echo $largeCheese; ?>;
+			price = "Price: $" + (price*quantity).toFixed(2);
+			document.getElementById("cheesePrice").innerHTML = price;
+		}
+
+		if(object.id == "pepSize") {
+			quantity = document.getElementById("pepQuantity").value;
+			if(object.value == "small") price = <?php echo $smallPep; ?>;
+			if(object.value == "medium") price = <?php echo $medPep; ?>;
+			if(object.value == "large") price = <?php echo $largePep; ?>;
+			price = "Price: $" + (price*quantity).toFixed(2);
+			document.getElementById("pepPrice").innerHTML = price;
+		}
+
+		if(object.id == "meatSize") {
+			quantity = document.getElementById("meatQuantity").value;
+			if(object.value == "small") price = <?php echo $smallMeat; ?>;
+			if(object.value == "medium") price = <?php echo $medMeat; ?>;
+			if(object.value == "large") price = <?php echo $largeMeat; ?>;
+			price = "Price: $" + (price*quantity).toFixed(2);
+			document.getElementById("meatPrice").innerHTML = price;
+		}
+
+		if(object.id == "supSize") {
+			quantity = document.getElementById("supQuantity").value;
+			if(object.value == "small") price = <?php echo $smallSup; ?>;
+			if(object.value == "medium") price = <?php echo $medSup; ?>;
+			if(object.value == "large") price = <?php echo $largeSup; ?>;
+			price = "Price: $" + (price*quantity).toFixed(2);
+			document.getElementById("supPrice").innerHTML = price;
+		}
+
+
+
+	}
+</script>
+
 <div id="pizza-table">
 	<table>
 			<tr>
+
 				<td><b>Cheese Pizza</b>
-				<form action="cart.php">
-				<p>
-				<div id="cheesePrice">Price: </div>
-				
-				<script>
-					function changePrice(object){
-						var price = document.getElementById("price");
-						var quantity;
-						if(object.id == "cheeseSize") {
-							quantity = document.getElementById("cheeseQuantity").value;
-							if(object.value == "small") price = <?php echo $smallCheese; ?>;
-							if(object.value == "medium") price = <?php echo $medCheese; ?>;
-							if(object.value == "large") price = <?php echo $largeCheese; ?>;
-							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("cheesePrice").innerHTML = price;
-						}
-						
-						if(object.id == "pepSize") {
-							quantity = document.getElementById("pepQuantity").value;
-							if(object.value == "small") price = <?php echo $smallPep; ?>;
-							if(object.value == "medium") price = <?php echo $medPep; ?>;
-							if(object.value == "large") price = <?php echo $largePep; ?>;
-							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("pepPrice").innerHTML = price;
-						}
-						
-						if(object.id == "meatSize") {
-							quantity = document.getElementById("meatQuantity").value;
-							if(object.value == "small") price = <?php echo $smallMeat; ?>;
-							if(object.value == "medium") price = <?php echo $medMeat; ?>;
-							if(object.value == "large") price = <?php echo $largeMeat; ?>;
-							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("meatPrice").innerHTML = price;
-						}
-						
-						if(object.id == "supSize") {
-							quantity = document.getElementById("supQuantity").value;
-							if(object.value == "small") price = <?php echo $smallSup; ?>;
-							if(object.value == "medium") price = <?php echo $medSup; ?>;
-							if(object.value == "large") price = <?php echo $largeSup; ?>;
-							price = "Price: $" + (price*quantity).toFixed(2);
-							document.getElementById("supPrice").innerHTML = price;
-						}
-						
-						
-						
-					}
-				</script>
-					
-				<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium </option>
-					<option value="large">Large</option>
-				</select>
-					
-				<p>
-				<select id="style" style="width: 200px">
-					<option value="pan">Pan Pizza</option>
-					<option value="hand">Hand Tossed</option>
-				</select>
-				</p>
-				<p>
-				<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
-					<option value="10">10</option>
-				</select>
-				<button type="add" onClick="cart.php">Add to Cart</button>
-				</form>
-				</p>
+					<div class="cheese-class">
+						<div id="cheese-form">
+							<form action="cart.php">
+								<br>
+								<div id="cheesePrice">Price: </div>
+								<br>
+								<select onchange="changePrice(this);" id="cheeseSize" style="width:200px">
+									<option value="" disabled selected>Select Size</option>
+									<option value="small">Small</option>
+									<option value="medium">Medium </option>
+									<option value="large">Large</option>
+								</select>
+								<br>
+								<select id="style" style="width: 200px">
+									<option value="pan">Pan Pizza</option>
+									<option value="hand">Hand Tossed</option>
+								</select>
+								<br>
+								<select onchange="changePrice(document.getElementById('cheeseSize'));" id="cheeseQuantity" >
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+								<button type="add" onClick="cart.php">Add to Cart</button>
+							</form>
+						</div>
+						<br>
+						<div id="cheese-img"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
+					</div>
 				</td>
-		
+
 				<td><b>Pepperoni</b>
-				<form action="cart.php">
-				<p>
-				<div id="pepPrice">Price: </div>
-				</p>
-				<select onchange="changePrice(this);" id="pepSize" style="width: 200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-				</select>
-				<p>
-				<select id="style" style="width: 200px">
-					<option value="pan">Pan Pizza</option>
-					<option value="hand">Hand Tossed</option>
-				</select>
-				</p>
-				<p>
-				<select onchange="changePrice(document.getElementById('pepSize'));" id="pepQuantity" >
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
-					<option value="10">10</option>
-				</select>
-				<button type="add" onClick="cart.php">Add to Cart</button>
-				</form>
-				</p>
-				
-				
-				
+					<div class="pep-class">
+						<div id="pep-form">
+							<form action="cart.php">
+								<br>
+								<div id="pepPrice">Price: </div>
+								<br>
+								<select onchange="changePrice(this);" id="pepSize" style="width: 200px">
+									<option value="" disabled selected>Select Size</option>
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<br>
+								<select id="style" style="width: 200px">
+									<option value="pan">Pan Pizza</option>
+									<option value="hand">Hand Tossed</option>
+								</select>
+								<br>
+								<select onchange="changePrice(document.getElementById('pepSize'));" id="pepQuantity" >
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+								<button type="add" onClick="cart.php">Add to Cart</button>
+							</form>
+						</div>
+						<br>
+						<div id="pep-img"><img src="/img/pizza-pep.png" alt="pizza-pep"></div>
+					</div>
 				</td>
 			</tr>
 			<tr>
 				<td><b>Meat Lovers</b>
-				<form action="cart.php">
-				<p>
-				<div id="meatPrice">Price: </div>
-				</p>
-				<select onchange="changePrice(this);" id="meatSize" style="width: 200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-				</select>
-				<p>
-				<select id="style" style="width: 200px">
-					<option value="pan">Pan Pizza</option>
-					<option value="hand">Hand Tossed</option>
-				</select>
-				</p>
-				<p>
-				<select onchange="changePrice(document.getElementById('meatSize'));" id="meatQuantity" >
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
-					<option value="10">10</option>
-				</select>
-				<button type="add" onClick="cart.php">Add to Cart</button>
-				</form>
-				</p>
-
+					<div class="meat-class">
+						<div id="meat-form">
+							<form action="cart.php">
+								<br>
+								<div id="meatPrice">Price: </div>
+								<br>
+								<select onchange="changePrice(this);" id="meatSize" style="width: 200px">
+									<option value="" disabled selected>Select Size</option>
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<br>
+								<select id="style" style="width: 200px">
+									<option value="pan">Pan Pizza</option>
+									<option value="hand">Hand Tossed</option>
+								</select>
+								<br>
+								<select onchange="changePrice(document.getElementById('meatSize'));" id="meatQuantity" >
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+								<button type="add" onClick="cart.php">Add to Cart</button>
+							</form>
+						</div>
+						<br>
+						<div id="meat-img"><img src="/img/pizza-meat.png" alt="pizza-meat"></div>
+					</div>
 				</td>
+
 				<td><b>Supreme</b>
-				<form action="cart.php">
-				<p>
-				<div id="supPrice">Price: </div>
-				</p>
-				<select onchange="changePrice(this);" id="supSize" style="width: 200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-				</select>
-				<p>
-				<select id="Style" style="width: 200px">
-					<option value="pan">Pan Pizza</option>
-					<option value="hand">Hand Tossed</option>
-				</select>
-				</p>
-				<p>
-				<select onchange="changePrice(document.getElementById('supSize'));" id="supQuantity">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option> 
-					<option value="9">9</option> 
-					<option value="10">10</option>
-				</select>
-				<button type="add" onClick="cart.php">Add to Cart</button>
-				</form>
-				</p>
-				</td> 
-				
-				
+					<div class="sup-class">
+						<div id="sup-form">
+							<form action="cart.php">
+								<br>
+								<div id="supPrice">Price: </div>
+								<br>
+								<select onchange="changePrice(this);" id="supSize" style="width: 200px">
+									<option value="" disabled selected>Select Size</option>
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<br>
+								<select id="Style" style="width: 200px">
+									<option value="pan">Pan Pizza</option>
+									<option value="hand">Hand Tossed</option>
+								</select>
+								<br>
+								<select onchange="changePrice(document.getElementById('supSize'));" id="supQuantity">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+								<button type="add" onClick="cart.php">Add to Cart</button>
+							</form>
+						</div>
+						<br>
+						<div id="sup-img"><img src="/img/pizza-sup.png" alt="pizza-sup"></div>
+					</div>
+				</td>
+
+
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
@@ -290,7 +306,7 @@
 			<label>Banana Pepper(.15)
 				<input type = "checkbox" name = "top" value = "ban"
 			</label>
-			
+
 			<p><label>Mushrooms(.15)
 				<input type = "checkbox" name = "top" value = "mus"
 			</label></p>
@@ -310,5 +326,5 @@
 			</p>
 			</td>
 	</table>
-</div>		
+</div>
 <?php include("footer.php");?>

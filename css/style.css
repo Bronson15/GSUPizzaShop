@@ -46,7 +46,7 @@ nav a:hover{
 	background-color:#a99260;
 }
 main{
-	
+
 }
 main h1{
 	text-align:center;
@@ -66,11 +66,12 @@ main h1{
     padding: 5px;
 	}
 #pizza-table table {
+	margin: auto;
     border-spacing: 10px;
 	width: 50%;
 }
 #pizza-table button {
-	width: 157px;
+	width: 148px;
 }
 #contact{
 	text-align:center;
@@ -111,6 +112,70 @@ footer{
 	margin-bottom:2px;
 }
 
-button{
+#pizza-table img {
+	height: 100px;
+}
+
+#cheese-form {
+	float: left;
+}
+
+#cheese-img {
+	float: left;
+}
+
+.cheese-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#pizza-text {
+	text-align: center;
+}
+
+#pep-form {
+	float:left;
+}
+
+#pep-img {
+	float: left;
+}
+
+.pep-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#meat-form {
+	float: left;
+}
+
+#meat-img {
+	float: left;
+}
+
+.meat-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#sup-form {
+	float: left;
+}
+
+#sup-img {
+	float: left;
+}
+
+.sup-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button {
 	background-color:#a99260;
 }
