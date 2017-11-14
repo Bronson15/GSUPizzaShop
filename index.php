@@ -8,13 +8,26 @@
 				font-size: 25px; 
 				text-align: center; 
 			}
+		caption{
+			font-size:15px;
+			text-align:left;
+		}
+			
+		table{ 
+			border-spacing:15 px;
+		}
+		
+		td{
+			width:35%;	
+		}	
 
 		</style>
 		<h1>Deals<h1>
 			
-		</main>
-		<div id="pizza-dea;s">
+		
+		<div id="pizza-deals">
 			<table>
+			<caption><b>Deals<b></caption>
 			<tbody>
 				<tr>
 				<td>
@@ -39,5 +52,5 @@
 		</div>
 		
 	</div>
-
+</main>
 <?php include("footer.php");?>
