@@ -114,6 +114,11 @@ footer{
 
 #pizza-table img {
 	height: 100px;
+	padding-left: 15%;
+}
+
+#pizza-table td {
+	width: 15%;
 }
 
 #cheese-form {
