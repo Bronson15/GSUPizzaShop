@@ -1,5 +1,5 @@
 <?php include("header.php");
-	
+	session_start();
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
 		//variables set to values the user inputs
@@ -16,16 +16,19 @@
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
 			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
 			window.history.back();</script>';
+			session_unset();
 		}
 			//if username is a duplicate
 		else if($username = $userParam){
 			echo "<script type='text/javascript'>alert('Username taken.');
 			window.history.back();</script>";
+			session_unset();
 		}
 		else if(($name = $nameParam && $email = $emailParam) || $email = 
 		$emailParam){
 			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.');
 			window.history.back();</script>";
+			session_unset();
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
