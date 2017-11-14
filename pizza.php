@@ -286,8 +286,9 @@
 			</tr>
 				<td><b>Create your own</b>
 				<form action = "cart.php">
-				<p>Price: $
-				</p>
+				<br>
+				<div id="custPrice">Price: </div>
+				<br>
 				<select name="Size" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
