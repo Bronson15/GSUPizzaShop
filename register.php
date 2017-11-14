@@ -1,5 +1,6 @@
 <?php include("header.php");
 	session_start();
+	$pg_conn2 = pg_connection_reset($pg_conn);
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
 		//variables set to values the user inputs
