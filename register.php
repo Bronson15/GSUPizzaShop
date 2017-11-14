@@ -9,7 +9,7 @@
 		$email = $_POST['email'];
 		
 		//variables to validate form elements
-		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username= '$username'");
+		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
 		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
 		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
 		
