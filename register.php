@@ -19,7 +19,7 @@
 			window.history.back();</script>';
 		}
 		//checks for duplicate users
-		else if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
+		else if($_POST['username'] == $userParam || ($_POST['flname'] == $nameParam && $_POST['email'] == $emailParam)){
 			echo '<script type="text/javascript">alert("There is already an account with those credentials");
 			window.history.back();</script>';
 			
