@@ -3,9 +3,8 @@
 	<div id="index-body-text">		
 		<main>
 			<h2>Welcome to GSU Pizza Shop!</h2>
-			<p>Check out our best deals under specials</p>
 		</main>
-		<br><img style="border-radius:20px; max-height:250px; width:auto;" src="img/pizza.jpg"><br>
+		<br><img style="border-radius:20px; max-height:250px; width:auto;" src="img/pizza.jpg"><br><br>
 		<div id="pizza-deals">
 			<table align="center">
 				<caption><b>Deals<b></caption>
