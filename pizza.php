@@ -88,13 +88,21 @@
 			}
 		?>
 		if(pizzaID != 1){
+			alert("success1");
 			var priceDisplay = document.getElementById("price" + pizzaID);
+			alert("success2");
 			var quantity = document.getElementById("quantity" + pizzaID).value;
+			alert("success3");
 			var size = document.getElementById("size" + pizzaID).value;
+			alert("success4");
 			var price = basePrice[pizzaID];
+			alert("success5");
 			if(size == "medium") price += mUpcharge[pizzaID];
+			alert("success6");
 			if(size == "large") price += lUpcharge[pizzaID];
+			alert("success7");
 			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+			alert("success8");
 		}
 
 		if(object.id == "custSize") {
