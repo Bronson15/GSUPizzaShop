@@ -332,7 +332,7 @@
 			<p><label>Mushrooms(.15)
 				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "mus"
 			</label></p>
-			<p><select onchange="changePrice(document.getElementById('custSize'));" name = "quantity"</select>
+			<p><select onchange="changePrice(document.getElementById('custSize'));" id = "custQuantity"</select>
 				<option selected>1</option>
 				<option>2</option>
 				<option>3</option>
