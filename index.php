@@ -2,13 +2,12 @@
 	
 	<div id="index-body-text">		
 		<main>
-			<p>Welcome to GSU pizza shop<p>
+			<h2>Welcome to GSU Pizza Shop!<h2>
 			<p>Check out our best deals under specials</p>
-			test
 		</main>
-		<img style="border-radius:20px; max-height:200px; width:auto;" src="img/pizza.jpg">
+		<br><img style="border-radius:20px; max-height:250px; width:auto;" src="img/pizza.jpg">
 		<div id="pizza-deals">
-			<table>
+			<table align="center">
 				<caption><b>Deals<b></caption>
 				<tbody>
 					<tr>
