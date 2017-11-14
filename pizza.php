@@ -29,32 +29,35 @@
 </main>
 
 <script>
-	try{
 		function changePrice(pizzaID){
-			var basePrice = {};
-			var mUpcharge = {};
-			var lUpcharge = {};
-			var pUpcharge = {};
-			<?php
-				for($i = 1; $i <= 5; $i++){
-					echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
-					echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
-					echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
-					echo "pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
+			try{
+				var basePrice = {};
+				var mUpcharge = {};
+				var lUpcharge = {};
+				var pUpcharge = {};
+				<?php
+					for($i = 1; $i <= 5; $i++){
+						echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
+						echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
+						echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
+						echo "pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
+					}
+				?>
+				var priceDisplay = document.getElementById("price" + pizzaID);
+				var quantity = document.getElementById("quantity" + pizzaID).value;
+				var size = document.getElementById("size" + pizzaID).value;
+				var crust = document.getElementById("crust" + pizzaID).value;
+				var price = basePrice[pizzaID];
+				if(size == "medium") price += mUpcharge[pizzaID];
+				if(size == "large") price += lUpcharge[pizzaID];
+				if(crust == "pan") price += pUpcharge[pizzaID];
+				if(pizzaID == 1) {
+					price = price+getToppingTotal();
 				}
-			?>
-			var priceDisplay = document.getElementById("price" + pizzaID);
-			var quantity = document.getElementById("quantity" + pizzaID).value;
-			var size = document.getElementById("size" + pizzaID).value;
-			var crust = document.getElementById("crust" + pizzaID).value;
-			var price = basePrice[pizzaID];
-			if(size == "medium") price += mUpcharge[pizzaID];
-			if(size == "large") price += lUpcharge[pizzaID];
-			if(crust == "pan") price += pUpcharge[pizzaID];
-			if(pizzaID == 1) {
-				price = price+getToppingTotal();
+				priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+			} catch(err){
+				alert(err.message);
 			}
-			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
 		}
 
 		function getToppingTotal(){
@@ -77,10 +80,6 @@
 			if(document.getElementById("T").checked) total += <?php echo $t_prices['T']; ?>;
 			return total;
 		}
-	}
-	catch(err){
-			alert(err.message);
-	}
 </script>
 
 <div id="pizza-table">
