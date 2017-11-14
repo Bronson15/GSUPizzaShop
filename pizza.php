@@ -79,6 +79,7 @@
 
 <script>
 	function changePrice(pizzaID){
+		try{
 		var basePrice = {};
 		var mUpcharge = {};
 		var lUpcharge = {};
@@ -101,6 +102,9 @@
 			if(size == "large") price += lUpcharge[pizzaID];
 			if(crust == "pan") price += pUpcharge[pizzaID];
 			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+		}
+		} catch(err){
+			alert(err.message);
 		}
 
 		if(object.id == "custSize") {
