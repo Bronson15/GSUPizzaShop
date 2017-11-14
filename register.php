@@ -33,7 +33,7 @@
 	else{
 ?>
 <div id="log-col">
-	<form id="login" action="/register.php" method="POST">
+	<form id="login" action=<?php echo $_SERVER['PHP_SELF']; ?> method="POST">
 		<fieldset id="username">
 			
 			<label>Name(First and Last):</label>
