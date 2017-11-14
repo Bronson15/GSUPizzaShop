@@ -10,8 +10,8 @@
 		
 		//variables to validate form elements
 		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."'");
-		$nameParam = pg_query($pg_conn,"SELECT flname FROM customer WHERE name ='" . $name ."'");
-		$emailParam = pg_query($pg_conn,"SELECT emailaddress FROM customer WHERE name = '" . $email ."'");
+		$nameParam = pg_query($pg_conn,"SELECT name FROM customer WHERE name ='" . $name ."'");
+		$emailParam = pg_query($pg_conn,"SELECT emailaddress FROM customer WHERE emailaddress = '" . $email ."'");
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
@@ -20,13 +20,6 @@
 			header("Refresh:0");
 		}
 			//if username is a duplicate
-		/*	
-		else if($username = $userParam){
-			echo "<script type='text/javascript'>alert('Username taken.')</script>";
-			session_unset();
-			header("Refresh:0");
-		}
-		*/
 		else if(pg_num_rows($userParam) >= 1){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 			session_unset();
@@ -39,7 +32,7 @@
 			session_unset();
 			header("Refresh:0");
 		}*/
-		else if(pg_num_rows($nameParam) >= 1){
+		else if(pg_num_rows($nameParam) >= 1 && pg_num_rows($emailParam) >= 1{
 			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
 			session_unset();
 			header("Refresh:0");
