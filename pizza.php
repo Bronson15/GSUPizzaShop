@@ -241,7 +241,7 @@
 				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 				<form action = "cart.php">
 				<br>
-				<div id="custPrice">Price: </div>
+				<div id="price1">Price: </div>
 				<br>
 				<select onchange="changePrice(1);" id="size1" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
@@ -285,7 +285,7 @@
 				<p><label>Mushrooms(.15)
 					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "mus"
 				</label></p>
-				<p><select onchange="changePrice(1);" id = "custQuantity"</select>
+				<p><select onchange="changePrice(1);" id = "quantity1"</select>
 					<option selected>1</option>
 					<option>2</option>
 					<option>3</option>
