@@ -5,23 +5,21 @@
 	$name = $_POST['flname'];
 	$email = $_POST['email'];	
 	
+	//variables to validate form elements
+	$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
+	$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
+	$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
+	
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
 		
-		//variables to validate form elements
-		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
-		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
-		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
-		
+		//if username is a duplicate
+		if($username == $userParam){
+			echo "<script type='text/javascript'>alert('Username' . $_POST['username'] . 'taken.')</script>";
+		}
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
-			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
-			window.history.back();</script>';
-		}
-		//checks for duplicate users
-		else if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
-			echo '<script type="text/javascript">alert("There is already an account with those credentials");
-			window.history.back();</script>';
+			echo '<script type="text/javascript">alert("There is an empty field. Please review your form")</script>';
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
