@@ -22,7 +22,7 @@
 		}	
 
 		</style>
-		<h1>Deals<h1>
+		<h1>Deals</h1>
 			
 		
 		<div id="pizza-deals">
