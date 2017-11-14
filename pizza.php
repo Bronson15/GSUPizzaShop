@@ -16,6 +16,11 @@
 	$customPizza['l_upcharge'] = $row['l_upcharge'];
 	$customPizza['p_upcharge'] = $row['p_upcharge'];
 
+	//Get specialty pizza info
+	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE product_id!=1;");
+	echo $result;
+
+
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 7;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$smallCheese = $row['price'];
