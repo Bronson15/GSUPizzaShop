@@ -288,7 +288,7 @@
 
 
 			</tr>
-			<tr<
+			<tr>
 				<td colspan=2><b>Create your own</b>
 				<form action = "cart.php">
 				<br>
