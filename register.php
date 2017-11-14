@@ -15,12 +15,13 @@
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
-			die('<script type="text/javascript">alert("There is an empty field. Please review your form")</script>');
+			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
+			window.history.back();</script>';
 		}
 		//checks for duplicate users
 		if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
-			die('<script type="text/javascript">alert("There is already an account with those credentials");
-			window.history.back();</script>');
+			echo '<script type="text/javascript">alert("There is already an account with those credentials");
+			window.history.back();</script>';
 			
 		}
 		//if no duplicates or empty fields, insert data into table
