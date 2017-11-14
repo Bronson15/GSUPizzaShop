@@ -257,14 +257,16 @@
 					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
-				<table>
+				<table align="left">
 					<tr>
-						<td>
+						<td style="border:0;">
+							<p>Veggies:</p>
 							<p><input type="checkbox"><label>Green Peppers</label></p>
 							<p><input type="checkbox"><label>Onion</label></p>
 							<p><input type="checkbox"><label>Jalapeno</label></p>
 						</td>
-						<td>
+						<td style="border:0;">
+							<p>Meats</p>
 							<p><input type="checkbox"><label>Beef</label></p>
 						</td>
 					</tr>
