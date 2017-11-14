@@ -36,7 +36,7 @@
 			var lUpcharge = {};
 			var pUpcharge = {};
 			<?php
-				for($i = 2; $i <= 5; $i++){
+				for($i = 1; $i <= 5; $i++){
 					echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
 					echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
 					echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
