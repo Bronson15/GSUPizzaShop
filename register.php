@@ -11,19 +11,18 @@
 		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
 		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
 		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
-	
-		//if username is a duplicate
-		if($username = $userParam){
-			echo "<script type='text/javascript'>alert('Username taken.')</script>";
-		}
-		if($name = $nameParam && $email = $emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
-		}
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
 			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
 			window.history.back();</script>';
+		
+			//if username is a duplicate
+		else if($username = $userParam){
+			echo "<script type='text/javascript'>alert('Username taken.')</script>";
+		}
+		else if($name = $nameParam && $email = $emailParam){
+			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
