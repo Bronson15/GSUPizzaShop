@@ -4,7 +4,7 @@
 	$result = pg_query($query);
 ?>
 <div id="log-col">
-	<form id="login" action="/register.php" method="POST">
+	<form id="login" action="/index.php" method="POST">
 		<fieldset id="username">
 			
 			<label>Name(First and Last):</label>
