@@ -14,7 +14,7 @@
 		</main>
 		<!-- <img style="border-radius:20px" src="img/pizza.jpg"> -->
 		<p style="font-size: 160%"><i>
-				<img src="img/PizzaGus1.png" alt="Gus" style="float:left;width:432px;height:504px;">Check out the best deals
+				<img src="img/PizzaGus1.png" alt="Gus" style="float:left;width:216px;height:252px;">Check out the best deals
 				in town! 
 		</i></p>
 		
