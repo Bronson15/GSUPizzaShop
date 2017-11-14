@@ -289,7 +289,7 @@
 				<br>
 				<div id="custPrice">Price: </div>
 				<br>
-				<select name="Size" style="width: 200px">
+				<select onchange="changePrice(this);" id="custSize" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
@@ -304,34 +304,34 @@
 			</select></p>
 			<p>Toppings:</p>
 			<p><label>Cheese
-				<input type = "checkbox" name = "top" id = "che"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "che"
 			</label>
 			<label>Pepperoni(.25)
-				<input type = "checkbox" name = "top" id = "pep"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pep"
 			</label></p>
 			<p><label>Chicken(.3)
-				<input type = "checkbox" name = "top" id = "chi"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "chi"
 			</label>
 			<label>Pineapple(.25)
-				<input type = "checkbox" name = "top" id = "pin"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "pin"
 			</label></p>
 			<p><label>Jalapeno(.15)
-				<input type = "checkbox" name = "top" id = "jal"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "jal"
 			</label>
 			<label>Black Olives(.15)
-				<input type = "checkbox" name = "top" id = "bla"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bla"
 			</label></p>
 			<label>Bacon(.25)
-				<input type = "checkbox" name = "top" id = "bac"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "bac"
 			</label>
 			<label>Banana Pepper(.15)
-				<input type = "checkbox" name = "top" id = "ban"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "ban"
 			</label>
 
 			<p><label>Mushrooms(.15)
-				<input type = "checkbox" name = "top" id = "mus"
+				<input onchange="changePrice(document.getElementById('custSize'));" type = "checkbox" name = "top" id = "mus"
 			</label></p>
-			<p><select name = "quantity"</select>
+			<p><select onchange="changePrice(document.getElementById('custSize'));" name = "quantity"</select>
 				<option selected>1</option>
 				<option>2</option>
 				<option>3</option>
