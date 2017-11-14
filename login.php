@@ -1,19 +1,5 @@
 <?php include("header.php");
 	session_start();
-	
-	$username = $_POST['user'];
-	$password = $_POST['pass'];
-	
-	$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username= '$username'");
-	$passParam = pg_query($pg_conn, "SELECT * FROM customer WHERE passw = '$password'");
-	
-	if($username == "" && $password == ""){
-		echo "<script type='text/javascript'>alert('Username and/or password is inccorect. Try again')</script>";
-	}
-	else if($username == $userParam && $password == $passParam){
-		echo "<script type='text/javascript'>alert('Successful Login')</script>";
-	}
-	
 ?>
 <div id="log-col">
 	<form id="login" action="/login.php" method="POST">
@@ -31,6 +17,21 @@
 			
 		</fieldset>
 	</form>
+<?php 
+		
+	$username = $_POST['user'];
+	$password = $_POST['pass'];
+	
+	$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username= '$username'");
+	$passParam = pg_query($pg_conn, "SELECT * FROM customer WHERE passw = '$password'");
+	
+	if($username == "" && $password == ""){
+		echo "<script type='text/javascript'>alert('Username and/or password is inccorect. Try again')</script>";
+	}
+	else if($username == $userParam && $password == $passParam){
+		echo "<script type='text/javascript'>alert('Successful Login')</script>";
+	}
+?>
 	<p>Not a user? Click <a href="register.php">here</a>.</p>
 </div>
 <?php include("footer.php") ?>
