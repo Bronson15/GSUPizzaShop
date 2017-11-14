@@ -6,7 +6,7 @@
 			<p>Check out our best deals under specials</p>
 			test
 		</main>
-		<img style="border-radius:20px" src="img/pizza.jpg">
+		<img style="border-radius:20px; max-height:200px; width:auto;" src="img/pizza.jpg">
 		<div id="pizza-deals">
 			<table>
 				<caption><b>Deals<b></caption>
