@@ -78,59 +78,61 @@
 </main>
 
 <script>
-	function changePrice(pizzaID){
-		try{
-		var basePrice = {};
-		var mUpcharge = {};
-		var lUpcharge = {};
-		var pUpcharge = {};
-		<?php
-			for($i = 2; $i <= 5; $i++){
-				echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
-				echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
-				echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
-				echo "pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
+	try{
+		function changePrice(pizzaID){
+			var basePrice = {};
+			var mUpcharge = {};
+			var lUpcharge = {};
+			var pUpcharge = {};
+			<?php
+				for($i = 2; $i <= 5; $i++){
+					echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
+					echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
+					echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
+					echo "pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";";
+				}
+			?>
+			if(pizzaID > 1){
+				var priceDisplay = document.getElementById("price" + pizzaID);
+				var quantity = document.getElementById("quantity" + pizzaID).value;
+				var size = document.getElementById("size" + pizzaID).value;
+				var crust = document.getElementById("crust" + pizzaID).value;
+				var price = basePrice[pizzaID];
+				if(size == "medium") price += mUpcharge[pizzaID];
+				if(size == "large") price += lUpcharge[pizzaID];
+				if(crust == "pan") price += pUpcharge[pizzaID];
+				priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
 			}
-		?>
-		if(pizzaID > 1){
-			var priceDisplay = document.getElementById("price" + pizzaID);
-			var quantity = document.getElementById("quantity" + pizzaID).value;
-			var size = document.getElementById("size" + pizzaID).value;
-			var crust = document.getElementById("crust" + pizzaID).value;
-			var price = basePrice[pizzaID];
-			if(size == "medium") price += mUpcharge[pizzaID];
-			if(size == "large") price += lUpcharge[pizzaID];
-			if(crust == "pan") price += pUpcharge[pizzaID];
-			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
-		}
-		} catch(err){
-			alert(err.message);
+
+
+			if(object.id == "custSize") {
+				if(object.value!=""){
+					quantity = document.getElementById("custQuantity").value;
+					if(object.value == "small") price = <?php echo $pizzaInfo[1]['base_price']; ?>;
+					if(object.value == "medium") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['m_upcharge']; ?>;
+					if(object.value == "large") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['l_upcharge']; ?>;
+					price = price+getToppingTotal();
+					price = "Price: $" + (price*quantity).toFixed(2);
+					document.getElementById("custPrice").innerHTML = price;
+				}
+			}
 		}
 
-		if(object.id == "custSize") {
-			if(object.value!=""){
-				quantity = document.getElementById("custQuantity").value;
-				if(object.value == "small") price = <?php echo $pizzaInfo[1]['base_price']; ?>;
-				if(object.value == "medium") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['m_upcharge']; ?>;
-				if(object.value == "large") price = <?php echo $pizzaInfo[1]['base_price'] + $pizzaInfo[1]['l_upcharge']; ?>;
-				price = price+getToppingTotal();
-				price = "Price: $" + (price*quantity).toFixed(2);
-				document.getElementById("custPrice").innerHTML = price;
-			}
+		function getToppingTotal(){
+			total = 0.0;
+			if(document.getElementById("pep").checked) total += .25;
+			if(document.getElementById("chi").checked) total += .30;
+			if(document.getElementById("pin").checked) total += .25;
+			if(document.getElementById("jal").checked) total += .15;
+			if(document.getElementById("bla").checked) total += .15;
+			if(document.getElementById("bac").checked) total += .25;
+			if(document.getElementById("ban").checked) total += .15;
+			if(document.getElementById("mus").checked) total += .15;
+			return total;
 		}
 	}
-
-	function getToppingTotal(){
-		total = 0.0;
-		if(document.getElementById("pep").checked) total += .25;
-		if(document.getElementById("chi").checked) total += .30;
-		if(document.getElementById("pin").checked) total += .25;
-		if(document.getElementById("jal").checked) total += .15;
-		if(document.getElementById("bla").checked) total += .15;
-		if(document.getElementById("bac").checked) total += .25;
-		if(document.getElementById("ban").checked) total += .15;
-		if(document.getElementById("mus").checked) total += .15;
-		return total;
+	catch(err){
+			alert(err.message);
 	}
 </script>
 
@@ -260,7 +262,7 @@
 					<div id="tile-form">
 						<form action="cart.php">
 							<br>
-							<div id="crust5">Price: </div>
+							<div id="price5">Price: </div>
 							<br>
 							<select onchange="changePrice(5);" id="size5" style="width: 200px">
 								<option value="" disabled selected>Select Size</option>
