@@ -25,11 +25,11 @@
 	$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username= '$username'");
 	$passParam = pg_query($pg_conn, "SELECT * FROM customer WHERE passw = '$password'");
 	
-	if($username == "" && $password == ""){
-		echo "<script type='text/javascript'>alert('Username and/or password is inccorect. Try again')</script>";
-	}
-	else if($username == $userParam && $password == $passParam){
+	if($username == $userParam && $password == $passParam){
 		echo "<script type='text/javascript'>alert('Successful Login')</script>";
+	}
+	else if($username != $userParam && $password != $passParam){
+		echo "<script type='text/javascript'>alert('Username and/or password is inccorect. Try again')</script>";
 	}
 ?>
 	<p>Not a user? Click <a href="register.php">here</a>.</p>
