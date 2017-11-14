@@ -20,14 +20,21 @@
 			header("Refresh:0");
 		}
 			//if username is a duplicate
+		/*	
 		else if($username = $userParam){
+			echo "<script type='text/javascript'>alert('Username taken.')</script>";
+			session_unset();
+			header("Refresh:0");
+		}
+		*/
+		else if(pg_num_rows($userParam) >= 1){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 			session_unset();
 			header("Refresh:0");
 		}
 		else if(($name = $nameParam && $email = $emailParam) || $email = 
 		$emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
+			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
 			session_unset();
 			header("Refresh:0");
 		}
