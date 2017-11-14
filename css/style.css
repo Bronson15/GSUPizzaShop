@@ -68,7 +68,7 @@ main h1{
 #pizza-table table {
 	margin: auto;
     border-spacing: 10px;
-	width: 80%;
+	width: 50%;
 }
 #pizza-table button {
 	width: 148px;
@@ -128,7 +128,7 @@ footer{
 }
 
 #cheese-img {
-	float: left;
+	float: right;
 }
 
 .cheese-class:after {
@@ -146,7 +146,7 @@ footer{
 }
 
 #pep-img {
-	float: left;
+	float: right;
 }
 
 .pep-class:after {
