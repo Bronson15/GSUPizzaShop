@@ -95,9 +95,11 @@
 			var priceDisplay = document.getElementById("price" + pizzaID);
 			var quantity = document.getElementById("quantity" + pizzaID).value;
 			var size = document.getElementById("size" + pizzaID).value;
+			var crust = document.getElementById("crust" + pizzaID).value;
 			var price = basePrice[pizzaID];
 			if(size == "medium") price += mUpcharge[pizzaID];
 			if(size == "large") price += lUpcharge[pizzaID];
+			if(crust == "pan") price += pUpcharge[pizzaID];
 			priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
 		}
 
@@ -145,7 +147,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="style" style="width: 200px">
+							<select id="crust2" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -184,7 +186,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="style" style="width: 200px">
+							<select id="crust3" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -224,7 +226,7 @@
 								<option value="large">Large</option>
 							</select>
 							<br>
-							<select id="style" style="width: 200px">
+							<select id="crust4" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
 							</select>
@@ -254,7 +256,7 @@
 					<div id="tile-form">
 						<form action="cart.php">
 							<br>
-							<div id="price5">Price: </div>
+							<div id="crust5">Price: </div>
 							<br>
 							<select onchange="changePrice(5);" id="size5" style="width: 200px">
 								<option value="" disabled selected>Select Size</option>
