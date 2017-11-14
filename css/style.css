@@ -68,7 +68,7 @@ main h1{
 #pizza-table table {
 	margin: auto;
     border-spacing: 10px;
-	width: 75%;
+	width: 50%;
 }
 #pizza-table button {
 	width: 148px;
@@ -118,7 +118,7 @@ footer{
 }
 
 #pizza-table td {
-	width: 15%;
+	width: 75%;
 }
 
 #cheese-form {
