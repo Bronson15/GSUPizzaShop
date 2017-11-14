@@ -22,7 +22,8 @@
 			echo "<script type='text/javascript'>alert('Username taken.');
 			window.history.back();</script>";
 		}
-		else if($name = $nameParam && $email = $emailParam){
+		else if(($name = $nameParam && $email = $emailParam) || $email = 
+		$emailParam){
 			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.');
 			window.history.back();</script>";
 		}
