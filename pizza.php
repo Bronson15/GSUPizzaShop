@@ -264,7 +264,7 @@
 							<p><input type="checkbox"><label>Onion</label></p>
 							<p><input type="checkbox"><label>Jalapeno</label></p>
 						</td>
-						</td>
+						<td>
 							<p><input type="checkbox"><label>Beef</label></p>
 						</td>
 					</tr>
