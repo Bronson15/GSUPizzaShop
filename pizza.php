@@ -103,7 +103,7 @@
 			if(object.value == "large") price = <?php echo $largeCheese; ?>;
 			price = price+getToppingTotal();
 			price = "Price: $" + (price*quantity).toFixed(2);
-			document.getElementById("supPrice").innerHTML = price;
+			document.getElementById("custPrice").innerHTML = price;
 		}
 	}
 
