@@ -259,11 +259,11 @@
 				<p>Toppings:</p>
 				<table align="left" style="table-layout: fixed;">
 					<tr>
-						<td style="border:0;"><input type="checkbox"> <label>Green Peppers</label></td>
-						<td style="border:0;"><input type="checkbox"> <label>Onion</label></td>
-						<td style="border:0;"><input type="checkbox"> <label>Jalapeno</label></td>
+						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Green Peppers</label></td>
+						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Onion</label></td>
+						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Jalapeno</label></td>
 					</tr>
-				</table>
+				</table><br>
 				<p><select onchange="changePrice(1);" id = "quantity1"</select>
 					<option selected>1</option>
 					<option>2</option>
