@@ -3,7 +3,7 @@
 
 	//Get topping prices
 	$result = pg_query($pg_conn, "SELECT * FROM toppings;");
-	while($row = pg_fetch_row($result)){
+	while($row = pg_fetch_assoc($result)){
 		echo $row['topping_name'] . "<br>";
 	}
 
