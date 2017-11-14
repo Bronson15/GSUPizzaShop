@@ -15,21 +15,21 @@
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
-			echo '<script type="text/javascript">alert("There is an empty field. Please review your form");
-			window.history.back();</script>';
+			echo '<script type="text/javascript">alert("There is an empty field. Please review your form")</script>';
 			session_unset();
+			header("Refresh:0");
 		}
 			//if username is a duplicate
 		else if($username = $userParam){
-			echo "<script type='text/javascript'>alert('Username taken.');
-			window.history.back();</script>";
+			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 			session_unset();
+			header("Refresh:0");
 		}
 		else if(($name = $nameParam && $email = $emailParam) || $email = 
 		$emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.');
-			window.history.back();</script>";
+			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
 			session_unset();
+			header("Refresh:0");
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
