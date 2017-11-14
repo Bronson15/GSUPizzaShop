@@ -256,11 +256,10 @@
 				<p><select name = "sauce" style="width:200px"</select>
 					<option selected>Marinara Sauce</option>
 				</select></p>
-				<p>Toppings:</p>
 				<table>
 					<tr>
 						<td style="border:0;">
-							<p>Veggies:</p>
+							<p><b>Veggies:</b></p>
 							<p><input type="checkbox"><label>Green Pepper</label></p>
 							<p><input type="checkbox"><label>Onion</label></p>
 							<p><input type="checkbox"><label>Jalapeno</label></p>
@@ -271,7 +270,7 @@
 							<p><input type="checkbox"><label>Tomato</label></p>
 						</td>
 						<td style="border:0;">
-							<p>Meats:</p>
+							<p><b>Meats:</b></p>
 							<p><input type="checkbox"><label>Anchovy</label></p>
 							<p><input type="checkbox"><label>Bacon</label></p>
 							<p><input type="checkbox"><label>Beef</label></p>
