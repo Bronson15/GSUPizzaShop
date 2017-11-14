@@ -9,7 +9,7 @@
 	}
 
 	//Get custom pizza info
-	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE id=1;");
+	$result = pg_query($pg_conn, "SELECT * FROM prices WHERE product_id=1;");
 	$row = pg_fetch_assoc($result);
 	$customPizza['base_price'] = $row['base_price'];
 	$customPizza['m_upcharge'] = $row['m_upcharge'];
@@ -63,8 +63,6 @@
 	$result = pg_query($pg_conn, "SELECT price FROM pizzas WHERE productid = 27;") or die("Error in SQL: " . pg_last_error());
 	$row = pg_fetch_assoc($result);
 	$largeSup = $row['price'];
-
-	echo $customPizza['base_price'];
 
 ?>
 
