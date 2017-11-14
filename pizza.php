@@ -64,6 +64,8 @@
 	$row = pg_fetch_assoc($result);
 	$largeSup = $row['price'];
 
+	echo $customPizza['base_price'];
+
 ?>
 
 <main>
