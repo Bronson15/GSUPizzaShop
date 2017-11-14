@@ -59,14 +59,22 @@
 
 		function getToppingTotal(){
 			total = 0.0;
-			if(document.getElementById("pep").checked) total += .25;
-			if(document.getElementById("chi").checked) total += .30;
-			if(document.getElementById("pin").checked) total += .25;
-			if(document.getElementById("jal").checked) total += .15;
-			if(document.getElementById("bla").checked) total += .15;
-			if(document.getElementById("bac").checked) total += .25;
-			if(document.getElementById("ban").checked) total += .15;
-			if(document.getElementById("mus").checked) total += .15;
+			if(document.getElementById("A").checked) total += <?php echo $t_prices['A']; ?>;
+			if(document.getElementById("B").checked) total += <?php echo $t_prices['B']; ?>;
+			if(document.getElementById("C").checked) total += <?php echo $t_prices['C']; ?>;
+			if(document.getElementById("E").checked) total += <?php echo $t_prices['E']; ?>;
+			if(document.getElementById("G").checked) total += <?php echo $t_prices['G']; ?>;
+			if(document.getElementById("H").checked) total += <?php echo $t_prices['H']; ?>;
+			if(document.getElementById("I").checked) total += <?php echo $t_prices['I']; ?>;
+			if(document.getElementById("J").checked) total += <?php echo $t_prices['J']; ?>;
+			if(document.getElementById("K").checked) total += <?php echo $t_prices['K']; ?>;
+			if(document.getElementById("M").checked) total += <?php echo $t_prices['M']; ?>;
+			if(document.getElementById("N").checked) total += <?php echo $t_prices['N']; ?>;
+			if(document.getElementById("O").checked) total += <?php echo $t_prices['O']; ?>;
+			if(document.getElementById("P").checked) total += <?php echo $t_prices['P']; ?>;
+			if(document.getElementById("R").checked) total += <?php echo $t_prices['R']; ?>;
+			if(document.getElementById("S").checked) total += <?php echo $t_prices['S']; ?>;
+			if(document.getElementById("T").checked) total += <?php echo $t_prices['T']; ?>;
 			return total;
 		}
 	}
@@ -260,24 +268,24 @@
 					<tr>
 						<td style="border:0;">
 							<p><b>Veggies:</b></p>
-							<p><input type="checkbox"><label>Green Pepper</label></p>
-							<p><input type="checkbox"><label>Onion</label></p>
-							<p><input type="checkbox"><label>Jalapeno</label></p>
-							<p><input type="checkbox"><label>Mushroom</label></p>
-							<p><input type="checkbox"><label>Pineapple</label></p>
-							<p><input type="checkbox"><label>Black Olive</label></p>
-							<p><input type="checkbox"><label>Banana Pepper</label></p>
-							<p><input type="checkbox"><label>Tomato</label></p>
+							<p><input id="G" type="checkbox"><label>Green Pepper</label></p>
+							<p><input id="I" type="checkbox"><label>Onion</label></p>
+							<p><input id="J" type="checkbox"><label>Jalapeno</label></p>
+							<p><input id="M" type="checkbox"><label>Mushroom</label></p>
+							<p><input id="N" type="checkbox"><label>Pineapple</label></p>
+							<p><input id="O" type="checkbox"><label>Black Olive</label></p>
+							<p><input id="R" type="checkbox"><label>Banana Pepper</label></p>
+							<p><input id="T" type="checkbox"><label>Tomato</label></p>
 						</td>
 						<td style="border:0;">
 							<p><b>Meats:</b></p>
-							<p><input type="checkbox"><label>Anchovy</label></p>
-							<p><input type="checkbox"><label>Bacon</label></p>
-							<p><input type="checkbox"><label>Beef</label></p>
-							<p><input type="checkbox"><label>Ham</label></p>
-							<p><input type="checkbox"><label>Chicken</label></p>
-							<p><input type="checkbox"><label>Pepperoni</label></p>
-							<p><input type="checkbox"><label>Sausage</label></p>
+							<p><input id="A" type="checkbox"><label>Anchovy</label></p>
+							<p><input id="B" type="checkbox"><label>Bacon</label></p>
+							<p><input id="E" type="checkbox"><label>Beef</label></p>
+							<p><input id="H" type="checkbox"><label>Ham</label></p>
+							<p><input id="K" type="checkbox"><label>Chicken</label></p>
+							<p><input id="P" type="checkbox"><label>Pepperoni</label></p>
+							<p><input id="S" type="checkbox"><label>Sausage</label></p>
 						</td>
 					</tr>
 				</table><br>
