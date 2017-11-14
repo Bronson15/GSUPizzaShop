@@ -13,10 +13,10 @@
 		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
 	
 		//if username is a duplicate
-		if($_POST['username'] = $userParam){
+		if($username = $userParam){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 		}
-		if($_POST['flname'] = $nameParam && $_POST['email'] = $emailParam){
+		if($name = $nameParam && $email = $emailParam){
 			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
 		}
 		
