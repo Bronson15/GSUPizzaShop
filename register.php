@@ -13,7 +13,7 @@
 		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
 	
 		//if username is a duplicate
-		if($_POST['username'] == pg_query("SELECT * FROM customer WHERE username = '$_POST['username']'")){
+		if($_POST['username'] == pg_query("SELECT * FROM customer WHERE username = '$username'")){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 		}
 		//If form elements are left empty
