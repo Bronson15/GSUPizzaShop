@@ -1,12 +1,12 @@
 <?php include("header.php");
 
+	//variables set to values the user inputs
+	$username = $_POST['username'];
+	$name = $_POST['flname'];
+	$email = $_POST['email'];	
+	
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
-		
-		//variables set to values the user inputs
-		$username = $_POST['username'];
-		$name = $_POST['flname'];
-		$email = $_POST['email'];
 		
 		//variables to validate form elements
 		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
@@ -19,18 +19,19 @@
 			window.history.back();</script>';
 		}
 		//checks for duplicate users
-		else if($_POST['username'] == $userParam || ($_POST['flname'] == $nameParam && $_POST['email'] == $emailParam)){
+		else if($username == $userParam || ($name == $nameParam && $email == $emailParam)){
 			echo '<script type="text/javascript">alert("There is already an account with those credentials");
 			window.history.back();</script>';
-			
 		}
 		//if no duplicates or empty fields, insert data into table
-		$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
-		$result = pg_query($query);
+		else{
+			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
+			$result = pg_query($query);
 ?>		
 	<h1>Registered</h1>
 	<p>You are now registered. You can log on <a href="login.php">here</a></p>
 <?php
+		}
 	}
 	else{
 ?>
