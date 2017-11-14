@@ -257,7 +257,7 @@
 					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
-				<table align="left" style="table-layout: fixed;">
+				<table align="left" style="table-layout: fixed; float: none;">
 					<tr>
 						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Green Peppers</label></td>
 						<td style="border:0; padding:5px;"><input type="checkbox"> <label>Onion</label></td>
