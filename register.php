@@ -19,10 +19,12 @@
 		}
 			//if username is a duplicate
 		else if($username = $userParam){
-			echo "<script type='text/javascript'>alert('Username taken.')</script>";
+			echo "<script type='text/javascript'>alert('Username taken.');
+			window.history.back();</script>";
 		}
 		else if($name = $nameParam && $email = $emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
+			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.');
+			window.history.back();</script>";
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
