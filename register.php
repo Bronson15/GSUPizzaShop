@@ -9,9 +9,9 @@
 		$email = $_POST['email'];	
 		
 		//variables to validate form elements
-		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
-		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
-		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
+		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = $username");
+		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $flname");
+		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $email");
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
