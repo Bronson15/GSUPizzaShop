@@ -14,7 +14,7 @@
 	
 		//if username is a duplicate
 		if($username == $userParam){
-			echo "<script type='text/javascript'>alert('Username' . $_POST['username'] . 'taken.')</script>";
+			echo "<script type='text/javascript'>alert('Username taken.')</script>";
 		}
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
