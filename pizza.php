@@ -81,10 +81,10 @@
 	function changePrice(pizzaID){
 		<?php
 			for($i = 2; $i <= 5; $i++){
-				echo "var basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'];
-				echo "var mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'];
-				echo "var lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'];
-				echo "var pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'];
+				echo "var basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";\n";
+				echo "var mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";\n";
+				echo "var lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";\n";
+				echo "var pUpcharge[".$i."] = ".$pizzaInfo[$i]['p_upcharge'].";\n";
 			}
 		?>
 		if(pizzaID != 1){
