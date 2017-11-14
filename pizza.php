@@ -79,8 +79,10 @@
 
 <script>
 	function changePrice(pizzaID){
-		var test[0] = 0;
-		alert(test[0]);
+		var basePrice = new array();
+		var mUpcharge = new array();
+		var lUpcharge = new array();
+		var pUpcharge = new array();
 		<?php
 			for($i = 2; $i <= 5; $i++){
 				echo "var basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
