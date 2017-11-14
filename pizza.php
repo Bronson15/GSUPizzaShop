@@ -162,7 +162,7 @@
 						<br>
 						<div id="cheese-img"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
 					</div>
-				</td>
+				</td> 
 
 				<td><b>Pepperoni</b>
 					<div class="pep-class">
