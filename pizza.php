@@ -257,17 +257,28 @@
 					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
-				<table align="left">
+				<table>
 					<tr>
 						<td style="border:0;">
 							<p>Veggies:</p>
-							<p><input type="checkbox"><label>Green Peppers</label></p>
+							<p><input type="checkbox"><label>Green Pepper</label></p>
 							<p><input type="checkbox"><label>Onion</label></p>
 							<p><input type="checkbox"><label>Jalapeno</label></p>
+							<p><input type="checkbox"><label>Mushroom</label></p>
+							<p><input type="checkbox"><label>Pineapple</label></p>
+							<p><input type="checkbox"><label>Black Olive</label></p>
+							<p><input type="checkbox"><label>Banana Pepper</label></p>
+							<p><input type="checkbox"><label>Tomato</label></p>
 						</td>
 						<td style="border:0;">
-							<p>Meats</p>
+							<p>Meats:</p>
+							<p><input type="checkbox"><label>Anchovy</label></p>
+							<p><input type="checkbox"><label>Bacon</label></p>
 							<p><input type="checkbox"><label>Beef</label></p>
+							<p><input type="checkbox"><label>Ham</label></p>
+							<p><input type="checkbox"><label>Chicken</label></p>
+							<p><input type="checkbox"><label>Pepperoni</label></p>
+							<p><input type="checkbox"><label>Sausage</label></p>
 						</td>
 					</tr>
 				</table><br>
