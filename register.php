@@ -1,18 +1,17 @@
 <?php include("header.php");
-
-	//variables set to values the user inputs
-	$username = $_POST['username'];
-	$name = $_POST['flname'];
-	$email = $_POST['email'];	
-	
-	//variables to validate form elements
-	$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
-	$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
-	$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
 	
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
+		//variables set to values the user inputs
+		$username = $_POST['username'];
+		$name = $_POST['flname'];
+		$email = $_POST['email'];	
 		
+		//variables to validate form elements
+		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '$username'");
+		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$flname'");
+		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = '$email'");
+	
 		//if username is a duplicate
 		if($username == $userParam){
 			echo "<script type='text/javascript'>alert('Username' . $_POST['username'] . 'taken.')</script>";
