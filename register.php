@@ -38,6 +38,8 @@
 	<h1>Registered</h1>
 	<p>You are now registered. You can log on <a href="login.php">here</a></p>
 <?php
+			session_unset();
+			session_destroy();
 		}
 	}
 	else{
