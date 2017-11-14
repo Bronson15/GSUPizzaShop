@@ -257,34 +257,13 @@
 					<option selected>Marinara Sauce</option>
 				</select></p>
 				<p>Toppings:</p>
-				<p><label>Cheese
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "che"
-				</label>
-				<label>Pepperoni(.25)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "pep"
-				</label></p>
-				<p><label>Chicken(.3)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "chi"
-				</label>
-				<label>Pineapple(.25)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "pin"
-				</label></p>
-				<p><label>Jalapeno(.15)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "jal"
-				</label>
-				<label>Black Olives(.15)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "bla"
-				</label></p>
-				<label>Bacon(.25)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "bac"
-				</label>
-				<label>Banana Pepper(.15)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "ban"
-				</label>
-
-				<p><label>Mushrooms(.15)
-					<input onchange="changePrice(1);" type = "checkbox" name = "top" id = "mus"
-				</label></p>
+				<table>
+					<tr>
+						<td><input type="checkbox"> <label>Green Peppers</label></td>
+						<td><input type="checkbox"> <label>Onion</label></td>
+						<td><input type="checkbox"> <label>Jalapeno</label></td>
+					</tr>
+				</table>
 				<p><select onchange="changePrice(1);" id = "quantity1"</select>
 					<option selected>1</option>
 					<option>2</option>
