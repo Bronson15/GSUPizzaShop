@@ -97,13 +97,15 @@
 		}
 
 		if(object.id == "custSize") {
-			quantity = document.getElementById("custQuantity").value;
-			if(object.value == "small") price = <?php echo $smallCheese; ?>;
-			if(object.value == "medium") price = <?php echo $medCheese; ?>;
-			if(object.value == "large") price = <?php echo $largeCheese; ?>;
-			price = price+getToppingTotal();
-			price = "Price: $" + (price*quantity).toFixed(2);
-			document.getElementById("custPrice").innerHTML = price;
+			if(object.value!=""){
+				quantity = document.getElementById("custQuantity").value;
+				if(object.value == "small") price = <?php echo $smallCheese; ?>;
+				if(object.value == "medium") price = <?php echo $medCheese; ?>;
+				if(object.value == "large") price = <?php echo $largeCheese; ?>;
+				price = price+getToppingTotal();
+				price = "Price: $" + (price*quantity).toFixed(2);
+				document.getElementById("custPrice").innerHTML = price;
+			}
 		}
 	}
 
@@ -162,7 +164,7 @@
 						<br>
 						<div id="cheese-img"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
 					</div>
-				</td> 
+				</td>
 
 				<td><b>Pepperoni</b>
 					<div class="pep-class">
