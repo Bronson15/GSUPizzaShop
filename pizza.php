@@ -4,7 +4,7 @@
 	//Get topping prices
 	$result = pg_query($pg_conn, "SELECT * FROM toppings;");
 	while($row = pg_fetch_assoc($result)){
-		$t_names['$row['topping_id']'] = $row['topping_name'];
+		$t_names["$row['topping_id']"] = $row['topping_name'];
 	}
 
 	echo $t_names['Xm'];
