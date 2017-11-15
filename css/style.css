@@ -67,6 +67,12 @@ main h1{
 	color:#a99260;
 }
 
+#specials fieldset{
+	display: inline-block;
+	width: 700px;
+	height:450px;
+}
+
 
 #pizza-table th, td {
     border: 1px solid black;
