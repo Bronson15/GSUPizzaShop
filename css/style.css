@@ -71,6 +71,7 @@ main h1{
 	display: inline-block;
 	width: 750px;
 	height:450px;
+	border-style: none;
 }
 
 #specials form button{
