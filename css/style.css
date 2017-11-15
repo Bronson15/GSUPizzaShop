@@ -32,8 +32,8 @@ nav{
 }
 nav a{
 	display: inline-block;
-	font-size:20px;
-	padding: 14px 16px;
+	font-size:15px;
+	padding: 10px 12px;
 	color:#041e42;
 	text-align: center;
 	border: hidden;
