@@ -24,14 +24,9 @@
 				}
 			?>
 	</table>
-	<? php
-		if (isset($_POST['cart'])) {
-
-			$_SESSION['cart'] = $_POST["cart"];
-			
-			echo "<form><input type='submit' name='empty' method='empty' value='Empty Cart'></form>";
-			
-			if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
+	<form><input type='submit' name='empty' method='empty' value='Empty Cart'></form>
+	<?php
+		if (isset($_POST['empty'])) {
 				unset($_SESSION['cart']); 
 			}
 		
