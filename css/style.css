@@ -197,3 +197,7 @@ button {
 #cart-table table, #cart-table td, #cart-table th {
     border: 1px solid black;
 }
+
+#cart-buttons {
+	margin: 0 auto;
+}
