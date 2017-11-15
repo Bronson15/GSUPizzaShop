@@ -35,6 +35,7 @@
 		<?php
 				if(isset($_POST['clearCart'])){
 					unset($_SESSION['cart']);
+					header('Refresh: 0; URL = cart.php');
 				}	
 				
 				if(isset($_POST['checkout'])) {
