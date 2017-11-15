@@ -15,13 +15,13 @@
 		}
 		//if not redirect them to login page
 		else{
-			echo '<script type="text/javascript">alert("Username "' . $userParam . '" or password is not valid. Try again or register <a href="register.php">here</a>")</script>'; 
+			echo '<script type="text/javascript">alert("Username or password is not valid. Try again or register <a href="register.php">here</a>")</script>'; 
 			//header("Refresh:1; Location: login.php");
 		}
 	
 		//checks if the username and password match, send them to homepage as successful login
 		if(pg_num_rows($userParam) == 1 && $row['passw'] = $password){
-			echo '<script type="text/javascript">alert("Welcome "' . $name .' ".")</script>'; 
+			echo '<script type="text/javascript">alert("Welcome")</script>'; 
 			//header("Refresh:1; Location: index.php");
 		}
 	}
