@@ -32,8 +32,13 @@
 		$orderItem->itemPrice = $_POST['price'];
 		echo "<h3 align='center' style='color: #3B61F2;'>";
 		echo $orderItem->itemQuantity . "x ";
-		echo ucfirst($orderItem->itemSize) . " '";
-		echo $orderItem->itemName . "' successfully added to cart!";
+		echo ucfirst($orderItem->itemSize) . " ";
+		if($orderItem->itemCrust=="pan"){
+			echo "Pan ";
+		} else{
+			echo "Hand-Tossed ";
+		}
+		echo $orderItem->itemName . " successfully added to cart!";
 		echo "</h3>";
 	}
 
@@ -203,7 +208,7 @@
 							<p><select onchange="changePrice(1);" id = "quantity1"</select>
 								<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
 							</select>
-							<button type = "add" onClick="cart.php">Add to Cart</button>
+							<button type = "add" name="add">Add to Cart</button>
 							</p>
 						</div>	
 					</form>
