@@ -19,16 +19,18 @@
 					}
 					echo " " .$item->itemName . "</td> ";
 					echo "<td>" . $item->itemQuantity . "</td> ";
-					echo "<td>" . $item->itemPrice . "</td><br>";
+					echo "<td>$" . $item->itemPrice . "</td><br>";
 					echo "</tr>";
 					$total = $total + $item->itemPrice;
 				}
 			?>
-		<td colspan=3>
-			<?php 
-				echo $total;
-			?>
-		</td>		
+		<div id="total-div">	
+			<td colspan=3>
+				<?php 
+					echo "$ " . $total;
+				?>
+			</td>		
+		</div>	
 	</table>
 	<br>
 	<br>
