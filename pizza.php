@@ -266,24 +266,24 @@
 					<tr>
 						<td style="border:0;">
 							<p><b>Veggies:</b></p>
-							<p><input id="G" type="checkbox"><label>Green Pepper</label></p>
-							<p><input id="I" type="checkbox"><label>Onion</label></p>
-							<p><input id="J" type="checkbox"><label>Jalapeno</label></p>
-							<p><input id="M" type="checkbox"><label>Mushroom</label></p>
-							<p><input id="N" type="checkbox"><label>Pineapple</label></p>
-							<p><input id="O" type="checkbox"><label>Black Olive</label></p>
-							<p><input id="R" type="checkbox"><label>Banana Pepper</label></p>
-							<p><input id="T" type="checkbox"><label>Tomato</label></p>
+							<p><input onchange="changePrice(1);" id="G" type="checkbox"><label>Green Pepper ($<?php echo $t_prices['G']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="I" type="checkbox"><label>Onion ($<?php echo $t_prices['I']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="J" type="checkbox"><label>Jalapeno ($<?php echo $t_prices['J']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="M" type="checkbox"><label>Mushroom ($<?php echo $t_prices['M']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="N" type="checkbox"><label>Pineapple ($<?php echo $t_prices['N']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="O" type="checkbox"><label>Black Olive ($<?php echo $t_prices['O']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="R" type="checkbox"><label>Banana Pepper ($<?php echo $t_prices['R']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="T" type="checkbox"><label>Tomato ($<?php echo $t_prices['T']; ?>)</label></p>
 						</td>
 						<td style="border:0;">
 							<p><b>Meats:</b></p>
-							<p><input id="A" type="checkbox"><label>Anchovy</label></p>
-							<p><input id="B" type="checkbox"><label>Bacon</label></p>
-							<p><input id="E" type="checkbox"><label>Beef</label></p>
-							<p><input id="H" type="checkbox"><label>Ham</label></p>
-							<p><input id="K" type="checkbox"><label>Chicken</label></p>
-							<p><input id="P" type="checkbox"><label>Pepperoni</label></p>
-							<p><input id="S" type="checkbox"><label>Sausage</label></p>
+							<p><input onchange="changePrice(1);" id="A" type="checkbox"><label>Anchovy ($<?php echo $t_prices['A']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="B" type="checkbox"><label>Bacon ($<?php echo $t_prices['B']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="E" type="checkbox"><label>Beef ($<?php echo $t_prices['E']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="H" type="checkbox"><label>Ham ($<?php echo $t_prices['H']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="K" type="checkbox"><label>Chicken ($<?php echo $t_prices['K']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="P" type="checkbox"><label>Pepperoni ($<?php echo $t_prices['P']; ?>)</label></p>
+							<p><input onchange="changePrice(1);" id="S" type="checkbox"><label>Sausage ($<?php echo $t_prices['S']; ?>)</label></p>
 						</td>
 					</tr>
 				</table><br>
