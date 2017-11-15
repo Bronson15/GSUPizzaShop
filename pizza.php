@@ -106,18 +106,17 @@
 									echo "<option value='medium'>Medium</option>";
 									echo "<option value='large'>Large</option>";
 								echo "</select><br>";
-								/*
-								echo "<select onchange='changePrice(".$i.");' id='crust".$i"' style='width: 200px;'>";
+								echo "<select onchange='changePrice(".$i.");' id='crust".$i."' style='width: 200px;'>";
 									echo "<option value='hand'>Hand-Tossed</option>";
 									echo "<option value='pan'>Pan</option>";
 								echo "</select><br>";
-								*/
 								echo "<select onchange='changePrice(".$i.")' id='quantity".$i."'>";
 									for($j = 1; $j <= 10; $j++) echo "<option value='".$j."'>".$j."</option>";
 								echo "</select>";
 							echo "<button type='add'>Add to Cart</button>";
 							echo "</form>";
 						echo "</div>";
+						echo "<br><div id='tile-img'><img src='/img/pizzaicon".$i."' alt='".$pizzaInfo[$i]['product_name']."'></div>";
 					echo "</div>";
 				echo "</td>";
 				$generated++;
