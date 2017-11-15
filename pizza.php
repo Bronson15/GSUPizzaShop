@@ -25,6 +25,7 @@
 		$orderItem->itemID = $productID;
 		$orderItem->itemName = $pizzaInfo[$productID]['product_name']." Pizza";
 		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		echo $orderItem->toString();
 	}
 
 ?>
