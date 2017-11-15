@@ -101,6 +101,7 @@
 		}
 </script>
 
+
 <div id="pizza-table">
 	<table>
 		<?php
@@ -203,4 +204,5 @@
 		</tr>
 	</table>
 </div>
+
 <?php include("footer.php");?>
