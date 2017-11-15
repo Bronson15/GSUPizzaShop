@@ -1,13 +1,12 @@
 <?php include("header.php"); 
 	//runs if the login button is pressed
 	if(isset($_POST['log'])){
-		$username = $_POST['user'];
+		$username  = $_POST['user'];
 		$password = $_POST['pass'];
-		$name = pg_query($pg_conn,"SELECT name FROM customer WHERE username = '" . $username . "' AND passw = '" . $password . "'");
+		$name = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '" . $username . "' AND passw = '" . $password . "'");
 		
 		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."'");
 		$passParam = pg_query($pg_conn,"SELECT passw FROM customer WHERE passw ='" . $password ."'");
-		$nameParam = pg_query($pg_conn,"SELECT name FROM customer WHERE name ='" . $name ."'");
 		
 		//check if the log in form has any blank elements
 		if(!$_POST['user'] || !$_POST['pass']){
@@ -15,7 +14,7 @@
 			header("Refresh:0");
 		}
 		//checks if the username and password match, send them to homepage as successful login
-		if(pg_num_rows($userParam) === 1 && pg_num_rows($passParam) === 1){
+		if(pg_num_rows($userParam) == 1 && $password == $passParam){
 			echo '<script type="text/javascript">alert("Welcome "' . $nameParam .' ".")</script>'; 
 			//header("Refresh:1; Location: index.php");
 		}
