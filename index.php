@@ -12,17 +12,17 @@
 					<tr>
 					<td>
 					<!--image placed here-->
-					<img style="width:auto;" src="img/specials_college.png">
+					<img src="img/specials_college.png">
 					</td>
 					
 					<td>
 						<!--image placed here-->
-						<img style="width:auto;" src="img/meat_college.png">
+						<img src="img/meat_college.png">
 					</td>
 					
 					<td>
 						<!--image placed here-->
-						<img style="width:auto;" src="img/specials_college.png">
+						<img src="img/specials_college.png">
 					</td>
 					</tr>
 			</table>
