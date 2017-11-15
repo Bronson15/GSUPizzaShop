@@ -30,6 +30,7 @@
 		$orderItem->itemCrust = $_POST['crust'];
 		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
 		$orderItem->itemPrice = $_POST['price'];
+		array_push($_SESSION['cart'], $orderItem);
 		echo "<h3 align='center' style='color: #3B61F2;'>";
 		echo $orderItem->itemQuantity . "x ";
 		echo ucfirst($orderItem->itemSize) . " ";
