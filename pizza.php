@@ -19,9 +19,11 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
+
 	if(isset($_POST['add'])) echo "true";
 		else echo "false";
 
+	echo isset($_SESSION['cart'])."<br>";
 	foreach($_SESSION['cart'] as $item){
 		echo $item."<br>";
 	}
