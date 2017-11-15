@@ -61,7 +61,7 @@ main h1{
 	background-color:#041e42;
 }
 
-#pizza-table th, td {
+#pizza-table th, #pizza-table td {
     border: 1px solid black;
     padding: 5px;
 	}

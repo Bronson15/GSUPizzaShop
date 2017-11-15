@@ -120,10 +120,9 @@
 					echo "<div class='tile-class'>";
 						echo "<div id='tile-form'>";
 							echo "<form method='POST'>";
-								echo "<input name='price' id='hiddenPrice".$i."' type='text' hidden>";
-								echo "<br>Price: $<span id='price".$i."'>0.00</span><br>";
+								echo "<input name='price' id='hiddenPrice".$i."' value='".number_format($pizzaInfo[$i]['base_price']+$pizzaInfo[$i]['l_upcharge'],2)."' type='text' hidden>";
+								echo "<br>Price: $<span id='price".$i."'>".number_format($pizzaInfo[$i]['base_price']+$pizzaInfo[$i]['l_upcharge'],2)."</span><br>";
 								echo "<select name='size' onchange='changePrice(".$i.");' id='size".$i."' style='width: 200px;'>";
-									echo "<option value='' disabled selected>Select Size</option>";
 									echo "<option value='small'>Small</option>";
 									echo "<option value='medium'>Medium</option>";
 									echo "<option value='large'>Large</option>";
@@ -152,14 +151,13 @@
 				<div id="custom-pizza-selector">
 					<b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 					<form action = "cart.php"><br>	
-							<input name='price' id='hiddenPrice1' type='text' hidden>
-							Price: $<span id="price1">0.00</span>
+							<input name='price' id='hiddenPrice1' type='text' value='<?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?>' hidden>
+							Price: $<span id="price1"><?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?></span>
 							<br>
 							<select name='size' onchange="changePrice(1);" id="size1" style="width: 200px">
-								<option value="" disabled selected>Select Size</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
-								<option value="large">Large</option>
+								<option value="large" selected>Large</option>
 							</select><br>
 							<select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
