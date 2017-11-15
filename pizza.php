@@ -61,7 +61,7 @@
 		}
 
 		function getToppingTotal(){
-			total = 0.0;
+			var total = 0.0;
 			if(document.getElementById("A").checked) total += <?php echo $t_prices['A']; ?>;
 			if(document.getElementById("B").checked) total += <?php echo $t_prices['B']; ?>;
 			if(document.getElementById("E").checked) total += <?php echo $t_prices['E']; ?>;
@@ -77,6 +77,10 @@
 			if(document.getElementById("R").checked) total += <?php echo $t_prices['R']; ?>;
 			if(document.getElementById("S").checked) total += <?php echo $t_prices['S']; ?>;
 			if(document.getElementById("T").checked) total += <?php echo $t_prices['T']; ?>;
+			var sauce = document.getElementById("sauce").value;
+			if(sauce == "Xm") total += <?php echo $t_prices['Xm']; ?>;
+			if(sauce == "Xa") total += <?php echo $t_prices['Xa']; ?>;
+			if(sauce == "Xb") total += <?php echo $t_prices['Xb']; ?>;
 			return total;
 		}
 </script>
@@ -142,8 +146,10 @@
 					<option value="hand">Hand Tossed</option>
 					<option value="pan">Pan</option>
 				</select></p>
-				<p><select name = "sauce" style="width:200px"</select>
-					<option selected>Marinara Sauce</option>
+				<p><select id="sauce" style="width:200px"</select>
+					<option value="Xm" selected>Marinara Sauce</option>
+					<option value="Xa">Alfredo Sauce</option>
+					<option value="Xb">BBQ Sauce</option>
 				</select></p>
 				<table>
 					<tr>
