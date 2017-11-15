@@ -9,6 +9,10 @@
 		public $itemCrust;
 		public $itemToppings;
 		public $itemPrice;
+
+		public function toString(){
+			return $itemID.", ".$itemName.", ".$itemSize.", ".$itemQuantity.", ".$itemCrust.", ".$itemToppings.", ".$itemPrice;
+		}
 	}
 ?>
 <!DOCTYPE html>
