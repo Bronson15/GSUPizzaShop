@@ -10,6 +10,7 @@
 		</tr>
 		<tr>
 			<?php
+			$total = 0.00;
 				foreach($_SESSION['cart'] as $item){
 					echo "<td> " . ucfirst($item->itemSize) . " ";
 					if($item->itemCrust=="pan"){
@@ -25,9 +26,9 @@
 				}
 			?>
 		<td>
-		Total
+			<b>Total</b>
 		</td>
-		<td colspan=2 id="total">
+		<td colspan=2 style="text-align: right;>
 			<?php 
 				echo "$ " . $total;
 			?>
