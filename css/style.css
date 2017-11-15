@@ -52,13 +52,37 @@ main h1{
 	text-align:center;
 }
 
-#specials img {
+
+
+#specials form img {
+	display: block;
+	margin: auto;
 	width: 500px;
 	height: 300px;
 }
 
+#specials p{
+	text-align: center;
+}
+
 #specials form{
 	background-color:#041e42;
+}
+
+#specials form p{
+	color:#a99260;
+}
+
+#specials fieldset{
+	display: inline-block;
+	width: 750px;
+	height:450px;
+	border-style: none;
+}
+
+#specials form button{
+	background-color:#a99260;
+	
 }
 
 #pizza-table th, #pizza-table td {
