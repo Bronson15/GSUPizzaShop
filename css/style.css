@@ -68,7 +68,7 @@ main h1{
 #pizza-table table {
 	margin: auto;
     border-spacing: 10px;
-	width: 50%;
+	width: 65%;
 }
 #pizza-table button {
 	width: 148px;
@@ -123,15 +123,15 @@ footer{
 	width: 75%;
 }
 
-#cheese-form {
+#tile-form {
 	float: left;
 }
 
-#cheese-img {
+#tile-img {
 	float: left;
 }
 
-.cheese-class:after {
+.tile-class:after {
   content: "";
   display: table;
   clear: both;
@@ -139,48 +139,6 @@ footer{
 
 #pizza-text {
 	text-align: center;
-}
-
-#pep-form {
-	float:left;
-}
-
-#pep-img {
-	float: left;
-}
-
-.pep-class:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#meat-form {
-	float: left;
-}
-
-#meat-img {
-	float: left;
-}
-
-.meat-class:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#sup-form {
-	float: left;
-}
-
-#sup-img {
-	float: left;
-}
-
-.sup-class:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 button {
