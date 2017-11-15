@@ -54,7 +54,7 @@
 					}
 				?>
 				var priceDisplay = document.getElementById("price" + pizzaID);
-				var priceHidden = document.getElementById("hiddenPrice" + pizzaID);
+				var hiddenPrice = document.getElementById("hiddenPrice" + pizzaID);
 				var quantity = document.getElementById("quantity" + pizzaID).value;
 				var size = document.getElementById("size" + pizzaID).value;
 				var crust = document.getElementById("crust" + pizzaID).value;
