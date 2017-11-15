@@ -12,7 +12,7 @@
 			<?php
 				foreach($_SESSION['cart'] as $item){
 					echo "<td> " . ucfirst($item->itemSize) . " ";
-					if($orderItem->itemCrust=="pan"){
+					if($item->itemCrust=="pan"){
 						echo "Pan ";
 					} else{
 						echo "Hand-Tossed ";
@@ -24,6 +24,18 @@
 				}
 			?>
 	</table>
+	<? php
+		if (isset($_POST['cart'])) {
+
+			$_SESSION['cart'] = $_POST["cart"];
+			
+			echo "<form><input type='submit' name='empty' method='empty' value='Empty Cart'></form>";
+			
+			if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
+				unset($_SESSION['cart']); 
+			}
+		
+	?>	
 </main>
 	
 <?php include("footer.php");?>
