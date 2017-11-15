@@ -105,7 +105,7 @@
 	<table>
 		<?php
 			$generated = -1;
-			for($i = 2; $i <= 5; $i++){
+			for($i = 2; $i <= 6; $i++){
 				if($generated < 0){
 					echo "<tr>";
 					$generated = 0;
@@ -151,19 +151,20 @@
 				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 				<form action = "cart.php">
 				<br>
+				<input name='price' id='hiddenPrice1' type='text' hidden>
 				Price: $<span id="price1">0.00</span>
 				<br>
-				<select onchange="changePrice(1);" id="size1" style="width: 200px">
+				<select name='size' onchange="changePrice(1);" id="size1" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
 					<option value="small">Small</option>
 					<option value="medium">Medium</option>
 					<option value="large">Large</option>
 				</select>
-				<p><select onchange="changePrice(1);" id="crust1" style="width: 200px">
+				<p><select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
 					<option value="hand">Hand Tossed</option>
 					<option value="pan">Pan</option>
 				</select></p>
-				<p><select onchange="changePrice(1);" id="sauce" style="width:200px"</select>
+				<p><select name='sauce' onchange="changePrice(1);" id="sauce" style="width:200px"</select>
 					<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
 					<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
 					<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
