@@ -24,10 +24,10 @@
 				}
 			?>
 	</table>
-		<button type='submit' id="clearCart" name='clear'>Clear Cart</input>
+		<button type='submit' id="clearCart" name='clear'>Clear Cart</button>
 		
 	<?php
-			if(isset($_POST['clearCart'])){
+			if(isset($_POST['clear'])){
 				echo "<sript type='text/javascript'>alert('Cart cleared')</script>";
 			}	
 	?>	
