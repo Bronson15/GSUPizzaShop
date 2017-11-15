@@ -52,11 +52,10 @@
 				}
 			?>)</a>
 			<a href="/login.php"><?php
-				if(isset($_SESSION['username'])){ echo $_SESSION['name'];
-				//	<a href="/logout.php">Logout</a>
-				}
-					else echo "Login";
+				if(isset($_SESSION['username'])) echo $_SESSION['name'];
+				else echo "Login";
 			?></a>
+			<a href="/logout.php">Logout</a>
         </b>
     </nav> 
 	
