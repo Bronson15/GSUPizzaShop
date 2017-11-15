@@ -34,7 +34,7 @@
 			<a href="/specials.php">Specials</a>
 			<a href="/cart.php">Cart (<?php echo count($_SESSION['cart']); ?>)</a>
 			<a href="/login.php"><?php
-				if(isset($_SESSION['username']) echo $_SESSION['name'];
+				if(isset($_SESSION['username'])) echo $_SESSION['name'];
 					else echo "Login";
 			?></a>
         </b>
