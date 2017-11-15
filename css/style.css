@@ -52,7 +52,9 @@ main h1{
 	text-align:center;
 }
 
-#specials img {
+#specials form img {
+	display: block;
+	margin: auto;
 	width: 500px;
 	height: 300px;
 }

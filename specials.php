@@ -33,7 +33,7 @@
 	</form>
 	<form action="cart.php" >
 	<fieldset>
-	<p><strong>For People who are ordering for themselves but want to act like they are ordering for 2 people</strong></p>
+	<p><strong>For People Who are Ordering for Themselves but Want to Act Like They are Ordering for 2 People</strong></p>
 	<img src= "/img/Mpizza.jpg" alt="MedPizza">
 	<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
 	</fieldset>
