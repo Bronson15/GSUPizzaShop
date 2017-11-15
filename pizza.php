@@ -1,5 +1,6 @@
 <?php
 	include("header.php");
+	$specialsMax = 6;
 
 	//Get topping names and prices
 	$result = pg_query($pg_conn, "SELECT * FROM toppings;");
@@ -49,7 +50,7 @@
 				var lUpcharge = {};
 				var pUpcharge = {};
 				<?php
-					for($i = 1; $i <= 5; $i++){
+					for($i = 1; $i <= $specialsMax; $i++){
 						echo "basePrice[".$i."] = ".$pizzaInfo[$i]['base_price'].";";
 						echo "mUpcharge[".$i."] = ".$pizzaInfo[$i]['m_upcharge'].";";
 						echo "lUpcharge[".$i."] = ".$pizzaInfo[$i]['l_upcharge'].";";
@@ -105,7 +106,7 @@
 	<table>
 		<?php
 			$generated = -1;
-			for($i = 2; $i <= 6; $i++){
+			for($i = 2; $i <= $specialsMax; $i++){
 				if($generated < 0){
 					echo "<tr>";
 					$generated = 0;
