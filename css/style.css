@@ -68,7 +68,7 @@ main h1{
 #pizza-table table {
 	margin: auto;
     border-spacing: 10px;
-	width: 50%;
+	width: 65%;
 }
 #pizza-table button {
 	width: 148px;
@@ -123,15 +123,24 @@ footer{
 	width: 75%;
 }
 
+<<<<<<< HEAD
 #cheese-form {
 	
 }
 
 #cheese-img {
 	
+=======
+#tile-form {
+	float: left;
 }
 
-.cheese-class:after {
+#tile-img {
+	float: left;
+>>>>>>> master
+}
+
+.tile-class:after {
   content: "";
   display: table;
   clear: both;
@@ -141,6 +150,7 @@ footer{
 	text-align: center;
 }
 
+<<<<<<< HEAD
 #pep-form {
 	
 }
@@ -183,6 +193,8 @@ footer{
   clear: both;
 }
 
+=======
+>>>>>>> master
 button {
 	background-color:#a99260;
 }

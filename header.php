@@ -1,3 +1,20 @@
+<?php
+	session_start(); 
+	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
+	class OrderItem {
+		public $itemID;
+		public $itemName;
+		public $itemSize;
+		public $itemQuantity;
+		public $itemCrust;
+		public $itemToppings;
+		public $itemPrice;
+
+		public function toString(){
+			return $this->itemID.", ".$this->itemName.", ".$this->itemSize.", ".$this->itemQuantity.", ".$this->itemCrust.", ".$this->itemToppings.", ".$this->itemPrice;
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +32,7 @@
 			<a href="/">Home</a>
 			<a href="/pizza.php">Pizza</a>
 			<a href="/specials.php">Specials</a>
-			<a href="/cart.php">Cart</a>
+			<a href="/cart.php">Cart (<?php echo count($_SESSION['cart']); ?>)</a>
 			<a href="/login.php">Login</a>
         </b>
     </nav> 
