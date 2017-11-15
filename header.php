@@ -11,7 +11,7 @@
 		public $itemPrice;
 
 		public function toString(){
-			return $itemID.", ".$itemName.", ".$itemSize.", ".$itemQuantity.", ".$itemCrust.", ".$itemToppings.", ".$itemPrice;
+			return $this->itemID.", ".$this->itemName.", ".$this->itemSize.", ".$this->itemQuantity.", ".$this->itemCrust.", ".$this->itemToppings.", ".$this->itemPrice;
 		}
 	}
 ?>
