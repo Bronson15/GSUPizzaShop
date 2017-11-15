@@ -31,7 +31,7 @@
 	<br>
 	<button type="add" onclick="cart.php" >Large 3 topping Pizza for $7.00</button>
 	</fieldset>
-	<br>
+	
 	<fieldset>
 	<p><strong>For People Who are Ordering for Themselves but Want to Act Like They are Ordering for 2 People #SingleLife</strong></p>
 	<img src= "/img/Mpizza.jpg" alt="MedPizza">
