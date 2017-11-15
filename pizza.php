@@ -146,10 +146,10 @@
 					<option value="hand">Hand Tossed</option>
 					<option value="pan">Pan</option>
 				</select></p>
-				<p><select id="sauce" style="width:200px"</select>
-					<option onchange="changePrice(1);" value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
-					<option onchange="changePrice(1);" value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
-					<option onchange="changePrice(1);" value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
+				<p><select onchange="changePrice(1);" id="sauce" style="width:200px"</select>
+					<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
+					<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
+					<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
 				</select></p>
 				<table>
 					<tr>
