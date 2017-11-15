@@ -152,3 +152,8 @@ button {
 #custom-pizza-button {
 	text-align: center;
 }
+
+#custom-table tbody {
+	vertical-align: top
+	text-align: center;
+}

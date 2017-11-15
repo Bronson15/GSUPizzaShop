@@ -160,19 +160,19 @@
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
 								<option value="large">Large</option>
-							</select>
-							<p><select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
+							</select><br>
+							<select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
 								<option value="hand">Hand Tossed</option>
 								<option value="pan">Pan</option>
-							</select></p>
-							<p><select name='sauce' onchange="changePrice(1);" id="sauce" style="width:200px"</select>
+							</select><br>
+							<select name='sauce' onchange="changePrice(1);" id="sauce" style="width:200px"</select>
 								<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
 								<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
 								<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
-							</select></p>.
+							</select>.
 				</div>	
 					
-						<table>
+						<table id="custom-table">
 							<tr>
 								<td style="border:0;">
 									<p><b>Veggies:</b></p>
