@@ -149,56 +149,56 @@
 
 		<tr>
 			<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
-				<form action = "cart.php">
-				<br>
-				<input name='price' id='hiddenPrice1' type='text' hidden>
-				Price: $<span id="price1">0.00</span>
-				<br>
-				<select name='size' onchange="changePrice(1);" id="size1" style="width: 200px">
-					<option value="" disabled selected>Select Size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-				</select>
-				<p><select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
-					<option value="hand">Hand Tossed</option>
-					<option value="pan">Pan</option>
-				</select></p>
-				<p><select name='sauce' onchange="changePrice(1);" id="sauce" style="width:200px"</select>
-					<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
-					<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
-					<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
-				</select></p>
-				<table>
-					<tr>
-						<td style="border:0;">
-							<p><b>Veggies:</b></p>
-							<p><input onchange="changePrice(1);" id="G" type="checkbox"><label>Green Pepper ($<?php echo number_format($t_prices['G'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="I" type="checkbox"><label>Onion ($<?php echo number_format($t_prices['I'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="J" type="checkbox"><label>Jalapeno ($<?php echo number_format($t_prices['J'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="M" type="checkbox"><label>Mushroom ($<?php echo number_format($t_prices['M'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="N" type="checkbox"><label>Pineapple ($<?php echo number_format($t_prices['N'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="O" type="checkbox"><label>Black Olive ($<?php echo number_format($t_prices['O'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="R" type="checkbox"><label>Banana Pepper ($<?php echo number_format($t_prices['R'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="T" type="checkbox"><label>Tomato ($<?php echo number_format($t_prices['T'], 2); ?>)</label></p>
-						</td>
-						<td style="border:0;">
-							<p><b>Meats:</b></p>
-							<p><input onchange="changePrice(1);" id="A" type="checkbox"><label>Anchovy ($<?php echo number_format($t_prices['A'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="B" type="checkbox"><label>Bacon ($<?php echo number_format($t_prices['B'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="E" type="checkbox"><label>Beef ($<?php echo number_format($t_prices['E'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="H" type="checkbox"><label>Ham ($<?php echo number_format($t_prices['H'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="K" type="checkbox"><label>Chicken ($<?php echo number_format($t_prices['K'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="P" type="checkbox"><label>Pepperoni ($<?php echo number_format($t_prices['P'], 2); ?>)</label></p>
-							<p><input onchange="changePrice(1);" id="S" type="checkbox"><label>Sausage ($<?php echo number_format($t_prices['S'], 2); ?>)</label></p>
-						</td>
-					</tr>
-				</table><br>
-				<p><select onchange="changePrice(1);" id = "quantity1"</select>
-					<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
-				</select>
-				<button type = "add" onClick="cart.php">Add to Cart</button>
-				</p>
+				<form action = "cart.php"><br>
+					<input name='price' id='hiddenPrice1' type='text' hidden>
+					Price: $<span id="price1">0.00</span>
+					<br>
+					<select name='size' onchange="changePrice(1);" id="size1" style="width: 200px">
+						<option value="" disabled selected>Select Size</option>
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="large">Large</option>
+					</select>
+					<p><select name='crust' onchange="changePrice(1);" id="crust1" style="width: 200px">
+						<option value="hand">Hand Tossed</option>
+						<option value="pan">Pan</option>
+					</select></p>
+					<p><select name='sauce' onchange="changePrice(1);" id="sauce" style="width:200px"</select>
+						<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
+						<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
+						<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
+					</select></p>
+					<table>
+						<tr>
+							<td style="border:0;">
+								<p><b>Veggies:</b></p>
+								<p><input onchange="changePrice(1);" id="G" type="checkbox"><label>Green Pepper ($<?php echo number_format($t_prices['G'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="I" type="checkbox"><label>Onion ($<?php echo number_format($t_prices['I'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="J" type="checkbox"><label>Jalapeno ($<?php echo number_format($t_prices['J'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="M" type="checkbox"><label>Mushroom ($<?php echo number_format($t_prices['M'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="N" type="checkbox"><label>Pineapple ($<?php echo number_format($t_prices['N'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="O" type="checkbox"><label>Black Olive ($<?php echo number_format($t_prices['O'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="R" type="checkbox"><label>Banana Pepper ($<?php echo number_format($t_prices['R'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="T" type="checkbox"><label>Tomato ($<?php echo number_format($t_prices['T'], 2); ?>)</label></p>
+							</td>
+							<td style="border:0;">
+								<p><b>Meats:</b></p>
+								<p><input onchange="changePrice(1);" id="A" type="checkbox"><label>Anchovy ($<?php echo number_format($t_prices['A'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="B" type="checkbox"><label>Bacon ($<?php echo number_format($t_prices['B'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="E" type="checkbox"><label>Beef ($<?php echo number_format($t_prices['E'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="H" type="checkbox"><label>Ham ($<?php echo number_format($t_prices['H'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="K" type="checkbox"><label>Chicken ($<?php echo number_format($t_prices['K'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="P" type="checkbox"><label>Pepperoni ($<?php echo number_format($t_prices['P'], 2); ?>)</label></p>
+								<p><input onchange="changePrice(1);" id="S" type="checkbox"><label>Sausage ($<?php echo number_format($t_prices['S'], 2); ?>)</label></p>
+							</td>
+						</tr>
+					</table><br>
+					<p><select onchange="changePrice(1);" id = "quantity1"</select>
+						<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
+					</select>
+					<button type = "add" onClick="cart.php">Add to Cart</button>
+					</p>
+				</form>
 			</td>
 		</tr>
 	</table>
