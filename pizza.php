@@ -99,12 +99,29 @@
 					echo "<div class='tile-class'>";
 						echo "<div id='tile-form'>";
 							echo "<form method='POST'>";
-								echo "<br><div id='price".$i."'>Price: </div>";
+								echo "<br><div id='price".$i."'>Price: </div><br>";
+								echo "<select onchange='changePrice(".$i.");' id='size".$i."' style='width: 200px;'>";
+									echo "<option value='' disabled selected>Select Size</option>";
+									echo "<option value='small'>Small</option>";
+									echo "<option value='medium'>Medium</option>";
+									echo "<option value='large'>Large</option>";
+								echo "</select><br>";
+								echo "<select onchange='changePrice(".$i.");' id='crust".$i"' style='width: 200px;'>";
+									echo "<option value='hand'>Hand-Tossed</option>";
+									echo "<option value='pan'>Pan</option>";
+								echo "</select><br>";
+								echo "<select onchange='changePrice(".$i.")' id='quantity".$i."'>";
+									for($j = 1; $j <= 10; $j++) echo "<option value='".$j."'>".$j."</option>";
+								echo "</select>";
+							echo "<button type='add'>Add to Cart</button>";
 							echo "</form>";
 						echo "</div>";
 					echo "</div>";
 				echo "</td>";
+				$generated++;
+				$generated = $generated % 2;
 			}
+			echo "</tr>";
 		?>
 		<tr>
 			<td><b><?php echo $pizzaInfo[2]['product_name']; ?> Pizza</b>
