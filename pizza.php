@@ -19,14 +19,9 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
-	if(isset($_POST['add'])) echo "true";
-		else echo "false";
-
-	echo isset($_SESSION['cart'])."<br>";
-	foreach($_SESSION['cart'] as $item){
-		echo $item."<br>";
+	if(isset($_POST['add'])){
+		echo $_POST['add'];
 	}
-	echo count($_SESSION['cart']);
 
 ?>
 
@@ -126,7 +121,7 @@
 								echo "<select onchange='changePrice(".$i.")' id='quantity".$i."'>";
 									for($j = 1; $j <= 10; $j++) echo "<option>".$j."</option>";
 								echo "</select>";
-							echo "<button name='add' type='add'>Add to Cart</button>";
+							echo "<button value='btnAdd".$i."' name='add' type='add'>Add to Cart</button>";
 							echo "</form>";
 						echo "</div>";
 						echo "<br><div id='tile-img'><img src='/img/pizzaicon".$i.".png' alt='".$pizzaInfo[$i]['product_name']."'></div>";
