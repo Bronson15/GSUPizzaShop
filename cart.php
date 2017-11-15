@@ -25,7 +25,7 @@
 			?>
 	</table>
 	<?php
-		if (isset($_POST['cart'])) {
+		if (isset($_SESSION['cart'])) {
 			echo "<form><input type='submit' name='logout' method='logout' value='Empty Cart'>";
 			echo "</form>";
 
