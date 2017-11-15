@@ -20,7 +20,11 @@
 	}
 
 	if(isset($_POST['add'])){
-		echo substr($_POST['add'], 5);
+		$productID = substr($_POST['add'], 6);
+		$orderItem = new OrderItem();
+		$orderItem->itemID = $productID;
+		$orderItem->itemName = $pizzaInfo[$productID]['product_name']." Pizza";
+		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
 	}
 
 ?>
@@ -58,7 +62,7 @@
 				if(pizzaID == 1) {
 					price = price+getToppingTotal();
 				}
-				priceDisplay.innerHTML = "Price: $" + (price*quantity).toFixed(2);
+				priceDisplay.innerHTML = (price*quantity).toFixed(2);
 			} catch(err){
 				alert(err.message);
 			}
@@ -107,7 +111,7 @@
 					echo "<div class='tile-class'>";
 						echo "<div id='tile-form'>";
 							echo "<form method='POST'>";
-								echo "<br><div id='price".$i."'>Price: </div><br>";
+								echo "<br>Price: $<span id='price".$i."'>0.00</span><br>";
 								echo "<select onchange='changePrice(".$i.");' id='size".$i."' style='width: 200px;'>";
 									echo "<option value='' disabled selected>Select Size</option>";
 									echo "<option value='small'>Small</option>";
@@ -138,7 +142,7 @@
 				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 				<form action = "cart.php">
 				<br>
-				<div id="price1">Price: </div>
+				Price: $<span id="price1">0.00</span>
 				<br>
 				<select onchange="changePrice(1);" id="size1" style="width: 200px">
 					<option value="" disabled selected>Select Size</option>
