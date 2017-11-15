@@ -3,7 +3,7 @@
 <main>
 		<?php
 			foreach($_SESSION['cart'] as $item){
-				echo $item->$itemName;
+				echo $item->itemName;
 			}
 		?>
 </main>
