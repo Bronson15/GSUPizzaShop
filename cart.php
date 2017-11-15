@@ -27,7 +27,7 @@
 	<form><input type='submit' name='empty' method='logout' value='Empty Cart'></form>
 	<?php
 		if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
-			unset($_SESSION['cart']); 
+			u$_SESSION['cart'] = array(); 
 		}
 		
 	?>	
