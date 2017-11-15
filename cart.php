@@ -24,16 +24,12 @@
 				}
 			?>
 	</table>
-	<?php
-		if (isset($_SESSION['cart'])) {
-	?>
 		<button type='submit' id="clearCart" name='clear'>Clear Cart</input>
 		
 	<?php
 			if(isset($_POST['clearCart'])){
 				echo "<sript type='text/javascript'>alert('Cart cleared')</script>";
-			}
-		}	
+			}	
 	?>	
 </main>
 	
