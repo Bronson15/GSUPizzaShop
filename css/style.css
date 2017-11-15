@@ -140,3 +140,8 @@ footer{
 button {
 	background-color:#a99260;
 }
+
+#index table, tr{
+	border: 0px;	
+	
+}	
