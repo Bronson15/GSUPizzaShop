@@ -146,9 +146,8 @@
 			echo "</tr>";
 		?>
 
-		</tr>
-			<tr>
-				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
+		<tr>
+			<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
 				<form action = "cart.php">
 				<br>
 				<input name='price' id='hiddenPrice1' type='text' hidden>
