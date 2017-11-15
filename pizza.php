@@ -19,6 +19,8 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
+	echo $_POST['add'];
+
 ?>
 
 <main>
@@ -117,7 +119,7 @@
 								echo "<select onchange='changePrice(".$i.")' id='quantity".$i."'>";
 									for($j = 1; $j <= 10; $j++) echo "<option>".$j."</option>";
 								echo "</select>";
-							echo "<button type='add'>Add to Cart</button>";
+							echo "<button name='add' type='add'>Add to Cart</button>";
 							echo "</form>";
 						echo "</div>";
 						echo "<br><div id='tile-img'><img src='/img/pizzaicon".$i.".png' alt='".$pizzaInfo[$i]['product_name']."'></div>";
