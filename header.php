@@ -51,7 +51,10 @@
 					}
 				}
 			?>)</a>
-			<a href="/login.php">Login</a>
+			<a href="/login.php"><?php
+				if(isset($_SESSION['username'])) echo $_SESSION['name'];
+					else echo "Login";
+			?></a>
         </b>
     </nav> 
 	
