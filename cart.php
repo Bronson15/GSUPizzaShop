@@ -24,7 +24,9 @@
 				}
 			?>
 	</table>
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<button type='submit' id="clearCart" name='clear'>Clear Cart</button>
+		</form>
 		
 	<?php
 			if(isset($_POST['clear'])){
