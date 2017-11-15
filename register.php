@@ -1,6 +1,4 @@
 <?php include("header.php");
-	session_start();
-	$pg_conn2 = pg_connection_reset($pg_conn);
 	//runs if the create user button is pressed
 	if(isset($_POST['createUser'])){
 		//variables set to values the user inputs
@@ -9,44 +7,39 @@
 		$email = $_POST['email'];	
 		
 		//variables to validate form elements
-		$userParam = pg_query($pg_conn,"SELECT * FROM customer WHERE username = $username");
-		$nameParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $flname");
-		$emailParam = pg_query($pg_conn,"SELECT * FROM customer WHERE name = $email");
+		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."'");
+		$nameParam = pg_query($pg_conn,"SELECT name FROM customer WHERE name ='" . $name ."'");
+		$emailParam = pg_query($pg_conn,"SELECT emailaddress FROM customer WHERE emailaddress = '" . $email ."'");
 		
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
 			echo '<script type="text/javascript">alert("There is an empty field. Please review your form")</script>';
-			session_unset();
-			header("Refresh:0");
+			
 		}
 			//if username is a duplicate
-		else if($username = $userParam){
+		else if(pg_num_rows($userParam) >= 1){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
-			session_unset();
-			header("Refresh:0");
 		}
-		else if(($name = $nameParam && $email = $emailParam) || $email = 
-		$emailParam){
-			echo "<script type='text/javascript'>alert('Someone with those credentials alreadt exist.')</script>";
-			session_unset();
-			header("Refresh:0");
+		else if(pg_num_rows($nameParam) >= 1 && pg_num_rows($emailParam) >= 1){
+			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
+			
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
 			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
 			$result = pg_query($query);
-?>		
-	<h1>Registered</h1>
-	<p>You are now registered. You can log on <a href="login.php">here</a></p>
+?>	
+	<div class="register">
+		<h1>Registered</h1>
+		<p>You are now registered. You can log on <a href="login.php">here</a></p>
+	</div>
 <?php
-			session_unset();
-			session_destroy();
 		}
 	}
 	else{
 ?>
 <div id="log-col">
-	<form id="login" action=<?php echo $_SERVER['PHP_SELF']; ?> method="POST">
+	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<fieldset id="username">
 			
 			<label>Name(First and Last):</label>
