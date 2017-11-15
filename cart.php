@@ -24,13 +24,14 @@
 					$total = $total + $item->itemPrice;
 				}
 			?>
-		<div id="total-div">	
-			<td colspan=3>
-				<?php 
-					echo "$ " . $total;
-				?>
-			</td>		
-		</div>	
+		<td>
+		Total
+		</td>
+		<td colspan=2 id="total">
+			<?php 
+				echo "$ " . $total;
+			?>
+		</td>
 	</table>
 	<br>
 	<br>
