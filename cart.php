@@ -28,7 +28,7 @@
 		<td>
 			<b>Total</b>
 		</td>
-		<td colspan=2 style="text-align: right;>
+		<td colspan=2 style="text-align: right;">
 			<?php 
 				echo "$ " . $total;
 			?>
