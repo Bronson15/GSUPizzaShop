@@ -14,7 +14,7 @@
 			header("Refresh:0");
 		}
 		//checks if the username and password match, send them to homepage as successful login
-		else if(pg_num_rows($userParam) == 1 && $password == $passParam){
+		else if(pg_num_rows($userParam) == 1 && $row['passw'] = $password){
 			echo '<script type="text/javascript">alert("Welcome "' . $nameParam .' ".")</script>'; 
 			//header("Refresh:1; Location: index.php");
 		}
