@@ -19,7 +19,6 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
-	array_push($_SESSION['cart'], "test");
 	if(isset($_POST['add'])) echo "true";
 		else echo "false";
 
