@@ -26,11 +26,12 @@
 	</table>
 	<?php
 		if (isset($_SESSION['cart'])) {
-			echo "<form><input type='submit' name='logout' method='logout' value='Empty Cart'>";
-			echo "</form>";
-
-			if(isset($_POST['logout']))) { 
-				unset($_SESSION['cart']); 
+	?>
+		<input type='button' id="clearCart" name='clear'>Clear Cart</input>
+		
+	<?php
+			if(isset($_POST['clearCart'])){
+				echo "Clear cart";
 			}
 		}	
 	?>	
