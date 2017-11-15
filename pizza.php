@@ -83,6 +83,29 @@
 
 <div id="pizza-table">
 	<table>
+		<?php
+			$generated = -1;
+			for($i = 2; $i <= 5; $i++){
+				if($generated < 0){
+					echo "<tr>";
+					$generated = 0;
+				} else{
+					if($generated == 0){
+						echo "</tr><tr>";
+					}
+				}
+				echo "<td>";
+					echo "<b>".$pizzaInfo[$i]['product_name']." Pizza</b>";
+					echo "<div class='tile-class'>";
+						echo "<div id='tile-form'>";
+							echo "<form method='POST'>";
+								echo "<br><div id='price".$i."'>Price: </div>";
+							echo "</form>";
+						echo "</div>";
+					echo "</div>";
+				echo "</td>";
+			}
+		?>
 		<tr>
 			<td><b><?php echo $pizzaInfo[2]['product_name']; ?> Pizza</b>
 				<div class="tile-class">
