@@ -25,7 +25,6 @@
 			//header("Refresh:1; Location: login.php");
 		}
 	}
-	else{
 ?>
 <div id="log-col">
 	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -46,6 +45,5 @@
 	<p>Not a user? Click <a href="register.php">here</a>.</p>
 </div>
 <?php 
-	}
 include("footer.php"); ?>
 
