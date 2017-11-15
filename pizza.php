@@ -22,10 +22,10 @@
 	if(isset($_POST['add'])) echo "true";
 		else echo "false";
 
-	echo $_SESSION['cart'];
 	foreach($_SESSION['cart'] as $item){
 		echo $item."<br>";
 	}
+	echo count($_SESSION['cart']);
 
 ?>
 
