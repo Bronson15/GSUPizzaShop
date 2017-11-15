@@ -32,7 +32,7 @@
 		$orderItem->itemPrice = $_POST['price'];
 		echo "<h3 align='center' style='color: #3B61F2;'>";
 		echo $orderItem->itemQuantity . "x ";
-		echo ucfirst($orderItem->itemSize) . " '"
+		echo ucfirst($orderItem->itemSize) . " '";
 		echo $orderItem->itemName . "' successfully added to cart!";
 		echo "</h3>";
 	}
