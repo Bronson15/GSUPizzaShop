@@ -147,9 +147,9 @@
 					<option value="pan">Pan</option>
 				</select></p>
 				<p><select id="sauce" style="width:200px"</select>
-					<option value="Xm" selected>Marinara Sauce</option>
-					<option value="Xa">Alfredo Sauce</option>
-					<option value="Xb">BBQ Sauce</option>
+					<option value="Xm" selected>Marinara Sauce ($<?php echo number_format($t_prices['Xm'], 2); ?>)</option>
+					<option value="Xa">Alfredo Sauce ($<?php echo number_format($t_prices['Xa'], 2); ?>)</option>
+					<option value="Xb">BBQ Sauce ($<?php echo number_format($t_prices['Xb'], 2); ?>)</option>
 				</select></p>
 				<table>
 					<tr>
