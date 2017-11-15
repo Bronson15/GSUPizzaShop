@@ -32,7 +32,18 @@
 			<a href="/">Home</a>
 			<a href="/pizza.php">Pizza</a>
 			<a href="/specials.php">Specials</a>
-			<a href="/cart.php">Cart (<?php echo count($_SESSION['cart']); ?>)</a>
+			<a href="/cart.php">Cart (
+				<?php
+				if(count($_SESSION['cart'])==0){
+					echo "0";
+				} else{
+					$items = 0;
+					foreach($_SESSION['cart'] as $line){
+						$items += $line->itemQuantity;
+					}
+				}
+				?>
+			)</a>
 			<a href="/login.php">Login</a>
         </b>
     </nav> 
