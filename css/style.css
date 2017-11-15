@@ -154,6 +154,6 @@ button {
 }
 
 #custom-table tbody {
-	vertical-align: top
+	vertical-align: top;
 	text-align: center;
 }
