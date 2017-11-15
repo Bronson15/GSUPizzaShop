@@ -119,7 +119,7 @@
 						</form>
 					</div>
 					<br>
-					<div id="tile-img"><img src="/img/pizza-cheese.png" alt="pizza-cheese"></div>
+					<div id="tile-img"><img src="/img/pizzaicon2.png" alt="<?php echo $pizzaInfo[2]['product_name']; ?>"></div>
 				</div>
 			</td>
 
@@ -158,7 +158,7 @@
 						</form>
 					</div>
 					<br>
-					<div id="tile-img"><img src="/img/pizza-pep.png" alt="pizza-pep"></div>
+					<div id="tile-img"><img src="/img/pizzaicon3.png" alt="<?php echo $pizzaInfo[3]['product_name']; ?>"></div>
 				</div>
 			</td>
 		</tr>
@@ -198,7 +198,7 @@
 						</form>
 					</div>
 					<br>
-					<div id="tile-img"><img src="/img/pizza-meat.png" alt="pizza-meat"></div>
+					<div id="tile-img"><img src="/img/pizzaicon4.png" alt="<?php echo $pizzaInfo[4]['product_name']; ?>"></div>
 				</div>
 			</td>
 
@@ -237,7 +237,7 @@
 						</form>
 					</div>
 					<br>
-					<div id="tile-img"><img src="/img/pizza-sup.png" alt="pizza-sup"></div>
+					<div id="tile-img"><img src="/img/pizzaicon5.png" alt="<?php echo $pizzaInfo[5]['product_name']; ?>"></div>
 				</div>
 			</td>
 
