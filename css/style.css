@@ -141,6 +141,7 @@ button {
 	background-color:#a99260;
 }
 
+
 #pizza-deals table{
 	border: 0px;
 }	
@@ -151,3 +152,15 @@ button {
 	
 }
 
+#custom-pizza-selector {
+	text-align: center;
+}
+
+#custom-pizza-button {
+	text-align: center;
+}
+
+#custom-table tbody {
+	vertical-align: top;
+	text-align: center;
+}
