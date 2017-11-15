@@ -11,7 +11,7 @@
 	</form>
 	<form action="cart.php" >	
     <fieldset>	
-	<p><strong><font color = "#a99260">Broke College Kid Special</font></strong></p>
+	<p><strong>Broke College Kid Special</strong></p>
 	<img src= "/img/cheese.jpg" alt="CPizza">
 	<button type="add" onclick="cart.php" >Two Large Cheese Pizzas for $9.99</button>	
 	</fieldset>

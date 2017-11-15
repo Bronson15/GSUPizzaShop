@@ -59,7 +59,9 @@ main h1{
 
 #specials form{
 	background-color:#041e42;
+	font:#a99260;
 }
+
 
 #pizza-table th, td {
     border: 1px solid black;
