@@ -125,7 +125,7 @@
 								echo "<select name='size' onchange='changePrice(".$i.");' id='size".$i."' style='width: 200px;'>";
 									echo "<option value='small'>Small</option>";
 									echo "<option value='medium'>Medium</option>";
-									echo "<option value='large'>Large</option>";
+									echo "<option value='large' selected>Large</option>";
 								echo "</select><br>";
 								echo "<select name='crust' onchange='changePrice(".$i.");' id='crust".$i."' style='width: 200px;'>";
 									echo "<option value='hand'>Hand-Tossed</option>";
