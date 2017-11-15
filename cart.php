@@ -24,10 +24,15 @@
 				}
 			?>
 	</table>
-	<form><input type='submit' name='empty' method='empty' value='Empty Cart'></form>
+	<form>
 	<?php
-		if (isset($_POST['empty'])) {
-				$_SESSION['cart'] = array(); 
+		if (isset($_POST['cart'])) {
+				echo "<input type='submit' name='empty' method='logout' value='Empty Cart'>";
+				echo "</form>";
+
+				if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
+					unset($_SESSION['cart']); 
+				}
 			}
 		
 	?>	
