@@ -24,13 +24,13 @@
 				}
 			?>
 	</table>
-	<form><input type='submit' name='empty' method='logout' value='Empty Cart'></form>
 	<?php
-		if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
-			$_SESSION['cart'] = array(); 
+		function emptyCart() {
+			unset($_SESSION['cart']);
 		}
-		
 	?>	
+	
+	<button id="empty" onclick="emptyCart()">Empty Cart</button>
 </main>
 	
 <?php include("footer.php");?>
