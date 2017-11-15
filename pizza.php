@@ -22,8 +22,10 @@
 	if(isset($_POST['add'])) echo "true";
 		else echo "false";
 
-	array_push($_SESSION['cart'], "test");
 	echo $_SESSION['cart'];
+	foreach($_SESSION['cart'] as $item){
+		echo $item."<br>";
+	}
 
 ?>
 
