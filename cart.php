@@ -26,7 +26,7 @@
 	</table>
 	<?php
 		function emptyCart() {
-			unset($_SESSION['cart']);
+			$_SESSION['cart'] = array();
 		}
 	?>	
 	
