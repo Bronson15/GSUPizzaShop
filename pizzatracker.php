@@ -4,10 +4,11 @@
 <?php include("header.php"); ?>
 
 <main>
-	<p>Your order has been processed!</p>
-	<!--Start with pizza tracker image 1 -->
-	<img id= "pt" src="img/pizzatrack1.png" alt="Pizza Tracker Phase 1: Prep">
- 
+	<div id="tracker">
+		<p>Your order has been processed!</p>
+		<!--Start with pizza tracker image 1 -->
+		<img id= "pt" src="img/pizzatrack1.png" alt="Pizza Tracker Phase 1: Prep">
+	</div>
  
 	<script type="text/javascript">
 		setTimeout(changePizzaTracker12, 3000);  //3000 = 3 seconds
@@ -24,7 +25,6 @@
 			document.getElementById('pt').alt = 'Pizza Tracker Phase 3: Finished';
 		}
 	</script>
-
 </main>
 
 <?php include("footer.php");?>

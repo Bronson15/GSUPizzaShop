@@ -24,6 +24,8 @@
 				}
 			?>
 	</table>
+	<br>
+	<br>
 	<div id="cart-buttons">
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 			<button type='submit' id="clearCart" name='clearCart'>Clear Cart</button>
@@ -36,7 +38,7 @@
 				}	
 				
 				if(isset($_POST['checkout'])) {
-					header('Refresh: 1; URL = pizzatracker.php');
+					header('Refresh: 0; URL = pizzatracker.php');
 				}
 		?>	
 	</div>	

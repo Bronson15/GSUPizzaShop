@@ -199,5 +199,9 @@ button {
 }
 
 #cart-buttons {
-	margin: 0 auto;
+	text-align: center;
+}
+
+#tracker {
+	text-align: center;
 }
