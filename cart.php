@@ -3,7 +3,7 @@
 <main>
 		<?php
 			foreach($_SESSION['cart'] as $item){
-				echo $item->toString()."<br>";
+				echo $item->$itemname . " x" . $item->$itemQuantity;
 			}
 		?>
 </main>
