@@ -30,7 +30,7 @@
 		
 	<?php
 			if(isset($_POST['clear'])){
-				echo "<script type='text/javascript'>alert('Cart cleared')</script>";
+				unset($_SESSION['cart']);
 			}	
 	?>	
 </main>
