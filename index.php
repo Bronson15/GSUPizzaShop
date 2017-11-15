@@ -17,7 +17,7 @@
 					
 					<td>
 						<!--image placed here-->
-						<!--img src="img/meat_college.png"-->
+						<img src="img/meat_college.png">
 					</td>
 					
 					<td>
@@ -25,6 +25,7 @@
 						<!--img src="img/specials_college.png"-->
 					</td>
 					</tr>
+				</tbody>	
 			</table>
 		</div>
 	</div>
