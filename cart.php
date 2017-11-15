@@ -31,7 +31,7 @@
 		
 	<?php
 			if(isset($_POST['clearCart'])){
-				echo "Clear cart";
+				echo "<sript type='text/javascript'>alert('Cart cleared')</script>";
 			}
 		}	
 	?>	
