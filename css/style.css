@@ -58,7 +58,11 @@ main h1{
 }
 
 #specials form{
-	background-color:#a99260;
+	background-color:#041e42;
+}
+
+#specials form p{
+	color:#a99260;
 }
 
 
@@ -139,5 +143,5 @@ footer{
 }
 
 button {
-	background-color:#041e42;
+	background-color:#a99260;
 }
