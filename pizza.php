@@ -111,7 +111,7 @@
 									echo "<option value='pan'>Pan</option>";
 								echo "</select><br>";
 								echo "<select onchange='changePrice(".$i.")' id='quantity".$i."'>";
-									for($j = 1; $j <= 10; $j++) echo "<option value='".$j."'>".$j."</option>";
+									for($j = 1; $j <= 10; $j++) echo "<option>".$j."</option>";
 								echo "</select>";
 							echo "<button type='add'>Add to Cart</button>";
 							echo "</form>";
@@ -124,7 +124,7 @@
 			}
 			echo "</tr>";
 		?>
-		
+
 		</tr>
 			<tr>
 				<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
@@ -171,16 +171,7 @@
 					</tr>
 				</table><br>
 				<p><select onchange="changePrice(1);" id = "quantity1"</select>
-					<option selected>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
+					<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
 				</select>
 				<button type = "add" onClick="cart.php">Add to Cart</button>
 				</p>
