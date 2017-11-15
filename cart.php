@@ -3,7 +3,13 @@
 <main>
 		<?php
 			foreach($_SESSION['cart'] as $item){
-				echo $item->itemSize . " " . $item->itemCrust . " " .$item->itemName . " x" . $item->itemQuantity . " " . $item->itemPrice . "<br>";
+				echo ucfirst($item->itemSize) . " ";
+				if($orderItem->itemCrust=="pan"){
+					echo "Pan ";
+				} else{
+					echo "Hand-Tossed ";
+				}
+				echo " " .$item->itemName . " x" . $item->itemQuantity . " " . $item->itemPrice . "<br>";
 			}
 		?>
 </main>
