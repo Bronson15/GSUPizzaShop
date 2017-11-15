@@ -2,7 +2,7 @@
 	
 <main>
 
-	<table id="cart-table">
+	<table id="cart-table" cellpadding="12">
 		<tr>
 			<th>Item</th>
 			<th>Quantity</th>
