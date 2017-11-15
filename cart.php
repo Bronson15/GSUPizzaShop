@@ -27,7 +27,7 @@
 	<form><input type='submit' name='empty' method='empty' value='Empty Cart'></form>
 	<?php
 		if (isset($_POST['empty'])) {
-				unset($_SESSION['cart']); 
+				$_SESSION['cart'] = array(); 
 			}
 		
 	?>	
