@@ -69,8 +69,13 @@ main h1{
 
 #specials fieldset{
 	display: inline-block;
-	width: 800px;
+	width: 750px;
 	height:450px;
+}
+
+#specials form button {
+	position: absolute;
+	background-color:#a99260;
 }
 
 
