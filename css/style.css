@@ -119,25 +119,12 @@ footer{
 	padding-left: 15%;
 }
 
-#pizza-table td {
-	width: 75%;
-}
-
-<<<<<<< HEAD
-#cheese-form {
-	
-}
-
-#cheese-img {
-	
-=======
 #tile-form {
 	float: left;
 }
 
 #tile-img {
 	float: left;
->>>>>>> master
 }
 
 .tile-class:after {
@@ -150,51 +137,6 @@ footer{
 	text-align: center;
 }
 
-<<<<<<< HEAD
-#pep-form {
-	
-}
-
-#pep-img {
-
-}
-
-.pep-class:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#meat-form {
-	
-}
-
-#meat-img {
-	
-}
-
-.meat-class:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#sup-form {
-	
-}
-
-#sup-img {
-
-}
-
-.sup-class:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-=======
->>>>>>> master
 button {
 	background-color:#a99260;
 }
