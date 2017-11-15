@@ -12,7 +12,7 @@
 			<?php
 				foreach($_SESSION['cart'] as $item){
 					echo "<td> " . ucfirst($item->itemSize) . " ";
-					if($orderItem->itemCrust=="pan"){
+					if($item->itemCrust=="pan"){
 						echo "Pan ";
 					} else{
 						echo "Hand-Tossed ";
@@ -24,6 +24,15 @@
 				}
 			?>
 	</table>
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+		<button type='submit' id="clearCart" name='clear'>Clear Cart</button>
+		</form>
+		
+	<?php
+			if(isset($_POST['clear'])){
+				unset($_SESSION['cart']);
+			}	
+	?>	
 </main>
 	
 <?php include("footer.php");?>
