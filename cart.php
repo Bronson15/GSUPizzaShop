@@ -27,7 +27,7 @@
 	<?php
 		if (isset($_SESSION['cart'])) {
 	?>
-		<input type='button' id="clearCart" name='clear'>Clear Cart</input>
+		<button type='submit' id="clearCart" name='clear'>Clear Cart</input>
 		
 	<?php
 			if(isset($_POST['clearCart'])){
