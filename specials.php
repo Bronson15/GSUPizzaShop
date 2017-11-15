@@ -11,21 +11,21 @@
 	</form>
 	<form action="cart.php" >	
     <fieldset>	
-	<p>Broke College Kid Special</p>
+	<p><strong>Broke College Kid Special</strong></p>
 	<img src= "/img/cheese.jpg" alt="CPizza">
 	<button type="add" onclick="cart.php" >Two Large Cheese Pizzas for $9.99</button>	
 	</fieldset>
 	</form>
 	<form action="cart.php" >
 	<fieldset>
-	<p>Mighty Meat Special</p>
+	<p><strong>Mighty Meat Special</strong></p>
 	<img src= "/img/meat.jpg" alt="MPizza">
 	<button type="add" onclick="cart.php" >Large Meat Lovers Pizza for $12.99</button>
 	</fieldset>
 	</form>
 	<form action="cart.php" >
 	<fieldset>
-	<p>Toppings Galore</p>
+	<p><strong>Toppings Galore</strong></p>
 	<img src= "/img/3Tpizza.jpg" alt="3TPizza">
 	<button type="add" onclick="cart.php" >Large 3 topping Pizza for $7.00</button>
 	</fieldset>
