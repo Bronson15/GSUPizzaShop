@@ -52,7 +52,9 @@
 				}
 			?>)</a>
 			<a href="/login.php"><?php
-				if(isset($_SESSION['username'])) echo $_SESSION['name'];
+				if(isset($_SESSION['username'])){ echo $_SESSION['name'];
+					<a href="/logout.php">Logout</a>
+				}
 					else echo "Login";
 			?></a>
         </b>

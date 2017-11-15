@@ -4,7 +4,7 @@
 	unset($_SESSION['username']);
 	unset($_SESSION['name']);
 	unset($_SESSION['address']);
-	echo "Successfully logged out";
+	echo "<script type='text/javascript'>alert('Successfully logged out')</script>";
 	
 	header('Refresh: 2; URL = login.php');
 	
