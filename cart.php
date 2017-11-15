@@ -21,8 +21,14 @@
 					echo "<td>" . $item->itemQuantity . "</td> ";
 					echo "<td>" . $item->itemPrice . "</td><br>";
 					echo "</tr>";
+					$total = $total + $item->itemPrice;
 				}
 			?>
+		<td colspan=3>
+			<?php 
+				echo $total;
+			?>
+		</td>		
 	</table>
 	<br>
 	<br>
@@ -39,6 +45,7 @@
 				}	
 				
 				if(isset($_POST['checkout'])) {
+					unset($_SESSION['cart']);
 					header('Refresh: 0; URL = pizzatracker.php');
 				}
 		?>	
