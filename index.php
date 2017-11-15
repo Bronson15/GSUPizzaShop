@@ -7,7 +7,7 @@
 		<br><img style="width:auto;" src="img/home_graphic.png"><br><br>
 		<div id="pizza-deals">
 			<table align="center">
-				<caption style="font-size:30px"><b>Deals<b></caption>
+				<caption><b>Deals<b></caption>
 				<tbody>
 					<tr>
 					<td>
