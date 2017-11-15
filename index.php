@@ -2,6 +2,7 @@
 
 	<div id="index-body-text">		
 		<main>
+<<<<<<< HEAD
 		<style>
 		h1{ 
 				font-family:verdana;
@@ -20,6 +21,35 @@
 		td{
 			width:35%;	
 		}	
+=======
+			<h2>Welcome to GSU Pizza Shop!</h2>
+		</main>
+		<br><img style="width:auto;" src="img/home_graphic.png"><br><br>
+		<div id="pizza-deals">
+			<table align="center">
+				<caption><b>Deals<b></caption>
+				<tbody>
+					<tr>
+					<td>
+					<!--image placed here-->
+					<img src="img/specials_college.png">
+					</td>
+					
+					<td>
+						<!--image placed here-->
+						<img src="img/meat_specials.png">
+					</td>
+					
+					<td>
+						<!--image placed here-->
+						<img src="img/topping_specials.png">
+					</td>
+					</tr>
+				</tbody>	
+			</table>
+		</div>
+	</div>
+>>>>>>> master
 
 		</style>
 		<h1>Deals</h1>

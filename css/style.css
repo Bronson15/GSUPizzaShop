@@ -32,8 +32,8 @@ nav{
 }
 nav a{
 	display: inline-block;
-	font-size:20px;
-	padding: 14px 16px;
+	font-size:15px;
+	padding: 10px 12px;
 	color:#041e42;
 	text-align: center;
 	border: hidden;
@@ -46,36 +46,63 @@ nav a:hover{
 	background-color:#a99260;
 }
 main{
-	
+
 }
 main h1{
 	text-align:center;
 }
 
-#specials img {
+
+
+#specials form img {
+	display: block;
+	margin: auto;
 	width: 500px;
 	height: 300px;
+}
+
+#specials p{
+	text-align: center;
 }
 
 #specials form{
 	background-color:#041e42;
 }
 
-#pizza-table th, td {
+#specials form p{
+	color:#a99260;
+}
+
+#specials fieldset{
+	display: inline-block;
+	width: 750px;
+	height:450px;
+	border-style: none;
+}
+
+#specials form button{
+	background-color:#a99260;
+	
+}
+
+#pizza-table th, #pizza-table td {
     border: 1px solid black;
     padding: 5px;
 	}
 #pizza-table table {
+	margin: auto;
     border-spacing: 10px;
-	width: 50%;
+	width: 65%;
 }
 #pizza-table button {
-	width: 157px;
+	width: 148px;
 }
 #contact{
 	text-align:center;
 }
-
+#index-body-text{
+	text-align: center;
+}
 footer{
 	font-family:Times New Roman, serif;
 	font-size:.85em;
@@ -111,6 +138,62 @@ footer{
 	margin-bottom:2px;
 }
 
-button{
+#pizza-table img {
+	height: 100px;
+	padding-left: 15%;
+}
+
+#tile-form {
+	float: left;
+}
+
+#tile-img {
+	float: left;
+}
+
+.tile-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#pizza-text {
+	text-align: center;
+}
+
+button {
 	background-color:#a99260;
+}
+
+
+#pizza-deals table{
+	border: 0px;
+}	
+
+#pizza-deals caption{
+	font-size:30px;
+	text-align:left;
+	
+}
+
+#custom-pizza-selector {
+	text-align: center;
+}
+
+#custom-pizza-button {
+	text-align: center;
+}
+
+#custom-table tbody {
+	vertical-align: top;
+	text-align: center;
+}
+
+#cart-table {
+	margin: auto;
+	border-collapse: collapse;
+}
+
+#cart-table table, #cart-table td, #cart-table th {
+    border: 1px solid black;
 }
