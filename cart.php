@@ -24,16 +24,11 @@
 				}
 			?>
 	</table>
-	<form>
+	<form><input type='submit' name='empty' method='logout' value='Empty Cart'></form>
 	<?php
-		if (isset($_POST['cart'])) {
-				echo "<input type='submit' name='empty' method='logout' value='Empty Cart'>";
-				echo "</form>";
-
-				if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
-					unset($_SESSION['cart']); 
-				}
-			}
+		if(isset($_POST['empty']) && ($_POST['empty'] == "Empty Cart")) { 
+			unset($_SESSION['cart']); 
+		}
 		
 	?>	
 </main>
