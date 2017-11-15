@@ -144,3 +144,11 @@ footer{
 button {
 	background-color:#a99260;
 }
+
+#custom-pizza-selector {
+	text-align: center;
+}
+
+#custom-pizza-button {
+	text-align: center;
+}
