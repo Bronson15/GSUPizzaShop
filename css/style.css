@@ -157,3 +157,12 @@ button {
 	vertical-align: top;
 	text-align: center;
 }
+
+#cart-table {
+	margin: auto;
+	border-collapse: collapse;
+}
+
+#cart-table table, #cart-table td, #cart-table th {
+    border: 1px solid black;
+}
