@@ -1,6 +1,15 @@
 <?php
 	session_start(); 
 	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
+	class OrderItem {
+		public $itemID;
+		public $itemName;
+		public $itemSize;
+		public $itemQuantity;
+		public $itemCrust;
+		public $itemToppings;
+		public $itemPrice;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

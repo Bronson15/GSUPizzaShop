@@ -20,7 +20,7 @@
 	}
 
 	if(isset($_POST['add'])){
-		echo $_POST['add'];
+		echo substr($_POST['add'], 5);
 	}
 
 ?>
