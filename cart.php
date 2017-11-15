@@ -3,8 +3,7 @@
 <main>
 		<?php
 			foreach($_SESSION['cart'] as $item){
-				echo $item->$itemName . " x";
-				echo $item->$itemQuantity;
+				echo $item->$itemName;
 			}
 		?>
 </main>
