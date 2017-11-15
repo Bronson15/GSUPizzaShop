@@ -25,6 +25,7 @@
 		$orderItem->itemID = $productID;
 		$orderItem->itemName = $pizzaInfo[$productID]['product_name']." Pizza";
 		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		$orderItem->itemPrice = $_POST['price'];
 		echo $orderItem->toString();
 	}
 
@@ -53,6 +54,7 @@
 					}
 				?>
 				var priceDisplay = document.getElementById("price" + pizzaID);
+				var priceHidden = document.getElementById("hiddenPrice" + pizzaID);
 				var quantity = document.getElementById("quantity" + pizzaID).value;
 				var size = document.getElementById("size" + pizzaID).value;
 				var crust = document.getElementById("crust" + pizzaID).value;
@@ -63,7 +65,9 @@
 				if(pizzaID == 1) {
 					price = price+getToppingTotal();
 				}
-				priceDisplay.innerHTML = (price*quantity).toFixed(2);
+				var finalPrice = (price*quantity).toFixed(2);
+				priceDisplay.innerHTML = finalPrice;
+				hiddenPrice.value = finalPrice;
 			} catch(err){
 				alert(err.message);
 			}
@@ -112,6 +116,7 @@
 					echo "<div class='tile-class'>";
 						echo "<div id='tile-form'>";
 							echo "<form method='POST'>";
+								echo "<input name='price' id='hiddenPrice".$i."' type='text' hidden>";
 								echo "<br>Price: $<span id='price".$i."'>0.00</span><br>";
 								echo "<select onchange='changePrice(".$i.");' id='size".$i."' style='width: 200px;'>";
 									echo "<option value='' disabled selected>Select Size</option>";
