@@ -116,7 +116,7 @@
 							echo "<button type='add'>Add to Cart</button>";
 							echo "</form>";
 						echo "</div>";
-						echo "<br><div id='tile-img'><img src='/img/pizzaicon".$i."' alt='".$pizzaInfo[$i]['product_name']."'></div>";
+						echo "<br><div id='tile-img'><img src='/img/pizzaicon".$i.".png' alt='".$pizzaInfo[$i]['product_name']."'></div>";
 					echo "</div>";
 				echo "</td>";
 				$generated++;
