@@ -29,9 +29,15 @@
 	</fieldset>
 	
 	<fieldset>
-	<p><strong>For People Who are Ordering for Themselves but Want to Act Like They are Ordering for 2 People</strong></p>
+	<p><strong>For People Who are Ordering for Themselves but Want to Act Like They are Ordering for 2 People #SingleLife</strong></p>
 	<img src= "/img/Mpizza.jpg" alt="MedPizza">
 	<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
+	</fieldset>
+	
+	<fieldset>
+	<p><strong>Party People's Special</strong></p>
+	<img src= "/img/5pizzas.jfif" alt="3TPizza">
+	<button type="add" onclick="cart.php" >5 Large 1 topping Pizzas for $25.99</button>
 	</fieldset>
 	</form>
 </main>
