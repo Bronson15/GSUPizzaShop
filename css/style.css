@@ -61,7 +61,7 @@ main h1{
 	background-color:#041e42;
 }
 
-#pizza-table th, td {
+#pizza-table th, #pizza-table td {
     border: 1px solid black;
     padding: 5px;
 	}
@@ -139,4 +139,17 @@ footer{
 
 button {
 	background-color:#a99260;
+}
+
+#custom-pizza-selector {
+	text-align: center;
+}
+
+#custom-pizza-button {
+	text-align: center;
+}
+
+#custom-table tbody {
+	vertical-align: top;
+	text-align: center;
 }
