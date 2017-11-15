@@ -61,6 +61,10 @@ main h1{
 	height: 300px;
 }
 
+#specials p{
+	text-align: center;
+}
+
 #specials form{
 	background-color:#041e42;
 }
