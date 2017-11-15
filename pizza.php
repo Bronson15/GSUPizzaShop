@@ -19,7 +19,8 @@
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
 
-	echo $_POST['add'];
+	if(isset($_POST['add']) echo "true";
+		else echo "false";
 
 ?>
 
