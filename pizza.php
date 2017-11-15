@@ -148,9 +148,10 @@
 		?>
 
 		<tr>
-			<td colspan=2><b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
-				<form action = "cart.php"><br>
-					<div id="custom-pizza-selector">
+			<td colspan=2>
+				<div id="custom-pizza-selector">
+				<b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
+				<form action = "cart.php"><br>	
 						<input name='price' id='hiddenPrice1' type='text' hidden>
 						Price: $<span id="price1">0.00</span>
 						<br>
