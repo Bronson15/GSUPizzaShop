@@ -52,16 +52,40 @@ main h1{
 	text-align:center;
 }
 
-#specials img {
+
+
+#specials form img {
+	display: block;
+	margin: auto;
 	width: 500px;
 	height: 300px;
+}
+
+#specials p{
+	text-align: center;
 }
 
 #specials form{
 	background-color:#041e42;
 }
 
-#pizza-table th, td {
+#specials form p{
+	color:#a99260;
+}
+
+#specials fieldset{
+	display: inline-block;
+	width: 750px;
+	height:450px;
+	border-style: none;
+}
+
+#specials form button{
+	background-color:#a99260;
+	
+}
+
+#pizza-table th, #pizza-table td {
     border: 1px solid black;
     padding: 5px;
 	}
@@ -139,4 +163,28 @@ footer{
 
 button {
 	background-color:#a99260;
+}
+
+
+#pizza-deals table{
+	border: 0px;
+}	
+
+#pizza-deals caption{
+	font-size:30px;
+	text-align:left;
+	
+}
+
+#custom-pizza-selector {
+	text-align: center;
+}
+
+#custom-pizza-button {
+	text-align: center;
+}
+
+#custom-table tbody {
+	vertical-align: top;
+	text-align: center;
 }
