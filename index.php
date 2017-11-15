@@ -17,12 +17,12 @@
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/meat_college.png">
+						<!--img src="img/meat_college.png"-->
 					</td>
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/specials_college.png">
+						<!--img src="img/specials_college.png"-->
 					</td>
 					</tr>
 			</table>
