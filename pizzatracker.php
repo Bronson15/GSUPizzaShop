@@ -5,7 +5,7 @@
 
 <main>
 	<div id="tracker">
-		<p>Your order has been processed!</p>
+		<h1>Your order has been processed!</h1>
 		<!--Start with pizza tracker image 1 -->
 		<img id= "pt" src="img/pizzatrack1.png" alt="Pizza Tracker Phase 1: Prep">
 	</div>
