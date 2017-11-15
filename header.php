@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$temp_items;
 	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
 	class OrderItem {
 		public $itemID;
@@ -35,9 +34,8 @@
 			<a href="/specials.php">Specials</a>
 			<a href="/cart.php">Cart (<?php
 				if(count($_SESSION['cart'])==0){
-					if(isset($temp_items)){
-						echo $temp_items;
-						unset($temp_items);
+					if(isset($_POST['add'])){
+						echo $_POST['quantity'];
 					} else{
 						echo "0";
 					}
@@ -46,9 +44,8 @@
 					foreach($_SESSION['cart'] as $line){
 						$items += $line->itemQuantity;
 					}
-					if(isset($temp_items)){
-						echo $items + $temp_items;
-						unset($temp_items);
+					if(isset($_POST['add'])){
+						echo $items + $_POST['quantity'];
 					} else{
 						echo $items;
 					}
