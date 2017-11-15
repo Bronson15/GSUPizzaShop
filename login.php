@@ -4,7 +4,7 @@
 		$username  = $_POST['user'];
 		$password = $_POST['pass'];
 		$name = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '" . $username . "' AND passw = '" . $password . "'");
-		
+		$row = pg_fetch_assoc($name);
 		
 		//check if the log in form has any blank elements
 		if($_POST['user'] == "" || $_POST['pass'] == ""){
@@ -13,13 +13,13 @@
 		}
 		//checks if the username and password match, send them to homepage as successful login
 		else if(pg_num_rows($name) == 1){
-			echo '<script type="text/javascript">alert("Welcome")</script>'; 
-			//header("Refresh:1; Location: index.php");
+			echo '<script type="text/javascript">alert("Welcome ' . $row['name'] . '.")</script>'; 
+			header("Refresh:1; Location: index.php");
 		}
 		//if not redirect them to login page
 		else{
-			echo '<script type="text/javascript">alert("Username or password is not valid. Try again or register <a href="register.php">here</a>")</script>'; 
-			//header("Refresh:1; Location: login.php");
+			echo '<script type="text/javascript">alert("Username or password is not valid. Try again or register")</script>'; 
+			header("Refresh:1; Location: login.php");
 		}
 	}
 ?>
