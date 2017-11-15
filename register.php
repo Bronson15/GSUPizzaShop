@@ -14,19 +14,15 @@
 		//If form elements are left empty
 		if(!$_POST['flname'] || !$_POST['email'] || !$_POST['address'] || !$_POST['age'] || !$_POST['telephone'] || !$_POST['username'] || !$_POST['password'] ){
 			echo '<script type="text/javascript">alert("There is an empty field. Please review your form")</script>';
-			session_unset();
-			header("Refresh:0");
+			
 		}
 			//if username is a duplicate
 		else if(pg_num_rows($userParam) >= 1){
 			echo "<script type='text/javascript'>alert('Username taken.')</script>";
-			session_unset();
-			header("Refresh:0");
 		}
 		else if(pg_num_rows($nameParam) >= 1 && pg_num_rows($emailParam) >= 1){
 			echo "<script type='text/javascript'>alert('Someone with those credentials already exists.')</script>";
-			session_unset();
-			header("Refresh:0");
+			
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
@@ -38,8 +34,6 @@
 		<p>You are now registered. You can log on <a href="login.php">here</a></p>
 	</div>
 <?php
-			session_unset();
-			session_destroy();
 		}
 	}
 	else{
