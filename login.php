@@ -1,4 +1,5 @@
 <?php include("header.php"); 
+	//runs if the login button is pressed
 	if(isset($_POST['log'])){
 		$username = $_POST['user'];
 		$password = $_POST['pass'];
@@ -14,7 +15,7 @@
 			header("Refresh:0");
 		}
 		//checks if the username and password match, send them to homepage as successful login
-		if(pg_num_rows($userParam) = 1 && pg_num_rows($passParam) = 1){
+		else if(pg_num_rows($userParam) = 1 && pg_num_rows($passParam) = 1){
 			echo '<script type="text/javascript">alert("Welcome " . $nameParam . ".")</script>'; 
 			header("Refresh:1; Location: index.php");
 		}
@@ -27,7 +28,7 @@
 	else{
 ?>
 	<div id="log-col">
-	<form id="login" action="/login.php" method="POST">
+	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<fieldset id="username">
 			
 			<label>USERNAME:</label>
