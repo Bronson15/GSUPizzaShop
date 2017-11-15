@@ -5,23 +5,24 @@
 		$password = $_POST['pass'];
 		$name = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '" . $username . "' AND passw = '" . $password . "'");
 		
-		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."'");
-		$passParam = pg_query($pg_conn,"SELECT passw FROM customer WHERE passw ='" . $password ."'");
+		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."' AND passw = '" . $password . "'");
+		$passParam = pg_query($pg_conn,"SELECT passw FROM customer WHERE passw ='" . $password ."' AND username='" . $username . "'");
 		
 		//check if the log in form has any blank elements
 		if(!$_POST['user'] || !$_POST['pass']){
 			echo '<script type="text/javascript">alert("Username or Password blank")</script>';
 			header("Refresh:0");
 		}
-		//checks if the username and password match, send them to homepage as successful login
-		else if(pg_num_rows($userParam) == 1 && $row['passw'] = $password){
-			echo '<script type="text/javascript">alert("Welcome "' . $nameParam .' ".")</script>'; 
-			//header("Refresh:1; Location: index.php");
-		}
 		//if not redirect them to login page
 		else{
 			echo '<script type="text/javascript">alert("Username "' . $userParam . '" or password is not valid. Try again or register <a href="register.php">here</a>")</script>'; 
 			//header("Refresh:1; Location: login.php");
+		}
+	
+		//checks if the username and password match, send them to homepage as successful login
+		if(pg_num_rows($userParam) == 1 && $row['passw'] = $password){
+			echo '<script type="text/javascript">alert("Welcome "' . $name .' ".")</script>'; 
+			//header("Refresh:1; Location: index.php");
 		}
 	}
 ?>
