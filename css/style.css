@@ -141,6 +141,17 @@ button {
 	background-color:#a99260;
 }
 
+
+#pizza-deals table{
+	border: 0px;
+}	
+
+#pizza-deals caption{
+	font-size:30px;
+	text-align:left;
+	
+}
+
 #custom-pizza-selector {
 	text-align: center;
 }
