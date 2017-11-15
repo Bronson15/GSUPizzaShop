@@ -1,7 +1,7 @@
 <?php include("header.php");?>
 <div id="specials">
 <main>
-	<p><strong><font size = "4">The Best Deals in Town: ALL DAY, EVERYDAY</font></strong></p>
+	<h2>The Best Deals in Town: ALL DAY, EVERYDAY</h2>
 	<p>***CARRY OUT ONLY***</p>
 	<form action="cart.php" >
 	<fieldset>
