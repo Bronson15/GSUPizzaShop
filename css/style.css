@@ -52,6 +52,10 @@ main h1{
 	text-align:center;
 }
 
+#specials p{
+	margin: auto;
+}
+
 #specials form img {
 	display: block;
 	margin: auto;
@@ -75,7 +79,6 @@ main h1{
 }
 
 #specials form button{
-	position: relative;
 	background-color:#a99260;
 	
 }
