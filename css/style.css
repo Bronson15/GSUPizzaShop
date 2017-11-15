@@ -46,7 +46,7 @@ nav a:hover{
 	background-color:#a99260;
 }
 main{
-	
+
 }
 main h1{
 	text-align:center;
@@ -56,9 +56,7 @@ main h1{
 	width: 500px;
 	height: 300px;
 }
-#specials button{
-	background-color:#a99260;
-}
+
 #specials form{
 	background-color:#041e42;
 }
@@ -68,35 +66,77 @@ main h1{
     padding: 5px;
 	}
 #pizza-table table {
+	margin: auto;
     border-spacing: 10px;
-	width: 50%;
+	width: 65%;
 }
 #pizza-table button {
-	width: 157px;
+	width: 148px;
 }
 #contact{
 	text-align:center;
 }
-
+#index-body-text{
+	text-align: center;
+}
 footer{
 	font-family:Times New Roman, serif;
 	font-size:.85em;
-	background-color:#041e42;
-	
-}
-.copy{
-	font-family:Times New Roman, serif;
-	font-size: .85em;
-	text-align:center;
-	position: fixed;
-	left: 50px;
-	right: 50px;
-	bottom:5px;
-}
-.contact{
-	float:left;
-	padding-left:75px;
+	/*background-color:#041e42;*/
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
 }
 .clear{
 	clear:left;
+}
+#log-col{
+	max-width: 500px;
+	padding: 30px;
+	margin: 0 auto;
+	text-align:center;
+}
+
+#login{
+	position: relative;
+	height: auto;
+	padding: 20px;
+	font-size: 16px;
+}
+
+#user{
+	padding-bottom:5px;
+	margin-bottom:2px;
+}
+
+#pass{
+	padding-bottom:5px;
+	margin-bottom:2px;
+}
+
+#pizza-table img {
+	height: 100px;
+	padding-left: 15%;
+}
+
+#tile-form {
+	float: left;
+}
+
+#tile-img {
+	float: left;
+}
+
+.tile-class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#pizza-text {
+	text-align: center;
+}
+
+button {
+	background-color:#a99260;
 }

@@ -1,48 +1,35 @@
-<?php 
-
-include("header.php");
-
-?>
+<?php include("header.php"); ?>
 	
 	<div id="index-body-text">		
 		<main>
-			<p>Welcome to GSU pizza shop<p>
-			<p>Check out our best deals under specials</p>
+			<h2>Welcome to GSU Pizza Shop!</h2>
 		</main>
+		<br><img style="border-radius:20px; max-height:250px; width:auto;" src="img/pizza.jpg"><br><br>
+		<div id="pizza-deals">
+			<table align="center">
+				<caption><b>Deals<b></caption>
+				<tbody>
+					<tr>
+					<td>
+					<!--image placed here-->
+						<b>Broke College Kid Special<b>
+						<p>Enjoy two large cheese pizzas for $9.99</p>
+					</td>
+					
+					<td>
+						<!--image placed here-->
+						<b>Mighty Meat Special<b>
+						<p>Grab a large meat lovers pizza for $12.99</p>
+					</td>
+					
+					<td>
+						<!--image placed here-->
+						<b>Toppings Galore<b>
+						<p>Customize your pizza! Large three topping pizza for $7.00</p>
+					</td>
+					</tr>
+			</table>
+		</div>
 	</div>
-	
-	<div id="database-testing">
-		<?php
-			$result = pg_query($pg_conn, "SELECT * FROM customer") or die("Error in SQL: " . pg_last_error());
-		 	$i = 0;
-			echo '<table><tr>';
-			while ($i < pg_num_fields($result))
-			{
-				$fieldName = pg_field_name($result, $i);
-				echo '<td>' . $fieldName . '</td>';
-				$i = $i + 1;
-			}
-			echo '</tr>';
-			$i = 0;
 
-			while ($row = pg_fetch_row($result)) 
-			{
-				echo '<tr>';
-				$count = count($row);
-				$y = 0;
-				while ($y < $count)
-				{
-					$c_row = current($row);
-					echo '<td>' . $c_row . '</td>';
-					next($row);
-					$y = $y + 1;
-				}
-				echo '</tr>';
-				$i = $i + 1;
-			}
-			pg_free_result($result);
-
-			echo '</table>';
-		?>
-	</div>
-	<?php include("footer.php");?>
+<?php include("footer.php");?>
