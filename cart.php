@@ -18,7 +18,7 @@
 						echo "Hand-Tossed ";
 					}
 					echo " " .$item->itemName . "</td> ";
-					echo "<td>" . $item->itemQuantity . "</td> "
+					echo "<td>" . $item->itemQuantity . "</td> ";
 					echo "<td>" . $item->itemPrice . "</td><br>";
 				}
 			?>
