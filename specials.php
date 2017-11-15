@@ -5,6 +5,7 @@
 	<p>***CARRY OUT ONLY***</p>
 	<form action="cart.php" >
 	<fieldset>
+	<p><strong>For People who call Supreme Pizza a Combo Pizza</strong></p>
 	<img src="/img/pizzapizza.jpg" alt="Pizza">
     <button type="add" onclick="cart.php">Large Combo Pizza $8.00</button>	
 	</fieldset>
@@ -32,6 +33,7 @@
 	</form>
 	<form action="cart.php" >
 	<fieldset>
+	<p><strong>For People who are ordering for themselves but want to act like they are ordering for 2 people</strong></p>
 	<img src= "/img/Mpizza.jpg" alt="MedPizza">
 	<button type="add" onclick="cart.php" >2 Medium 1 topping Pizza for $9.99</button>
 	</fieldset>
