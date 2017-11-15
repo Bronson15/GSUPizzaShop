@@ -64,7 +64,6 @@
 			total = 0.0;
 			if(document.getElementById("A").checked) total += <?php echo $t_prices['A']; ?>;
 			if(document.getElementById("B").checked) total += <?php echo $t_prices['B']; ?>;
-			if(document.getElementById("C").checked) total += <?php echo $t_prices['C']; ?>;
 			if(document.getElementById("E").checked) total += <?php echo $t_prices['E']; ?>;
 			if(document.getElementById("G").checked) total += <?php echo $t_prices['G']; ?>;
 			if(document.getElementById("H").checked) total += <?php echo $t_prices['H']; ?>;
