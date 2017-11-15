@@ -1,5 +1,6 @@
 <?php
-	session_start(); 
+	session_start();
+	$temp_items;
 	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
 	class OrderItem {
 		public $itemID;
@@ -32,18 +33,27 @@
 			<a href="/">Home</a>
 			<a href="/pizza.php">Pizza</a>
 			<a href="/specials.php">Specials</a>
-			<a href="/cart.php">Cart (
-				<?php
+			<a href="/cart.php">Cart (<?php
 				if(count($_SESSION['cart'])==0){
-					echo "0";
+					if(isset($temp_items)){
+						echo $temp_items;
+						unset($temp_items);
+					} else{
+						echo "0";
+					}
 				} else{
 					$items = 0;
 					foreach($_SESSION['cart'] as $line){
 						$items += $line->itemQuantity;
 					}
+					if(isset($temp_items)){
+						echo $items + $temp_items;
+						unset($temp_items);
+					} else{
+						echo $items;
+					}
 				}
-				?>
-			)</a>
+			?>)</a>
 			<a href="/login.php">Login</a>
         </b>
     </nav> 
