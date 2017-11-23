@@ -61,8 +61,10 @@ main h1{
 	height: 300px;
 }
 
-#specials p{
+#specials br{
 	text-align: center;
+	font-size: 25px; 
+	
 }
 
 #specials form{
