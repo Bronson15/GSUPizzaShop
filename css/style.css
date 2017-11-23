@@ -61,14 +61,13 @@ main h1{
 	height: 300px;
 }
 
-#specials br{
+#specials p{
 	text-align: center;
-	font-size: 25px; 
-	
+	font-size:25px; 
 }
 
 #specials form{
-	background-color:#e4e4e4;
+	background-color:#041e42;
 }
 
 #specials form p{
