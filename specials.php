@@ -10,31 +10,31 @@
 	<tbody>
 		<tr> 
 			<td> 
-			<img src="jkgjsfd">
+			<img src="img/college_kid.png">
 			</td>
 			
 			<td> 
-			<img src="hgdfh">
+			<img src="img/combo_special.png">
 			</td>
 		</tr>
 
 		<tr> 
 			<td> 
-			<img src="jkgjsfd">
+			<img src="img/customize.png">
 			</td>
 			
 			<td> 
-			<img src="hgdfh">
+			<img src="img/double1.png">
 			</td>
 		</tr>
 			
 		<tr> 
 			<td> 
-			<img src="jkgjsfd">
+			<img src="img/meatlovers.png">
 			</td>
 			
 			<td> 
-			<img src="hgdfh">
+			<img src="img/partypeeps.png">
 			</td>
 		</tr>	
 	</tbody>
