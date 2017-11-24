@@ -43,6 +43,7 @@
 		<fieldset id="register">
 			
 			<label>Name(First and Last):</label>
+			<br>
 			<input type="text" id="flname" name="flname" placeholder="EX. John Doe">
 			<br>
 			<br>
