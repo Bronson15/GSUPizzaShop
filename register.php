@@ -38,9 +38,9 @@
 	}
 	else{
 ?>
-<div id="log-col">
+<div id="reg-col">
 	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-		<fieldset id="username">
+		<fieldset id="register">
 			
 			<label>Name(First and Last):</label>
 			<input type="text" id="flname" name="flname" placeholder="EX. John Doe">
