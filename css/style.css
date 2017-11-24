@@ -126,6 +126,7 @@ footer{
 	padding: 30px;
 	margin: 0 auto;
 	text-align:center;
+	position: center;
 }
 #register{
 	text-align: center;
