@@ -128,7 +128,6 @@ footer{
 	text-align:center;
 }
 #register{
-	text-align: center;
 	position: center;
 	border: hidden;
 }
@@ -138,7 +137,9 @@ footer{
 	padding: 20px;
 	font-size: 16px;
 }
-
+#username{
+	border: hidden;
+}
 #user{
 	padding-bottom:5px;
 	margin-bottom:2px;
