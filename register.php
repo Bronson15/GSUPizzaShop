@@ -58,7 +58,7 @@
 			<input type="number" id="age" name="age" placeholder="Age" min="14">
 			<br>
 			<br>
-			<label>Contact Number</label>
+			<label>Contact Number:</label>
 			<input type="text" id="telephone" name="telephone" placeholder="xxx-xxx-xxxx">
 			<br>
 			<br>

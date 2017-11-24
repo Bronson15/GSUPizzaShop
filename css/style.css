@@ -123,6 +123,7 @@ footer{
 }
 #register{
 	padding: 12px 12px;
+	width: 100%;
 	margin: 8px 0;
 	position: left;
 	border: hidden;
