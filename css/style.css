@@ -207,3 +207,15 @@ button {
 #cart-table table, #cart-table td, #cart-table th {
     border: 1px solid black;
 }
+
+#cart-buttons {
+	text-align: center;
+}
+
+#tracker {
+	text-align: center;
+}
+
+#totatl {
+	text-align: right;
+}
