@@ -51,11 +51,19 @@
 					}
 				}
 			?>)</a>
-			<a href="/login.php"><?php
-				if(isset($_SESSION['username'])) echo $_SESSION['name'];
-				else echo "Login";
-			?></a>
-			<a href="/logout.php"><?php if(isset($_SESSION['username'])) echo "Logout" ?></a>
+			
+			<?php if(isset($_SESSION['username'])){
+				?>
+					<a href="/member.php"><?php echo $_SESSION['name'];?></a>
+					<a href="/logout.php">Logout</a>
+			<?php 
+				} 
+				else{
+				?>
+					<a href="/login.php">Login</a>
+			<?php
+				}
+				?>
         </b>
     </nav> 
 	
