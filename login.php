@@ -16,6 +16,8 @@
 			$_SESSION['username'] = $username;
 			$_SESSION['name'] = $row['name'];
 			$_SESSION['address'] = $row['streetaddress'];
+			$_SESSION['email'] = $row['emailaddress'];
+			$_SESSION['phone'] = $row['contactnumber'];
  			header("Location: index.php");
 		}
 		//if not redirect them to login page
