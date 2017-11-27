@@ -39,21 +39,7 @@
 	else{
 ?>
 <script>
-	function showHint(str) {
-    if (str.length == 0) { 
-        document.getElementById("ajaxError").innerHTML = "field left empty";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ajaxError").innerHTML = this.responseText;
-            }
-        }
-        xmlhttp.open("GET", "register.php?q="+str, true);
-        xmlhttp.send();
-    }
-}
+
 </script>
 <div id="ajaxError"> </div>
 <div id="reg-col">
