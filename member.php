@@ -1,7 +1,6 @@
 <?php include(header.php);
-	if(isset($_SESSION['username'])){
-		$memberInfo = pg_query($pg_conn,"SELECT * FROM customer WHERE username = '");
-	}
+	echo "Name: " . $_SESSION['name'];
+	echo "Address: " . $_SESSION['address'];
 ?>
 
 <?php include(footer.php);?>
