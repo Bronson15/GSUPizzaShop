@@ -38,6 +38,24 @@
 	}
 	else{
 ?>
+<script>
+	function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("flname").innerHTML = "field left empty";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("flname").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "register.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+<div id="ajaxError"> </div>
 <div id="reg-col">
 	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<fieldset id="register">
