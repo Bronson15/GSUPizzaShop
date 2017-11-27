@@ -1,7 +1,15 @@
 <?php include("header.php");
 
 	if(isset($_SESSION['username'])){
-		echo "<p>Name: " . $_SESSION['name'] . "</p>";
+?>
+		<p> "Name: " <?php echo $_SESSION['name'] ?> </p>
+<?php
 	}
-	else echo "<p>Must be logged in to view personal info</p>"
- include("footer.php");?>
+	else { ?>
+	
+	<p>	"Must be logged in to view personal info" </p>
+	
+	<?php }
+
+	include("footer.php");
+ ?>
