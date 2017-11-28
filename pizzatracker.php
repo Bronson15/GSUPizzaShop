@@ -6,6 +6,9 @@
 <main>
 	<div id="tracker">
 		<h1>Your order has been processed!</h1>
+		<div id="tracker-text">
+			Use the tracker below to see when your pizza will be ready for pickup.
+		</div>
 		<!--Start with pizza tracker image 1 -->
 		<img id= "pt" src="img/pizzatrack1.png" alt="Pizza Tracker Phase 1: Prep">
 	</div>
