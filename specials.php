@@ -39,7 +39,7 @@
 	</tbody>
 	</table>
 	<map name="pizzamap">
-		<area shape="rect" coords="2,470,5,470"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="14,217,217,20"  href="/cart.php" alt="Pizza Special">
 	</map>
 </div>
 </main> 
