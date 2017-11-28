@@ -87,7 +87,7 @@ main h1{
 }
 
 #pizza-table th, #pizza-table td {
-    border: 1px solid black;
+    border: hidden;
     padding: 5px;
 	}
 #pizza-table table {
