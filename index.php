@@ -12,23 +12,29 @@
 					<tr>
 					<td>
 					<!--image placed here-->
-					<img src="img/specials_college.png" usemap="ordernow">
+					<img src="img/specials_college.png" usemap="cksm">
 					</td>
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/meat_specials.png" usemap="ordernow">
+						<img src="img/meat_specials.png" usemap="mms">
 					</td>
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/topping_specials.png" usemap="ordernow">
+						<img src="img/topping_specials.png" usemap="tg">
 					</td>
 					</tr>
 				</tbody>	
 			</table>
 		</div>
-		<map name="ordernow">
+		<map name="cksm">
+			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+		</map>
+		<map name="mms">
+			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+		</map>
+		<map name="tg">
 			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
 		</map>
 		</main>
