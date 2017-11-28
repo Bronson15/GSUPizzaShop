@@ -5,7 +5,7 @@
 	<p>CARRY OUT ONLY</p>
 </main>
 	<map name="pizzamap">
-		<area shape="rect" coords="2,470,5,470" alt="Pizza Special">
+		<area shape="rect" coords="2,470,5,470"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<div id="deals">
 	<table align="center">
