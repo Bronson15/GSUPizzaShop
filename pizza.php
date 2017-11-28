@@ -47,7 +47,6 @@
 
 <main>
 	<div id="pizza-text">
-		<h2>Welcome to GSU pizza shop</h2>
 		<b>Check out our best deals under specials</b>
 	</div>	
 </main>

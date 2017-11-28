@@ -2,7 +2,6 @@
 <div id="specials">
 <main>
 	<h1>The Best Deals in Town: ALL DAY, EVERYDAY</h1>
-	<p>CARRY OUT ONLY</p>
 
 	<div id="deals">
 	<table align="center">
@@ -39,7 +38,7 @@
 	</tbody>
 	</table>
 	<map name="ckss">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area class="CKS" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="cp">
 		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
