@@ -39,22 +39,22 @@
 	</tbody>
 	</table>
 	<map name="ckss">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="cp">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="tp">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="dpd">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="aym">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="pps">
-		<area shape="rect" coords="14,234,210,203"  href="/cart.php" alt="Pizza Special">
+		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 </div>
 </main> 

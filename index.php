@@ -4,7 +4,7 @@
 		<main>
 			<h2>Welcome to GSU Pizza Shop!</h2>
 		
-		<br><img style="width:auto;" src="img/home.png"><br><br>
+		<br><img style="width:auto;" src="img/home.png" usemap="main"><br><br>
 		<div id="pizza-deals">
 			<table align="center">
 				<caption><b>Deals<b></caption>
@@ -28,6 +28,9 @@
 				</tbody>	
 			</table>
 		</div>
+		<map name="main">
+			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+		</map>
 		<map name="cksm">
 			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
 		</map>
