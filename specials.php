@@ -19,11 +19,11 @@
 
 		<tr> 
 			<td> 
-			<img src="img/customize.png" usemap="#pizzamap">
+			<img src="img/hawaiianspecial.png" usemap="#pizzamap">
 			</td>
 			
 			<td> 
-			<img src="img/double1.png" usemap="#pizzamap">
+			<img src="img/doublepep.png" usemap="#pizzamap">
 			</td>
 		</tr>
 			
@@ -33,7 +33,7 @@
 			</td>
 			
 			<td> 
-			<img src="img/partypeeps.png" usemap="#pizzamap">
+			<img src="img/party.png" usemap="#pizzamap">
 			</td>
 		</tr>	
 	</tbody>
