@@ -2,7 +2,6 @@
 <div id="specials">
 <main>
 	<h1>The Best Deals in Town: ALL DAY, EVERYDAY</h1>
-	<p>CARRY OUT ONLY</p>
 
 	<div id="deals">
 	<table align="center">
