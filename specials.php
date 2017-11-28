@@ -38,7 +38,7 @@
 	</tbody>
 	</table>
 	<map name="ckss">
-		<area class="CKS" shape="rect" coords="17,236,212,203"  href="" alt="Pizza Special">
+		<area class="CKS" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
 	<map name="cp">
 		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
