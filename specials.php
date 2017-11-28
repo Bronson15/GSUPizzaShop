@@ -37,31 +37,9 @@
 		</tr>	
 	</tbody>
 	</table>
-	<?php 
-		function addCKS() {
-			$CKS = new OrderItem;
-			
-			$CKS->itemID = 14;
-			$CKS->itemName = "College Kid Special";
-			$CKS->itemSize = "Large";
-			$CKS->itemQuantity = 1;
-			$CKS->itemCrust = "hand";
-			$CKS->itemToppings = "pep";
-			$CKS->itemPrice = 9.99;
-			
-			array_push($_SESSION['cart'], '$CKS');
-		}
-		?>
-	
 	<map name="ckss">
 		<area class="CKS" shape="rect" coords="17,236,212,203"  href="" alt="Pizza Special">
 	</map>
-	<?php
-		$(".CKS").on("click", function(e)) {
-			e.preventDefault();
-			addCKS();
-		}
-	?>
 	<map name="cp">
 		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
 	</map>
