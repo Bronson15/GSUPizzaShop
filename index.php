@@ -29,7 +29,7 @@
 			</table>
 		</div>
 		<map name="ordernow">
-			<area shape="rect" coords="200,94,95,205" href="/cart.php" alt="Pizza Special">
+			<area shape="rect" coords="400,94,95,25" href="/cart.php" alt="Pizza Special">
 		</map>
 		</main>
 	</div>
