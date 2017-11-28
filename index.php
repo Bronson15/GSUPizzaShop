@@ -4,7 +4,7 @@
 		<main>
 			<h2>Welcome to GSU Pizza Shop!</h2>
 		
-		<br><img style="width:auto;" src="img/home_graphic.png"><br><br>
+		<br><img style="width:auto;" src="img/home.png"><br><br>
 		<div id="pizza-deals">
 			<table align="center">
 				<caption><b>Deals<b></caption>
