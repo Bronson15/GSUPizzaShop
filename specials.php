@@ -3,10 +3,7 @@
 <main>
 	<h1>The Best Deals in Town: ALL DAY, EVERYDAY</h1>
 	<p>CARRY OUT ONLY</p>
-</main>
-	<map name="pizzamap">
-		<area shape="rect" coords="2,470,5,470"  href="/cart.php" alt="Pizza Special">
-	</map>
+
 	<div id="deals">
 	<table align="center">
 	<tbody>
@@ -41,6 +38,10 @@
 		</tr>	
 	</tbody>
 	</table>
-</div> 
+	<map name="pizzamap">
+		<area shape="rect" coords="2,470,5,470"  href="/cart.php" alt="Pizza Special">
+	</map>
+</div>
+</main> 
 </div>
 <?php include("footer.php");?>
