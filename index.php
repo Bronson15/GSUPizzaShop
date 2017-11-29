@@ -1,18 +1,6 @@
 <?php
 include("header.php");
 ?>
-	<script>
-		function addSpecial(specialID){
-			var spCO = document.getElementById("carryout");
-			var spCKSM = document.getElementById("cksm");
-			var spMMS = document.getElementById("mms");
-			var spTG = document.getElementById("tg");
-			if(specialID==1) spCO.submit();
-			if(specialID==2) spCKSM.submit();
-			if(specialID==3) spMMS.submit();
-			if(specialID==4) spTG.submit();
-		}
-	</script>
 	<div id="index-body-text">
 		<main>
 		<br><img style="width:auto;" src="img/home.png" usemap="main"><br><br>

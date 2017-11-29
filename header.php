@@ -55,10 +55,24 @@
 	function addSpecial(specialID){
 		var spCO = document.getElementById("carryout");
 		var spCKSM = document.getElementById("cksm");
+		var spCKSS = document.getElementById("ckss");
 		var spMMS = document.getElementById("mms");
+		var spTG = document.getElementById("tg");
+		var spCP = document.getElementById("cp");
+		var spTP = document.getElementById("tp");
+		var spDPD = document.getElementById("dpd");
+		var spAYM = document.getElementById("aym");
+		var spPPS = document.getElementById("pps");
 		if(specialID==1) spCO.submit();
 		if(specialID==2) spCKSM.submit();
 		if(specialID==3) spMMS.submit();
+		if(specialID==4) spTG.submit();
+		if(specialID==5) spCP.submit();
+		if(specialID==6) spTP.submit();
+		if(specialID==7) spDPD.submit();
+		if(specialID==8) spAYM.submit();
+		if(specialID==9) spPPS.submit();
+		if(specialID==10) spCKSS.submit();
 	}
 </script>
 <div id="wrapper">
@@ -89,13 +103,13 @@
 					}
 				}
 			?>)</a>
-			
+
 			<?php if(isset($_SESSION['username'])){
 				?>
 					<a href="/member.php"><?php echo $_SESSION['name'];?></a>
 					<a href="/logout.php">Logout</a>
-			<?php 
-				} 
+			<?php
+				}
 				else{
 				?>
 					<a href="/login.php">Login</a>
@@ -103,9 +117,9 @@
 				}
 				?>
         </b>
-    </nav> 
-	
-</div> 
+    </nav>
+
+</div>
 
 <?php
 	//Display specials message
