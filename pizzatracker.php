@@ -1,7 +1,9 @@
 <!--pizzatracker.php -->
 <!-- https://www.w3schools.com/jsref/met_win_settimeout.asp   information on the setTimeout function.-->
 
-<?php include("header.php");
+<?php
+	unset($_SESSION['cart']);
+	include("header.php");
 	if(isset($_POST['checkout'])) {
 		$query = "INSERT INTO orders (customerid, price, date) VALUES (".$_SESSION['customerid'].", ".$_SESSION['total'].", NOW())";
 		$result = pg_query($query);
@@ -38,5 +40,4 @@
 </main>
 
 <?php
-unset($_SESSION['cart']);
 include("footer.php");?>
