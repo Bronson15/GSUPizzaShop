@@ -29,7 +29,7 @@
 		}
 		//if no duplicates or empty fields, insert data into table
 		else{
-			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$_POST[flname]', '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
+			$query = "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ($_POST[flname], '$_POST[age]', '$_POST[telephone]','$_POST[email]', '$_POST[address]','$_POST[username]', '$_POST[password]')"or die("Error in SQL: " . pg_last_error());	
 			$result = pg_query($query);
 ?>	
 	<div class="register">
@@ -41,13 +41,17 @@
 	}
 	else{
 ?>
+<script>
+
+</script>
+<div id="ajaxError"> </div>
 <div id="reg-col">
 	<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<fieldset id="register">
 			
 			<label>Name(First and Last):</label>
 			<br>
-			<input type="text" id="flname" name="flname" placeholder="EX. John Doe">
+			<input type="text" id="flname" name="flname" placeholder="EX. John Doe" onkeyup="showHint(this.value)">
 			<br>
 			<br>
 			<label>Email Address:</label>
