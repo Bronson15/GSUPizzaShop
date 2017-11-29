@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Registration</title>
-		<script src = "register.js" rel="javascript"></script>
+		<script type="text/javascript" src = "register.js"</script>
 	</head>
 		<div id="error"></div>
 		<div id="reg-col">
