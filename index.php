@@ -56,7 +56,7 @@ include("header.php");
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/topping_specials.png" usemap="tg">
+						<img src="img/home2.png" usemap="tg">
 					</td>
 					</tr>
 				</tbody>	
