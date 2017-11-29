@@ -8,7 +8,11 @@ if(isset($_POST['addspecial'])){
 	$orderItem->itemSize = $_POST['size'];
 	$orderItem->itemQuantity = $_POST['quantity'];
 	$orderItem->itemCrust = $_POST['crust'];
-	$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+	if($productID==1){
+		$orderItem->itemToppings = $_POST['toppings'];
+	} else{
+		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+	}
 	$orderItem->itemPrice = $_POST['price'];
 	array_push($_SESSION['cart'], $orderItem);
 	echo "<h3 align='center' style='color: #3B61F2;'>";
@@ -26,7 +30,9 @@ if(isset($_POST['addspecial'])){
 	<script>
 		function addSpecial(specialID){
 			var spCO = document.getElementById("carryout");
+			var spCKSM = document.getElementById("cksm");
 			if(specialID==1) spCO.submit();
+			if(specialID==2) spCKSM.submit();
 		}
 	</script>
 	<div id="index-body-text">		
@@ -48,6 +54,15 @@ if(isset($_POST['addspecial'])){
 					<td>
 					<!--image placed here-->
 					<img src="img/specials_college.png" usemap="cksm">
+					<form id="cksm" method="POST" style="margin: 0; padding: 0;">
+						<input name="productid" type="hidden" value="1" />
+						<input name="size" type="hidden" value="large" />
+						<input name="quantity" type="hidden" value="2" />
+						<input name="crust" type="hidden" value="hand" />
+						<input name="toppings" type="hidden" value="CXm" />
+						<input name="price" type="hidden" value="9.99" />
+						<input name="addspecial" type="hidden" value="true" />
+					</form>
 					</td>
 					
 					<td>
@@ -67,7 +82,7 @@ if(isset($_POST['addspecial'])){
 			<area onclick="addSpecial(1);" shape="rect" coords="636,318,723,285" href="#" alt="Pizza Special">
 		</map>
 		<map name="cksm">
-			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+			<area onclick="addSpecial(2);" shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
 		</map>
 		<map name="mms">
 			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
