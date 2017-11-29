@@ -1,5 +1,5 @@
 <?php include("header.php");?>	
-<html>
+
 	<head>
 		<title>Registration</title>
 		<script type="text/javascript" src = "register.js"</script>
@@ -49,5 +49,5 @@
 				</fieldset>
 			</form>
 		</div>
-</html>
+
 <?php include("footer.php"); ?>
