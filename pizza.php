@@ -9,6 +9,28 @@
 		$t_prices[$row['topping_id']] = $row['price'];
 	}
 
+	function getToppings(){
+		$toppingString = "";
+		if(isset($_POST['tpgA'])) $toppingString += "A";
+		if(isset($_POST['tpgB'])) $toppingString += "B";
+		$toppingString += "C";
+		if(isset($_POST['tpgE'])) $toppingString += "E";
+		if(isset($_POST['tpgG'])) $toppingString += "G";
+		if(isset($_POST['tpgH'])) $toppingString += "H";
+		if(isset($_POST['tpgI'])) $toppingString += "I";
+		if(isset($_POST['tpgJ'])) $toppingString += "J";
+		if(isset($_POST['tpgK'])) $toppingString += "K";
+		if(isset($_POST['tpgM'])) $toppingString += "M";
+		if(isset($_POST['tpgN'])) $toppingString += "N";
+		if(isset($_POST['tpgO'])) $toppingString += "O";
+		if(isset($_POST['tpgP'])) $toppingString += "P";
+		if(isset($_POST['tpgR'])) $toppingString += "R";
+		if(isset($_POST['tpgS'])) $toppingString += "S";
+		if(isset($_POST['tpgT'])) $toppingString += "T";
+		$toppingString += $_POST['sauce'];
+		return $toppingString;
+	}
+
 	if(isset($_POST['add'])){
 		$productID = substr($_POST['add'], 6);
 		$orderItem = new OrderItem();
@@ -17,7 +39,11 @@
 		$orderItem->itemSize = $_POST['size'];
 		$orderItem->itemQuantity = $_POST['quantity'];
 		$orderItem->itemCrust = $_POST['crust'];
-		$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		if($productID==1){
+			$orderItem->itemToppings = getToppings();
+		} else{
+			$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		}
 		$orderItem->itemPrice = $_POST['price'];
 		array_push($_SESSION['cart'], $orderItem);
 		echo "<h3 align='center' style='color: #3B61F2;'>";
@@ -148,7 +174,7 @@
 			<td colspan=2>
 				<div id="custom-pizza-selector">
 					<b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
-					<form action = "cart.php"><br>	
+					<form method="POST"><br>	
 							<input name='price' id='hiddenPrice1' type='text' value='<?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?>' hidden>
 							Price: $<span id="price1"><?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?></span>
 							<br>
@@ -172,29 +198,29 @@
 							<tr>
 								<td style="border:0;">
 									<p><b>Veggies:</b></p>
-									<p><input onchange="changePrice(1);" id="G" type="checkbox"><label>Green Pepper ($<?php echo number_format($t_prices['G'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="I" type="checkbox"><label>Onion ($<?php echo number_format($t_prices['I'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="J" type="checkbox"><label>Jalapeno ($<?php echo number_format($t_prices['J'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="M" type="checkbox"><label>Mushroom ($<?php echo number_format($t_prices['M'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="N" type="checkbox"><label>Pineapple ($<?php echo number_format($t_prices['N'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="O" type="checkbox"><label>Black Olive ($<?php echo number_format($t_prices['O'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="R" type="checkbox"><label>Banana Pepper ($<?php echo number_format($t_prices['R'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="T" type="checkbox"><label>Tomato ($<?php echo number_format($t_prices['T'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="G" name="tpgG" type="checkbox"><label>Green Pepper ($<?php echo number_format($t_prices['G'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="I" name="tpgI" type="checkbox"><label>Onion ($<?php echo number_format($t_prices['I'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="J" name="tpgJ" type="checkbox"><label>Jalapeno ($<?php echo number_format($t_prices['J'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="M" name="tpgM" type="checkbox"><label>Mushroom ($<?php echo number_format($t_prices['M'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="N" name="tpgN" type="checkbox"><label>Pineapple ($<?php echo number_format($t_prices['N'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="O" name="tpgO" type="checkbox"><label>Black Olive ($<?php echo number_format($t_prices['O'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="R" name="tpgR" type="checkbox"><label>Banana Pepper ($<?php echo number_format($t_prices['R'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="T" name="tpgT" type="checkbox"><label>Tomato ($<?php echo number_format($t_prices['T'], 2); ?>)</label></p>
 								</td>
 								<td style="border:0;">
 									<p><b>Meats:</b></p>
-									<p><input onchange="changePrice(1);" id="A" type="checkbox"><label>Anchovy ($<?php echo number_format($t_prices['A'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="B" type="checkbox"><label>Bacon ($<?php echo number_format($t_prices['B'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="E" type="checkbox"><label>Beef ($<?php echo number_format($t_prices['E'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="H" type="checkbox"><label>Ham ($<?php echo number_format($t_prices['H'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="K" type="checkbox"><label>Chicken ($<?php echo number_format($t_prices['K'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="P" type="checkbox"><label>Pepperoni ($<?php echo number_format($t_prices['P'], 2); ?>)</label></p>
-									<p><input onchange="changePrice(1);" id="S" type="checkbox"><label>Sausage ($<?php echo number_format($t_prices['S'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="A" name="tpgA" type="checkbox"><label>Anchovy ($<?php echo number_format($t_prices['A'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="B" name="tpgB" type="checkbox"><label>Bacon ($<?php echo number_format($t_prices['B'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="E" name="tpgE" type="checkbox"><label>Beef ($<?php echo number_format($t_prices['E'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="H" name="tpgH" type="checkbox"><label>Ham ($<?php echo number_format($t_prices['H'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="K" name="tpgK" type="checkbox"><label>Chicken ($<?php echo number_format($t_prices['K'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="P" name="tpgP" type="checkbox"><label>Pepperoni ($<?php echo number_format($t_prices['P'], 2); ?>)</label></p>
+									<p><input onchange="changePrice(1);" id="S" name="tpgS" type="checkbox"><label>Sausage ($<?php echo number_format($t_prices['S'], 2); ?>)</label></p>
 								</td>
 							</tr>
 						</table><br>
 						<div id="custom-pizza-button">	
-							<p><select onchange="changePrice(1);" id = "quantity1"</select>
+							<p><select name="quantity" onchange="changePrice(1);" id = "quantity1"</select>
 								<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
 							</select>
 							<button type = "add" name="add">Add to Cart</button>
