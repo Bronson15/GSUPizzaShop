@@ -43,7 +43,7 @@
 			
 		</fieldset>
 	</form>
-	<p>Not a user? Click <a href="register.php">here</a>.</p>
+	<p>Not a user? Click <a href="register.html">here</a>.</p>
 </div>
 <?php 
 include("footer.php"); ?>
