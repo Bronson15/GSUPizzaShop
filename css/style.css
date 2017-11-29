@@ -235,6 +235,7 @@ button {
 
 #order-history table, #order-history td, #order-history th {
 	border: 1px solid black;
+	margin: auto;
 }
 
 #order-history tbody {
