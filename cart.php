@@ -10,7 +10,7 @@
 		</tr>
 		<tr>
 			<?php
-			$total = 0.00;
+			$_SESSION['total'] = 0.00;
 				foreach($_SESSION['cart'] as $item){
 					echo "<td> " . ucfirst($item->itemSize) . " ";
 					if($item->itemCrust=="pan"){
@@ -22,7 +22,7 @@
 					echo "<td>" . $item->itemQuantity . "</td> ";
 					echo "<td>$" . $item->itemPrice . "</td><br>";
 					echo "</tr>";
-					$total = $total + $item->itemPrice;
+					$_SESSION['total'] = $_SESSION['total'] + $item->itemPrice;
 				}
 			?>
 		<td>
@@ -30,21 +30,24 @@
 		</td>
 		<td colspan=2 style="text-align: right;">
 			<?php
-				echo "$ " . $total;
+				echo "$ " . $_SESSION['total'];
 			?>
 		</td>
 	</table>
 	<br>
 	<br>
 	<div id="cart-buttons">
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+
 			<?php
-				if (!empty($_SESSION['cart'])) {
-					echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
-					echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
-				}
+					if (!empty($_SESSION['cart'])) {
+						echo "<form action='/cart.php' method='POST'>";
+							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
+						echo "</form>";
+						echo "<form action='pizzatracker.php' method='POST'>";
+							echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
+						echo "</form>";
+					}
 			?>
-		</form>
 
 		<?php
 				if(isset($_POST['clearCart'])){
@@ -52,10 +55,6 @@
 					header('Refresh: 0; URL = cart.php');
 				}
 
-				if(isset($_POST['checkout'])) {
-					unset($_SESSION['cart']);
-					header('Refresh: 0; URL = pizzatracker.php');
-				}
 		?>
 	</div>
 </main>
