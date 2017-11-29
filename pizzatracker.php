@@ -8,8 +8,6 @@
 		echo $result;
 		echo $query;
 	}
-	echo $_POST[];
-
 ?>
 
 <main>
@@ -39,4 +37,6 @@
 	</script>
 </main>
 
-<?php include("footer.php");?>
+<?php
+unset($_SESSION['cart']);
+include("footer.php");?>

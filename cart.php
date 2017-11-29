@@ -37,7 +37,7 @@
 	<br>
 	<br>
 	<div id="cart-buttons">
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+		<form action="pizzatracker.php" method="POST">
 			<?php
 				if (!empty($_SESSION['cart'])) {
 					echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
@@ -52,10 +52,6 @@
 					header('Refresh: 0; URL = cart.php');
 				}
 
-				if(isset($_POST['checkout'])) {
-					unset($_SESSION['cart']);
-					header('Refresh: 0; URL = pizzatracker.php');
-				}
 		?>
 	</div>
 </main>
