@@ -51,6 +51,16 @@
     <title>Home | GSU Pizza Shop</title>
 </head>
 <body>
+<script>
+	function addSpecial(specialID){
+		var spCO = document.getElementById("carryout");
+		var spCKSM = document.getElementById("cksm");
+		var spMMS = document.getElementById("mms");
+		if(specialID==1) spCO.submit();
+		if(specialID==2) spCKSM.submit();
+		if(specialID==3) spMMS.submit();
+	}
+</script>
 <div id="wrapper">
         <header>
 		<h1><a href="/"><img src="/img/logo.jpg" alt="GSU Logo"></a></h1>
