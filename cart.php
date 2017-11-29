@@ -45,6 +45,7 @@
 					if(isset($_POST['checkout'])) {
 						$query = "INSERT INTO orders (customerid, price, date) VALUES (".$_SESSION['customerid'].", ".$total.", NOW())";
 						$result = pg_query($query);
+						echo $result;
 					}
 				}
 			?>
