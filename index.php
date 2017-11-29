@@ -1,6 +1,6 @@
 <?php
 include("header.php");
-if(isset($POST['addspecial']){
+if(isset($_POST['addspecial']){
 	/*
 	$productID = $_POST['productid'];
 	$orderItem = new OrderItem();
