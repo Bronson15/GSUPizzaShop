@@ -42,7 +42,7 @@
 
 		}
 		else {
-	?>]
+	?>
 	<p>	Must be logged in to view personal info </p>
 	</div>
 	<?php }
