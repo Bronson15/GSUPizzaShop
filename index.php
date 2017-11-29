@@ -31,8 +31,10 @@ if(isset($_POST['addspecial'])){
 		function addSpecial(specialID){
 			var spCO = document.getElementById("carryout");
 			var spCKSM = document.getElementById("cksm");
+			var spMMS = document.getElementById("mms");
 			if(specialID==1) spCO.submit();
 			if(specialID==2) spCKSM.submit();
+			if(specialID==3) spMMS.submit();
 		}
 	</script>
 	<div id="index-body-text">		
@@ -68,6 +70,14 @@ if(isset($_POST['addspecial'])){
 					<td>
 						<!--image placed here-->
 						<img src="img/meat_specials.png" usemap="mms">
+						<form id="mms" method="POST" style="margin: 0; padding: 0;">
+							<input name="productid" type="hidden" value="3" />
+							<input name="size" type="hidden" value="large" />
+							<input name="quantity" type="hidden" value="1" />
+							<input name="crust" type="hidden" value="hand" />
+							<input name="price" type="hidden" value="12.99" />
+							<input name="addspecial" type="hidden" value="true" />
+						</form>
 					</td>
 					
 					<td>
@@ -82,13 +92,13 @@ if(isset($_POST['addspecial'])){
 			<area onclick="addSpecial(1);" shape="rect" coords="636,318,723,285" href="#" alt="Pizza Special">
 		</map>
 		<map name="cksm">
-			<area onclick="addSpecial(2);" shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+			<area onclick="addSpecial(2);" shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
 		</map>
 		<map name="mms">
-			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+			<area shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
 		</map>
 		<map name="tg">
-			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
+			<area shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
 		</map>
 		</main>
 	</div>
