@@ -214,6 +214,7 @@ button {
 #cart-buttons form {
 	margin: 0;
 	padding: 0;
+	display: inline;
 }
 
 #tracker {
