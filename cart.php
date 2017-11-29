@@ -48,7 +48,7 @@
 								echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
 							echo "</form>";
 						} else{
-							echo "<form action='login.php'><button type='submit'>Login to checkout'></button></form>";
+							echo "<form action='login.php'><button type='submit'>Login to checkout</button></form>";
 						}
 					}
 			?>
