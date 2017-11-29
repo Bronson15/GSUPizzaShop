@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include("database.php");
 	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
 	class OrderItem {
 		public $itemID;
@@ -78,4 +79,3 @@
     </nav> 
 	
 </div> 
-<?php include("database.php");?>

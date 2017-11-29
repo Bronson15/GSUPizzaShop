@@ -23,12 +23,12 @@ if(isset($_POST['addspecial'])){
 	echo "</h3>";
 }
 ?>
-	<!--<script>
+	<script>
 		function addSpecial(specialID){
 			var spCO = document.getElementById("carryout");
 			if(specialID==1) spCO.submit();
 		}
-	</script>-->
+	</script>
 	<div id="index-body-text">		
 		<main>
 		<br><img style="width:auto;" src="img/home.png" usemap="main"><br><br>
