@@ -20,7 +20,7 @@
 					}
 					echo " " .$item->itemName . "</td> ";
 					echo "<td>" . $item->itemQuantity . "</td> ";
-					echo "<td>$" . $item->itemPrice . "</td><br>";
+					echo "<td>$" . $item->itemPrice . "</td>";
 					echo "</tr>";
 					$_SESSION['total'] = $_SESSION['total'] + $item->itemPrice;
 				}
