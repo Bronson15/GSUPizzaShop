@@ -1,8 +1,8 @@
 <?php include("header.php");
 
-		$username = $_POST['username'];
-		$name = $_POST['flname'];
-		$email = $_POST['email'];
+		$username = $_POST['user1'];
+		$name = $_POST['name1'];
+		$email = $_POST['email1'];
 		
 		$userParam = pg_query($pg_conn,"SELECT username FROM customer WHERE username ='" . $username ."'");
 		$nameParam = pg_query($pg_conn,"SELECT name FROM customer WHERE name ='" . $name ."'");
