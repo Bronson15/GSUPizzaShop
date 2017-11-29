@@ -43,7 +43,7 @@
 					echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
 					echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
 					if(isset($_POST['checkout'])) {
-						//$query = "INSERT INTO orders (customerid, price, date) VALUES ($_SESSION['customerid'], $total, NOW())";
+						$query = "INSERT INTO orders (customerid, price, date) VALUES (".$_SESSION['customerid'].", ".$total.", NOW())";
 						$result = pg_query($query);
 					}
 				}
