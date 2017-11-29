@@ -1,19 +1,9 @@
 <?php
 include("header.php");
 ?>
-	<script>
-		function addSpecial(specialID){
-			var spCO = document.getElementById("carryout");
-			var spCKSM = document.getElementById("cksm");
-			var spMMS = document.getElementById("mms");
-			if(specialID==1) spCO.submit();
-			if(specialID==2) spCKSM.submit();
-			if(specialID==3) spMMS.submit();
-		}
-	</script>
 	<div id="index-body-text">		
 		<main>
-		<br><img style="width:auto;" src="img/home.png" usemap="main"><br><br>
+		<br><img onclick="confirmAdd();" style="width:auto;" src="img/home.png" usemap="main"><br><br>
 		<form id="carryout" method="POST" style="margin: 0; padding: 0;">
 			<input name="productid" type="hidden" value="4" />
 			<input name="size" type="hidden" value="large" />
