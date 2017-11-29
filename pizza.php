@@ -194,7 +194,7 @@
 							</tr>
 						</table><br>
 						<div id="custom-pizza-button">	
-							<p><select onchange="changePrice(1);" id = "quantity1"</select>
+							<p><select onchange="changePrice(1);" id = "quantity"</select>
 								<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
 							</select>
 							<button type = "add" name="add">Add to Cart</button>
