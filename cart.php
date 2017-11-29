@@ -40,8 +40,8 @@
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 			<?php
 				if (!empty($_SESSION['cart'])) {
-					echo "<button type='submit' id="clearCart" name='clearCart'>Clear Cart</button>";
-					echo "<button type='submit' id="checkout" name='checkout'>Checkout</button>";
+					echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
+					echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
 				}
 			?>
 		</form>
