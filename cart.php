@@ -40,7 +40,7 @@
 
 			<?php
 					if (!empty($_SESSION['cart'])) {
-						echo "<form action=''/cart.php' method='POST'>";
+						echo "<form action='/cart.php' method='POST'>";
 							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
 						echo "</form>";
 						echo "<form action='pizzatracker.php' method='POST'>";
