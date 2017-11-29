@@ -211,6 +211,10 @@ button {
 #cart-buttons {
 	text-align: center;
 }
+#cart-buttons form {
+	margin: 0;
+	padding: 0;
+}
 
 #tracker {
 	text-align: center;
