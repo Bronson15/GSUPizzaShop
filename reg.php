@@ -8,7 +8,7 @@
 	$user = $_REQUEST['username'];
 	$pass = $_REQUEST['password'];
 	
-	if(pg_query($pg_conn, "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$name','$age','$phone','$email', '$address','$user','$pass')){
+	if(pg_query($pg_conn, "INSERT INTO customer (name,age,contactnumber, emailaddress, streetaddress,username, passw) VALUES ('$name','$age','$phone','$email', '$address','$user','$pass')"){
 		echo "Registered Successfully"
 	}
 	
