@@ -21,6 +21,8 @@
     <meta charset="utf-8">
 	<link rel="stylesheet" href="/css/style.css">
     <title>Home | GSU Pizza Shop</title>
+	<script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
+		<script type="text/javascript" src="register.js"></script>
 </head>
 <body>
 <div id="wrapper">

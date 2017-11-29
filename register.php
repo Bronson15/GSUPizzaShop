@@ -24,8 +24,6 @@
 ?>
 	<head>
 		<title>Registration</title>
-		<script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
-		<script type="text/javascript" src="register.js"></script>
 	</head>
 	<body>
 		<div id="error"></div>
