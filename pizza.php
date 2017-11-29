@@ -9,6 +9,10 @@
 		$t_prices[$row['topping_id']] = $row['price'];
 	}
 
+	function getToppings(){
+
+	}
+
 	if(isset($_POST['add'])){
 		$productID = substr($_POST['add'], 6);
 		$orderItem = new OrderItem();
@@ -194,7 +198,7 @@
 							</tr>
 						</table><br>
 						<div id="custom-pizza-button">	
-							<p><select onchange="changePrice(1);" id = "quantity"</select>
+							<p><select name="quantity" onchange="changePrice(1);" id = "quantity1"</select>
 								<?php for($i = 1; $i <= 10; $i++) echo "<option>".$i."</option>"; ?>
 							</select>
 							<button type = "add" name="add">Add to Cart</button>
