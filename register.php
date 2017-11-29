@@ -1,11 +1,12 @@
 <?php include("header.php");?>	
+<html>
 	<head>
 		<title>Registration</title>
 		<script src = "register.js" rel="javascript"></script>
 	</head>
 		<div id="error"></div>
 		<div id="reg-col">
-			<form id="login">
+			<form id="login" method="post" action="#">
 				<fieldset id="register">
 					
 					<label>Name(First and Last):</label>
@@ -48,4 +49,5 @@
 				</fieldset>
 			</form>
 		</div>
+</html>
 <?php include("footer.php"); ?>
