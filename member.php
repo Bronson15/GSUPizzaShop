@@ -8,13 +8,13 @@
 		<p> Address: <?php echo $_SESSION['address'] ?> </p>
 		<p> Email: <?php echo $_SESSION['email'] ?> </p>
 		<p> Phone: <?php echo $_SESSION['phone'] ?> </p>
-<div id="order-history">
+
 	<?php
 		echo "Order History: ";
 		$query = "SELECT * FROM orders WHERE customerid = '" .$_SESSION['customerid']."'";
 		$result = pg_query($query);
 		$i = 0;
-		echo '<table><tr>';
+		echo '<div id="order-history"><table><tr>';
 		while ($i < pg_num_fields($result)){
 			$fieldName = pg_field_name($result, $i);
 			echo '<td>' . $fieldName . '</td>';
