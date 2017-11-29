@@ -148,7 +148,7 @@
 			<td colspan=2>
 				<div id="custom-pizza-selector">
 					<b><?php echo $pizzaInfo[1]['product_name']; ?> Pizza</b>
-					<form action = "cart.php"><br>	
+					<form method="POST"><br>	
 							<input name='price' id='hiddenPrice1' type='text' value='<?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?>' hidden>
 							Price: $<span id="price1"><?php echo number_format($pizzaInfo[1]['base_price']+$pizzaInfo[1]['l_upcharge'],2); ?></span>
 							<br>
