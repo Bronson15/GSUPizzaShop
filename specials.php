@@ -50,7 +50,7 @@
 			<img src="img/doublepep.png" usemap="#dpd">
 			<form id="dpd" method="POST" style="margin: 0; padding: 0;">
 				<input name="productid" type="hidden" value="1" />
-				<input name="size" type="hidden" value="large" />
+				<input name="size" type="hidden" value="medium" />
 				<input name="quantity" type="hidden" value="2" />
 				<input name="crust" type="hidden" value="hand" />
 				<input name="toppings" type="hidden" value="CPXm" />
