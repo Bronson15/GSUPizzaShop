@@ -13,33 +13,18 @@
 		echo "Order History: ";
 		$query = "SELECT * FROM orders WHERE customerid = '" .$_SESSION['customerid']."'";
 		$result = pg_query($query);
-		$i = 0;
-		echo '<div id="order-history"><table><tr>';
-		while ($i < pg_num_fields($result)){
-			$fieldName = pg_field_name($result, $i);
-			echo '<td>' . $fieldName . '</td>';
-			$i = $i + 1;
-		}
-		echo '</tr>';
-		$i = 0;
-
-		while ($row = pg_fetch_row($result)) {
-			echo '<tr>';
-			$count = count($row);
-			$y = 0;
-			while ($y < $count){
-				$c_row = current($row);
-				echo '<td>' . $c_row . '</td>';
-				next($row);
-				$y = $y + 1;
+		echo "<div id='order-history'><table><tr>";
+			echo "<td>Order ID</td><td>Price</td><td>Date</td></tr>";
+			while($row = pg_fetch_assoc($result)){
+				echo"<tr><td>";
+				$orderid = $row['orderid'];
+				echo $orderid."</td><td>";
+				$price = $row['price'];
+				echo $price."</td><td>";
+				$date = $row['date'];
+				echo $date."</td></tr>";
 			}
-			echo '</tr>';
-			$i = $i + 1;
-		}
-		pg_free_result($result);
-
 		echo '</table></div>';
-
 		}
 		else {
 	?>
