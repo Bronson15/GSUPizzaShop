@@ -1,5 +1,4 @@
 <?php include("header")?>
-<html>
 	<head>
 		<title>Registration</title>
 		<script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
@@ -53,5 +52,4 @@
 			</form>
 		</div>
 	</body>
-</html>
 <?php include("footer")?>
