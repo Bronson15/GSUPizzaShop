@@ -2,6 +2,7 @@
 <!-- https://www.w3schools.com/jsref/met_win_settimeout.asp   information on the setTimeout function.-->
 
 <?php
+	session_start();
 	unset($_SESSION['cart']);
 	include("header.php");
 	if(isset($_POST['checkout'])) {
