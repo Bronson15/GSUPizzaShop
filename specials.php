@@ -92,22 +92,22 @@
 	</tbody>
 	</table>
 	<map name="ckss">
-		<area onclick="addSpecial(10)" class="CKS" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(10)" class="CKS" shape="rect" coords="17,236,212,203"  href="/#" alt="Pizza Special">
 	</map>
 	<map name="cp">
-		<area onclick="addSpecial(5)" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(5)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="tp">
-		<area onclick="addSpecial(6)" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(6)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="dpd">
-		<area onclick="addSpecial(7)" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(7)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="aym">
-		<area onclick="addSpecial(8)" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(8)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="pps">
-		<area onclick="addSpecial(9)" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(9)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 </div>
 </main>
