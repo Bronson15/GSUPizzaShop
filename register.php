@@ -44,7 +44,7 @@
 					<input type="password" id="password" name="password" max="15">
 					<br>
 					<br>
-					<button type="submit" id="sub" name="createUser" onclick="saveData()">Create User</button>
+					<button type="submit" id="sub" name="createUser">Create User</button>
 					
 				</fieldset>
 			</form>
