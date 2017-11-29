@@ -6,56 +6,107 @@
 	<div id="deals">
 	<table align="center">
 	<tbody>
-		<tr> 
-			<td> 
+		<tr>
+			<td>
 			<img src="img/college_kid.png" usemap="#ckss">
+			<form id="ckss" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="1" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="2" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="toppings" type="hidden" value="CXm" />
+				<input name="price" type="hidden" value="9.99" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
-			
-			<td> 
+
+			<td>
 			<img src="img/combo_special.png" usemap="#cp">
+			<form id="cp" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="4" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="1" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="price" type="hidden" value="8.00" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
 		</tr>
 
-		<tr> 
-			<td> 
+		<tr>
+			<td>
 			<img src="img/hawaiianspecial.png" usemap="#tp">
+			<form id="tp" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="5" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="1" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="price" type="hidden" value="7.75" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
-			
-			<td> 
+
+			<td>
 			<img src="img/doublepep.png" usemap="#dpd">
+			<form id="dpd" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="1" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="2" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="toppings" type="hidden" value="CPXm" />
+				<input name="price" type="hidden" value="9.99" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
 		</tr>
-			
-		<tr> 
-			<td> 
+
+		<tr>
+			<td>
 			<img src="img/meatlovers.png" usemap="#aym">
+			<form id="aym" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="3" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="1" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="price" type="hidden" value="12.99" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
-			
-			<td> 
+
+			<td>
 			<img src="img/party.png" usemap="#pps">
+			<form id="pps" method="POST" style="margin: 0; padding: 0;">
+				<input name="productid" type="hidden" value="1" />
+				<input name="size" type="hidden" value="large" />
+				<input name="quantity" type="hidden" value="5" />
+				<input name="crust" type="hidden" value="hand" />
+				<input name="toppings" type="hidden" value="CPXm" />
+				<input name="price" type="hidden" value="25.99" />
+				<input name="addspecial" type="hidden" value="true" />
+			</form>
 			</td>
-		</tr>	
+		</tr>
 	</tbody>
 	</table>
 	<map name="ckss">
-		<area class="CKS" shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(10)" class="CKS" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="cp">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(5)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="tp">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(6)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="dpd">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(7)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="aym">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(8)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 	<map name="pps">
-		<area shape="rect" coords="17,236,212,203"  href="/cart.php" alt="Pizza Special">
+		<area onclick="addSpecial(9)" shape="rect" coords="17,236,212,203"  href="#" alt="Pizza Special">
 	</map>
 </div>
-</main> 
+</main>
 </div>
 <?php include("footer.php");?>
