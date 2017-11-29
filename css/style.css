@@ -229,9 +229,16 @@ button {
 }
 
 #order-history {
-	text-align: center;
+
+		margin: auto;
+		border-collapse: collapse;
 }
 
 #order-history table, #order-history td, #order-history th {
 	border: 1px solid black;
+}
+
+#order-history tbody {
+	vertical-align: top;
+	text-align: center;
 }
