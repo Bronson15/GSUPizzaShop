@@ -40,7 +40,7 @@
 
 			<?php
 					if (!empty($_SESSION['cart'])) {
-						echo "<form action='/cart.php' method='POST'>";
+						echo "<form method='POST'>";
 							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
 						echo "</form>";
 						if(isset($_SESSION['username'])){
@@ -48,7 +48,7 @@
 								echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
 							echo "</form>";
 						} else{
-							echo "<button>Please log in to checkout</button>";
+							echo "<form action='login.php'>Please log in to checkout</button></form>";
 						}
 					}
 			?>
