@@ -28,7 +28,7 @@ $(document).ready(function(){
 					$("#login")[0].reset();
 				}
 				alert(data);
-			}
+			})
 			});
 		}
 	});
