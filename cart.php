@@ -1,5 +1,5 @@
 <?php include("header.php");?>
-	
+
 <main>
 
 	<table id="cart-table" cellpadding="12">
@@ -29,7 +29,7 @@
 			<b>Total</b>
 		</td>
 		<td colspan=2 style="text-align: right;">
-			<?php 
+			<?php
 				echo "$ " . $total;
 			?>
 		</td>
@@ -38,22 +38,26 @@
 	<br>
 	<div id="cart-buttons">
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-			<button type='submit' id="clearCart" name='clearCart'>Clear Cart</button>
-			<button type='submit' id="checkout" name='checkout'>Checkout</button>
+			<?php
+				if ($_SESSION['cart'] !empty ) {
+					echo "<button type='submit' id="clearCart" name='clearCart'>Clear Cart</button>";
+					echo "<button type='submit' id="checkout" name='checkout'>Checkout</button>";
+				}
+			?>
 		</form>
-		
+
 		<?php
 				if(isset($_POST['clearCart'])){
 					unset($_SESSION['cart']);
 					header('Refresh: 0; URL = cart.php');
-				}	
-				
+				}
+
 				if(isset($_POST['checkout'])) {
 					unset($_SESSION['cart']);
 					header('Refresh: 0; URL = pizzatracker.php');
 				}
-		?>	
-	</div>	
+		?>
+	</div>
 </main>
-	
+
 <?php include("footer.php");?>
