@@ -30,7 +30,7 @@
 		</td>
 		<td colspan=2 style="text-align: right;">
 			<?php
-				echo "$ " . $total;
+				echo "$ " . $_SESSION['total'];
 			?>
 		</td>
 	</table>
