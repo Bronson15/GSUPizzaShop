@@ -20,7 +20,7 @@
 				$orderid = $row['orderid'];
 				echo $orderid."</td><td>";
 				$price = $row['price'];
-				echo $price."</td><td>";
+				echo number_format($price, 2)."</td><td>";
 				$date = $row['date'];
 				echo $date."</td></tr>";
 			}
