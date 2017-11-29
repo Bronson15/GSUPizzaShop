@@ -25,6 +25,33 @@
 		$pizzaInfo[$row['product_id']]['p_upcharge'] = $row['p_upcharge'];
 		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
 	}
+	//Handle specials
+	if(isset($_POST['addspecial'])){
+		$productID = $_POST['productid'];
+		$orderItem = new OrderItem();
+		$orderItem->itemID = $productID;
+		$orderItem->itemName = $pizzaInfo[$productID]['product_name']." Pizza";
+		$orderItem->itemSize = $_POST['size'];
+		$orderItem->itemQuantity = $_POST['quantity'];
+		$orderItem->itemCrust = $_POST['crust'];
+		if($productID==1){
+			$orderItem->itemToppings = $_POST['toppings'];
+		} else{
+			$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		}
+		$orderItem->itemPrice = $_POST['price'];
+		array_push($_SESSION['cart'], $orderItem);
+		echo "<h3 align='center' style='color: #3B61F2;'>";
+		echo $orderItem->itemQuantity . "x ";
+		echo ucfirst($orderItem->itemSize) . " ";
+		if($orderItem->itemCrust=="pan"){
+			echo "Pan ";
+		} else{
+			echo "Hand-Tossed ";
+		}
+		echo $orderItem->itemName . " successfully added to cart!";
+		echo "</h3>";
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
