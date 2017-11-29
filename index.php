@@ -63,7 +63,7 @@ if(isset$POST['addspecial']{
 			</table>
 		</div>
 		<map name="main">
-			<area shape="rect" coords="636,318,723,285" href="/cart.php" alt="Pizza Special">
+			<area onclick="addSpecial(1);" shape="rect" coords="636,318,723,285" href="#" alt="Pizza Special">
 		</map>
 		<map name="cksm">
 			<area shape="rect" coords="15,215,100,190" href="/cart.php" alt="Pizza Special">
