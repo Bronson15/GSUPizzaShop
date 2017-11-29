@@ -30,7 +30,7 @@
 		</td>
 		<td colspan=2 style="text-align: right;">
 			<?php
-				echo "$ " . $_SESSION['total'];
+				echo "$" . number_format($_SESSION['total'], 2);
 			?>
 		</td>
 	</table>

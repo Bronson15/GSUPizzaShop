@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include("database.php");
 	if(!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
 	class OrderItem {
 		public $itemID;
@@ -13,6 +14,33 @@
 		public function toString(){
 			return $this->itemID.", ".$this->itemName.", ".$this->itemSize.", ".$this->itemQuantity.", ".$this->itemCrust.", ".$this->itemToppings.", ".$this->itemPrice;
 		}
+	}
+	//Get pizza info
+	$result = pg_query($pg_conn, "SELECT * FROM prices;");
+	while($row = pg_fetch_assoc($result)){
+		$pizzaInfo[$row['product_id']]['product_name'] = $row['product_name'];
+		$pizzaInfo[$row['product_id']]['base_price'] = $row['base_price'];
+		$pizzaInfo[$row['product_id']]['m_upcharge'] = $row['m_upcharge'];
+		$pizzaInfo[$row['product_id']]['l_upcharge'] = $row['l_upcharge'];
+		$pizzaInfo[$row['product_id']]['p_upcharge'] = $row['p_upcharge'];
+		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
+	}
+	//Handle specials
+	if(isset($_POST['addspecial'])){
+		$productID = $_POST['productid'];
+		$orderItem = new OrderItem();
+		$orderItem->itemID = $productID;
+		$orderItem->itemName = $pizzaInfo[$productID]['product_name']." Pizza";
+		$orderItem->itemSize = $_POST['size'];
+		$orderItem->itemQuantity = $_POST['quantity'];
+		$orderItem->itemCrust = $_POST['crust'];
+		if($productID==1){
+			$orderItem->itemToppings = $_POST['toppings'];
+		} else{
+			$orderItem->itemToppings = $pizzaInfo[$productID]['toppings'];
+		}
+		$orderItem->itemPrice = $_POST['price'];
+		array_push($_SESSION['cart'], $orderItem);
 	}
 ?>
 <!DOCTYPE html>
@@ -68,4 +96,19 @@
     </nav> 
 	
 </div> 
-<?php include("database.php");?>
+
+<?php
+	//Display specials message
+	if(isset($_POST['addspecial'])){
+		echo "<h3 align='center' style='color: #3B61F2;'>";
+		echo $orderItem->itemQuantity . "x ";
+		echo ucfirst($orderItem->itemSize) . " ";
+		if($orderItem->itemCrust=="pan"){
+			echo "Pan ";
+		} else{
+			echo "Hand-Tossed ";
+		}
+		echo $orderItem->itemName . " successfully added to cart!";
+		echo "</h3>";
+	}
+?>
