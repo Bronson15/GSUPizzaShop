@@ -43,9 +43,13 @@
 						echo "<form action='/cart.php' method='POST'>";
 							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
 						echo "</form>";
-						echo "<form action='pizzatracker.php' method='POST'>";
-							echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
-						echo "</form>";
+						if(isset($_SESSION['username'])){
+							echo "<form action='pizzatracker.php' method='POST'>";
+								echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
+							echo "</form>";
+						} else{
+							echo "<button>Please log in to checkout</button>";
+						}
 					}
 			?>
 
