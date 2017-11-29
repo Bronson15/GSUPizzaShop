@@ -41,16 +41,6 @@
 		}
 		$orderItem->itemPrice = $_POST['price'];
 		array_push($_SESSION['cart'], $orderItem);
-		echo "<h3 align='center' style='color: #3B61F2;'>";
-		echo $orderItem->itemQuantity . "x ";
-		echo ucfirst($orderItem->itemSize) . " ";
-		if($orderItem->itemCrust=="pan"){
-			echo "Pan ";
-		} else{
-			echo "Hand-Tossed ";
-		}
-		echo $orderItem->itemName . " successfully added to cart!";
-		echo "</h3>";
 	}
 ?>
 <!DOCTYPE html>
@@ -106,3 +96,19 @@
     </nav> 
 	
 </div> 
+
+<?php
+	//Display specials message
+	if(isset($_POST['addspecial'])){
+		echo "<h3 align='center' style='color: #3B61F2;'>";
+		echo $orderItem->itemQuantity . "x ";
+		echo ucfirst($orderItem->itemSize) . " ";
+		if($orderItem->itemCrust=="pan"){
+			echo "Pan ";
+		} else{
+			echo "Hand-Tossed ";
+		}
+		echo $orderItem->itemName . " successfully added to cart!";
+		echo "</h3>";
+	}
+?>
