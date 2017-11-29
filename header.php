@@ -60,10 +60,33 @@
 		if(specialID==2) spCKSM.submit();
 		if(specialID==3) spMMS.submit();
 	}
+
+	var modal = document.getElementById('confirmModal');
+	var span = document.getElementsByClassName("close")[0];
+
+	function confirmAdd(){
+		 modal.style.display = "block";
+	}
+
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
 </script>
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
 <div id="wrapper">
         <header>
-		<h1><a href="/"><img src="/img/logo.jpg" alt="GSU Logo"></a></h1>
+		<h1><a href="/"><img onclick="confirmAdd();" src="/img/logo.jpg" alt="GSU Logo"></a></h1>
         </header>
 	<nav>
 		<b>
