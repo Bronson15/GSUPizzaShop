@@ -12,9 +12,8 @@
 	echo "Order History: ";
 	$query = "SELECT * FROM orders WHERE customerid = '" .$_SESSION['customerid']."'";
 	$result = pg_query($query);
-	echo $query;
-	echo $result;
-
+	$myarray = pg_fetch_all($result);
+ 	print_r($myarray);
 	}
 	else {
 ?>
