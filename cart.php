@@ -37,14 +37,17 @@
 	<br>
 	<br>
 	<div id="cart-buttons">
-		<form action="pizzatracker.php" method="POST">
+
 			<?php
-				if (!empty($_SESSION['cart'])) {
-					echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
-					echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
-				}
+					if (!empty($_SESSION['cart'])) {
+						echo "<form action='/cart.php' method='POST'>";
+							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
+						echo "</form>";
+						echo "<form action='pizzatracker.php' method='POST'>";
+							echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
+						echo "</form>";
+					}
 			?>
-		</form>
 
 		<?php
 				if(isset($_POST['clearCart'])){
