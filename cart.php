@@ -20,7 +20,7 @@
 					}
 					echo " " .$item->itemName . "</td> ";
 					echo "<td>" . $item->itemQuantity . "</td> ";
-					echo "<td>$" . $item->itemPrice . "</td><br>";
+					echo "<td>$" . $item->itemPrice . "</td>";
 					echo "</tr>";
 					$_SESSION['total'] = $_SESSION['total'] + $item->itemPrice;
 				}
@@ -40,12 +40,16 @@
 
 			<?php
 					if (!empty($_SESSION['cart'])) {
-						echo "<form action='/cart.php' method='POST'>";
+						echo "<form method='POST'>";
 							echo "<button type='submit' id='clearCart' name='clearCart'>Clear Cart</button>";
 						echo "</form>";
-						echo "<form action='pizzatracker.php' method='POST'>";
-							echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
-						echo "</form>";
+						if(isset($_SESSION['username'])){
+							echo "<form action='pizzatracker.php' method='POST'>";
+								echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
+							echo "</form>";
+						} else{
+							echo "<form action='login.php'><button type='submit'>Login to checkout</button></form>";
+						}
 					}
 			?>
 
