@@ -14,6 +14,16 @@
 			return $this->itemID.", ".$this->itemName.", ".$this->itemSize.", ".$this->itemQuantity.", ".$this->itemCrust.", ".$this->itemToppings.", ".$this->itemPrice;
 		}
 	}
+	//Get pizza info
+	$result = pg_query($pg_conn, "SELECT * FROM prices;");
+	while($row = pg_fetch_assoc($result)){
+		$pizzaInfo[$row['product_id']]['product_name'] = $row['product_name'];
+		$pizzaInfo[$row['product_id']]['base_price'] = $row['base_price'];
+		$pizzaInfo[$row['product_id']]['m_upcharge'] = $row['m_upcharge'];
+		$pizzaInfo[$row['product_id']]['l_upcharge'] = $row['l_upcharge'];
+		$pizzaInfo[$row['product_id']]['p_upcharge'] = $row['p_upcharge'];
+		$pizzaInfo[$row['product_id']]['toppings'] = $row['toppings'];
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
