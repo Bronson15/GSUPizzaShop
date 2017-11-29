@@ -83,7 +83,7 @@ include("header.php");
 			<area onclick="addSpecial(3);" shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
 		</map>
 		<map name="tg">
-			<area onclick-"addSpecial(4);" shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
+			<area onclick="addSpecial(4);" shape="rect" coords="15,215,100,190" href="#" alt="Pizza Special">
 		</map>
 		</main>
 	</div>
