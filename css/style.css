@@ -63,7 +63,7 @@ main h1{
 
 #specials p{
 	text-align: center;
-	font-size:25px; 
+	font-size:25px;
 }
 
 #specials form{
@@ -83,7 +83,7 @@ main h1{
 
 #specials form button{
 	background-color:#a99260;
-	
+
 }
 
 #pizza-table th, #pizza-table td {
@@ -178,12 +178,12 @@ button {
 
 #pizza-deals table{
 	border: 0px;
-}	
+}
 
 #pizza-deals caption{
 	font-size:30px;
 	text-align:left;
-	
+
 }
 
 #custom-pizza-selector {
@@ -226,4 +226,12 @@ button {
 
 #member{
 	text-align: center;
+}
+
+#order-history {
+	text-align: center;
+}
+
+#order-history table, #order-history td, #order-history th {
+	border: 1px solid black;
 }
