@@ -45,9 +45,9 @@
 						echo "</form>";
 						echo "<form action='pizzatracker.php' method='POST'>";
 							echo "<button type='submit' id='checkout' name='checkout'>Checkout</button>";
-						echo "</form>"
+						echo "</form>";
 					}
-			?>\
+			?>
 
 		<?php
 				if(isset($_POST['clearCart'])){
