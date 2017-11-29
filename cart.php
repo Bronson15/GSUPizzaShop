@@ -10,7 +10,7 @@
 		</tr>
 		<tr>
 			<?php
-			$total = 0.00;
+			$_SESSION['total'] = 0.00;
 				foreach($_SESSION['cart'] as $item){
 					echo "<td> " . ucfirst($item->itemSize) . " ";
 					if($item->itemCrust=="pan"){
@@ -22,7 +22,7 @@
 					echo "<td>" . $item->itemQuantity . "</td> ";
 					echo "<td>$" . $item->itemPrice . "</td><br>";
 					echo "</tr>";
-					$total = $total + $item->itemPrice;
+					$_SESSION['total'] = $_SESSION['total'] + $item->itemPrice;
 				}
 			?>
 		<td>
