@@ -1,6 +1,6 @@
 <?php
 include("header.php");
-if(isset$POST['addspecial']{
+if(isset($POST['addspecial']){
 	$productID = $_POST['productid'];
 	$orderItem = new OrderItem();
 	$orderItem->itemID = $productID;
@@ -38,6 +38,7 @@ if(isset$POST['addspecial']{
 			<input name="quantity" type="hidden" value="1" />
 			<input name="crust" type="hidden" value="hand" />
 			<input name="price" type="hidden" value="8.00" />
+			<input name="addspecial" type="hidden" value="true" />
 		</form>
 		<div id="pizza-deals">
 			<table align="center">
