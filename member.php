@@ -38,12 +38,11 @@
 		}
 		pg_free_result($result);
 
-		echo '</table>';
+		echo '</table></div>';
 
 		}
 		else {
-	?>
-</div>
+	?>]
 	<p>	Must be logged in to view personal info </p>
 	</div>
 	<?php }
