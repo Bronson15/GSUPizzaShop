@@ -1,7 +1,6 @@
 <?php
 include("header.php");
-if(isset($_POST['addspecial']){
-	/*
+if(isset($_POST['addspecial'])){
 	$productID = $_POST['productid'];
 	$orderItem = new OrderItem();
 	$orderItem->itemID = $productID;
@@ -22,7 +21,6 @@ if(isset($_POST['addspecial']){
 	}
 	echo $orderItem->itemName . " successfully added to cart!";
 	echo "</h3>";
-	*/
 }
 ?>
 	<script>
