@@ -8,8 +8,8 @@
 		echo $result;
 		echo $query;
 	}
-	echo $_POST['checkout'];
-	
+	echo $_POST[];
+
 ?>
 
 <main>
