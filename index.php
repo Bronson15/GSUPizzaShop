@@ -20,7 +20,7 @@
 					
 					<td>
 						<!--image placed here-->
-						<img src="img/home_deal.png" usemap="tg">
+						<img src="img/home2.png" usemap="tg">
 					</td>
 					</tr>
 				</tbody>	
