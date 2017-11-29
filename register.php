@@ -3,6 +3,7 @@
 		<title>Registration</title>
 		<script src = "register.js" rel="javascript"></script>
 	</head>
+		<div id="error"></div>
 		<div id="reg-col">
 			<form id="login">
 				<fieldset id="register">
